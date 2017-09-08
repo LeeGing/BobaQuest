@@ -1,10 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  users: null,
 
-  setupController: function(controller, model) {
-    controller.set('somethingCool', model);
-    console.log(somethingCool);
+  actions: {
+    signup: function() {
+      console.log(this.get('userEmail'));
+    }
   }
-
 });

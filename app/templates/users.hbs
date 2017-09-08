@@ -1,7 +1,12 @@
-
 <h2>Users</h2>
 
-<p>model {{model}}</p>
+{{#each users as |user|}}
+  Name: {{user.name}} <br />
+  Age: {{user.age}} <br />
+  Email: {{user.email}}
+{{/each}}
 
-<p>usersString {{somethingCool}}</p>
-
+<form>
+  {{input type='text' value=userEmail placeholder='email'}}
+  <button type='submit'>Sign up</button>
+</form>
