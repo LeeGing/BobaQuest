@@ -2,15 +2,22 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 
-  model(){
+   model: function() {
+    return Ember.$.ajax({
+      type: 'GET',
+      url: 'http://localhost:3000/stores',
+      success: function(data){
+        return data;
+      }, error: function(e) {
+        console.log('banana errors', e.status);
+      }
+    });
+  },
 
-    // Ember.$.ajax('this is where the data that i want to fetch is')
-    //   data: { type:'get'}
-    //   }, success{(d) => {
-    //     return d;
 
+  setupController: function(controller, model) {
+    controller.set('stores', model)
   }
-
 
 });
 

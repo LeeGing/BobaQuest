@@ -1,11 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-
-  model: function() {
+  model: function(param) {
+    // localhost:4200/users/1/transactions
+    // param = 1
+    // param.id
     return Ember.$.ajax({
       type: 'GET',
-      url: 'http://localhost:3000/users',
+      url: 'http://localhost:3000/transactions',
+      data: {
+        id: param.id
+      },
       success: function(data){
         return data;
       }, error: function(e) {
@@ -13,13 +18,4 @@ export default Ember.Route.extend({
       }
     });
   },
-
-
-  setupController: function(controller, model) {
-    controller.set('users', model)
-  }
-
 });
-
-
-// rails router, controller rename to user, everywhere reference to user
