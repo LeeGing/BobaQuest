@@ -1,5 +1,5 @@
 class StoresController < ApplicationController
-  def index
+  def show
     stores = Store.all
     render json: stores
   end
