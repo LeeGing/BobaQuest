@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170908224225) do
+ActiveRecord::Schema.define(version: 20170909023700) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(version: 20170908224225) do
     t.string  "name"
     t.integer "drinks_points"
     t.index ["store_id"], name: "index_drinks_on_store_id", using: :btree
+  end
+
+  create_table "quests", force: :cascade do |t|
+    t.integer "multiplier",   default: 1
+    t.string  "description"
+    t.integer "bonus_points"
+    t.integer "store_id"
+    t.index ["store_id"], name: "index_quests_on_store_id", using: :btree
   end
 
   create_table "stores", force: :cascade do |t|
@@ -65,10 +73,20 @@ ActiveRecord::Schema.define(version: 20170908224225) do
     t.index ["user_id"], name: "index_users_achievements_on_user_id", using: :btree
   end
 
+  create_table "users_quests", force: :cascade do |t|
+    t.integer "quest_id"
+    t.integer "user_id"
+    t.index ["quest_id"], name: "index_users_quests_on_quest_id", using: :btree
+    t.index ["user_id"], name: "index_users_quests_on_user_id", using: :btree
+  end
+
   add_foreign_key "drinks", "stores"
+  add_foreign_key "quests", "stores"
   add_foreign_key "transactions", "drinks"
   add_foreign_key "transactions", "stores"
   add_foreign_key "transactions", "users"
   add_foreign_key "users_achievements", "achievements"
   add_foreign_key "users_achievements", "users"
+  add_foreign_key "users_quests", "quests"
+  add_foreign_key "users_quests", "users"
 end
