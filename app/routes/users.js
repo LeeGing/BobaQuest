@@ -2,24 +2,38 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 
-  model: function() {
-    return Ember.$.ajax({
+  model: function(params) {
+
+    return new Ember.RSVP.hash({
+      users: Ember.$.ajax({
       type: 'GET',
-      url: 'http://localhost:3000/users',
-      success: function(data){
-        return data;
-      }, error: function(e) {
-        console.log('banana errors', e.status);
-      }
-    });
+      url: 'http://localhost:3000/users/' + params.id
+      }),
+
+      stores: Ember.$.ajax({
+        type: 'GET',
+        url: 'http://localhost:3000/stores/' + params.id
+      })
+    })
   },
 
 
-  setupController: function(controller, model) {
-    controller.set('users', model)
+  setupController: function(controller, models) {
+
+
+    controller.set('user', models.users)
+    controller.set('stores', models.stores)
+
   }
 
 });
 
 
-// rails router, controller rename to user, everywhere reference to user
+
+  // model: function(params) {
+  // return new Ember.RSVP.hash({
+  //           news: Ember.$.ajax({
+  //             url: wpUrl + 'news',
+  //             dataType: "jsonp",
+  //             type: 'GET' }),
+  //           events: Ember.$.ajax({ url: wpUrl + 'events', dataType: "jsonp", type: 'GET' })

@@ -2,10 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 
-   model: function() {
+   model: function(params) {
     return Ember.$.ajax({
       type: 'GET',
-      url: 'http://localhost:3000/stores',
+      url: 'http://localhost:3000/stores/' + params.id,
       success: function(data){
         return data;
       }, error: function(e) {

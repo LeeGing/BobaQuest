@@ -8,4 +8,5 @@ export default Ember.Controller.extend({
       console.log(this.get('userEmail'));
     }
   }
+
 });

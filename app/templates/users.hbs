@@ -1,10 +1,29 @@
-<h2>Users</h2>
 
-{{#each users as |user|}}
+
+<h2>Users n stores</h2>
+
+THIS IS USERS.HBS
+
+
+<div>
+
   Name: {{user.name}} <br />
   Age: {{user.age}} <br />
   Email: {{user.email}}
+
+
+</div>
+
+{{outlet}}
+
+
+<div>
+{{#each stores as |store|}}
+  Name: {{store.name}} <br />
+  Address: {{store.address}} <br />
+  Phone Number: {{store.phonenumber}}
 {{/each}}
+</div>
 
 <form>
   {{input type='text' value=userEmail placeholder='email'}}
