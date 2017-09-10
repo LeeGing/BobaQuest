@@ -1,6 +1,6 @@
 class StoresController < ApplicationController
   def show
-    stores = Store.all
-    render json: stores
+    store = Store.find(params[:id])
+    render json: store
   end
 end

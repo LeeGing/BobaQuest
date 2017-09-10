@@ -16,7 +16,7 @@ export default Ember.Route.extend({
 
 
   setupController: function(controller, model) {
-    controller.set('stores', model)
+    controller.set('store', model)
   }
 
 });

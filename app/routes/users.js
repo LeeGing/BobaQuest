@@ -28,12 +28,4 @@ export default Ember.Route.extend({
 
 });
 
-
-
-  // model: function(params) {
-  // return new Ember.RSVP.hash({
-  //           news: Ember.$.ajax({
-  //             url: wpUrl + 'news',
-  //             dataType: "jsonp",
-  //             type: 'GET' }),
-  //           events: Ember.$.ajax({ url: wpUrl + 'events', dataType: "jsonp", type: 'GET' })
+//Can't load users/2 ... attempts to load stores/2 as well. Why?

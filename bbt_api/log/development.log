@@ -410,3 +410,970 @@ FOREIGN KEY ("user_id")
   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7548110526173859915)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 10.0.2.2 at 2017-09-10 13:52:18 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/gems/railties-5.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/gems/railties-5.0.5/lib/rails/templates/rails/welcome/index.html.erb (8.5ms)
+Completed 200 OK in 29ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 10.0.2.2 at 2017-09-10 13:52:19 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.0.5) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/1" for 10.0.2.2 at 2017-09-10 13:52:29 +0000
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 13:52:29 +0000
+Processing by UsersController#show as */*
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (5.8ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+Completed 200 OK in 38ms (Views: 5.1ms | ActiveRecord: 16.8ms)
+
+
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 0.6ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/users/2" for 10.0.2.2 at 2017-09-10 13:52:32 +0000
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 13:52:32 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mStore Load (0.6ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 13:52:36 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 13:52:37 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 13:53:04 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 13:53:05 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 13:53:37 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mStore Load (0.8ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 13:53:39 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 13:53:51 +0000
+Started GET "/users/1" for 10.0.2.2 at 2017-09-10 13:53:51 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2017-09-10 13:53:58 +0000
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 13:53:58 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+Processing by StoresController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 13:54:00 +0000
+Started GET "/users/2" for 10.0.2.2 at 2017-09-10 13:54:00 +0000
+Processing by StoresController#show as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  Parameters: {"id"=>"2"}
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 13:54:04 +0000
+Started GET "/users/1" for 10.0.2.2 at 2017-09-10 13:54:04 +0000
+Processing by StoresController#show as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+
+
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2017-09-10 13:54:25 +0000
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 13:54:25 +0000
+Processing by UsersController#show as */*
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores" for 10.0.2.2 at 2017-09-10 13:54:33 +0000
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for StoresController):
+  
+actionpack (5.0.5) lib/abstract_controller/base.rb:121:in `process'
+actionpack (5.0.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.5) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:727:in `call'
+omniauth (1.6.1) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.6.1) lib/omniauth/strategy.rb:167:in `call'
+omniauth (1.6.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+activerecord (5.0.5) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.5) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.5) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.5) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.0.5) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/store" for 10.0.2.2 at 2017-09-10 13:54:37 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/store"):
+  
+actionpack (5.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.0.5) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/store" for 10.0.2.2 at 2017-09-10 13:55:38 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/store"):
+  
+actionpack (5.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.0.5) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 13:55:40 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 0.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 13:55:43 +0000
+Processing by StoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=2):
+  
+app/controllers/stores_controller.rb:3:in `show'
+Started GET "/users/1" for 10.0.2.2 at 2017-09-10 13:55:49 +0000
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 13:55:49 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 21ms (Views: 0.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/2" for 10.0.2.2 at 2017-09-10 13:55:53 +0000
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 13:55:53 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"2"}
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=2):
+  
+app/controllers/stores_controller.rb:3:in `show'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 0.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2017-09-10 13:55:55 +0000
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 13:55:55 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mStore Load (1.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 13:56:07 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 13:56:19 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 13:56:23 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=2):
+  
+app/controllers/stores_controller.rb:3:in `show'
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 13:56:26 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 13:56:39 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 13:56:45 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 13:56:55 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stores/undefined" for 10.0.2.2 at 2017-09-10 14:26:01 +0000
+Started GET "/users/undefined" for 10.0.2.2 at 2017-09-10 14:26:01 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as */*
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"undefined"}
+  Parameters: {"id"=>"undefined"}
+  [1m[36mStore Load (0.6ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 53ms (ActiveRecord: 14.3ms)
+
+
+Completed 404 Not Found in 43ms (ActiveRecord: 9.1ms)
+
+
+  
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=undefined):
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+  
+app/controllers/stores_controller.rb:3:in `show'
+app/controllers/users_controller.rb:3:in `show'
+Started GET "/users/undefined" for 10.0.2.2 at 2017-09-10 14:26:07 +0000
+Started GET "/stores/undefined" for 10.0.2.2 at 2017-09-10 14:26:07 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=undefined):
+  
+app/controllers/stores_controller.rb:3:in `show'
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/users_controller.rb:3:in `show'
+Started GET "/stores/undefined" for 10.0.2.2 at 2017-09-10 14:26:09 +0000
+Started GET "/users/undefined" for 10.0.2.2 at 2017-09-10 14:26:09 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"undefined"}
+Processing by StoresController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  Parameters: {"id"=>"undefined"}
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+  [1m[36mStore Load (1.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+Completed 404 Not Found in 3ms (ActiveRecord: 1.0ms)
+
+
+  
+app/controllers/users_controller.rb:3:in `show'
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=undefined):
+  
+app/controllers/stores_controller.rb:3:in `show'
+Started GET "/users/1" for 10.0.2.2 at 2017-09-10 14:26:13 +0000
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 14:26:13 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 0.7ms | ActiveRecord: 1.3ms)
+
+
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2017-09-10 14:26:18 +0000
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 14:26:18 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStore Load (0.8ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stores/undefined" for 10.0.2.2 at 2017-09-10 14:26:21 +0000
+Started GET "/users/undefined" for 10.0.2.2 at 2017-09-10 14:26:21 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"undefined"}
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=undefined):
+Completed 404 Not Found in 3ms (ActiveRecord: 1.6ms)
+
+
+  
+  
+app/controllers/stores_controller.rb:3:in `show'
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/users_controller.rb:3:in `show'
+Started GET "/stores/undefined" for 10.0.2.2 at 2017-09-10 14:26:52 +0000
+Started GET "/users/undefined" for 10.0.2.2 at 2017-09-10 14:26:52 +0000
+Processing by StoresController#show as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"undefined"}
+  Parameters: {"id"=>"undefined"}
+  [1m[36mStore Load (0.8ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.8ms)
+
+
+  
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=undefined):
+Completed 404 Not Found in 4ms (ActiveRecord: 2.2ms)
+
+
+  
+  
+app/controllers/stores_controller.rb:3:in `show'
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/users_controller.rb:3:in `show'
+Started GET "/stores/undefined" for 10.0.2.2 at 2017-09-10 14:26:59 +0000
+Started GET "/users/undefined" for 10.0.2.2 at 2017-09-10 14:26:59 +0000
+Processing by StoresController#show as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"undefined"}
+  Parameters: {"id"=>"undefined"}
+  [1m[36mStore Load (0.9ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=undefined):
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+  
+app/controllers/stores_controller.rb:3:in `show'
+app/controllers/users_controller.rb:3:in `show'
+Started GET "/users/1" for 10.0.2.2 at 2017-09-10 14:26:59 +0000
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 14:26:59 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stores/undefined" for 10.0.2.2 at 2017-09-10 14:26:59 +0000
+Started GET "/users/undefined" for 10.0.2.2 at 2017-09-10 14:26:59 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"undefined"}
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mStore Load (1.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=undefined):
+  
+app/controllers/stores_controller.rb:3:in `show'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 27ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/users_controller.rb:3:in `show'
+Started GET "/stores/undefined" for 10.0.2.2 at 2017-09-10 14:27:50 +0000
+Started GET "/users/undefined" for 10.0.2.2 at 2017-09-10 14:27:50 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"undefined"}
+Processing by UsersController#show as */*
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  Parameters: {"id"=>"undefined"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=undefined):
+Completed 404 Not Found in 3ms (ActiveRecord: 1.3ms)
+
+
+  
+  
+app/controllers/stores_controller.rb:3:in `show'
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/users_controller.rb:3:in `show'
+Started GET "/users/1" for 10.0.2.2 at 2017-09-10 14:27:56 +0000
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 14:27:56 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+Processing by StoresController#show as */*
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 2.6ms)
+
+
+  [1m[36mStore Load (0.9ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 14:27:58 +0000
+Started GET "/users/2" for 10.0.2.2 at 2017-09-10 14:27:58 +0000
+Processing by StoresController#show as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  Parameters: {"id"=>"2"}
+  [1m[36mStore Load (0.8ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.8ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.2ms)
+
+
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=2):
+  
+app/controllers/stores_controller.rb:3:in `show'
+Started GET "/users/1" for 10.0.2.2 at 2017-09-10 14:28:02 +0000
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 14:28:02 +0000
+Processing by UsersController#show as */*
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mStore Load (1.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 14:28:07 +0000
+Started GET "/users/2" for 10.0.2.2 at 2017-09-10 14:28:07 +0000
+Processing by StoresController#show as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  Parameters: {"id"=>"2"}
+  [1m[36mStore Load (0.6ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.6ms)
+
+
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=2):
+  
+app/controllers/stores_controller.rb:3:in `show'
+Started GET "/users/1" for 10.0.2.2 at 2017-09-10 14:28:50 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 14:28:50 +0000
+Processing by StoresController#show as */*
+  [1m[36mUser Load (31.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 35ms (Views: 0.8ms | ActiveRecord: 31.3ms)
+
+
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 14:28:55 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 14:28:58 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mStore Load (0.6ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=2):
+  
+app/controllers/stores_controller.rb:3:in `show'
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 14:29:12 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=2):
+  
+app/controllers/stores_controller.rb:3:in `show'
+Started GET "/users/1" for 10.0.2.2 at 2017-09-10 14:29:24 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 14:29:24 +0000
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 0.7ms)
+
+
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.7ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/2" for 10.0.2.2 at 2017-09-10 14:29:27 +0000
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 14:29:27 +0000
+Processing by UsersController#show as */*
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"2"}
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mStore Load (2.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=2):
+  
+app/controllers/stores_controller.rb:3:in `show'
+Started GET "/users/2" for 10.0.2.2 at 2017-09-10 14:29:49 +0000
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 14:29:49 +0000
+Processing by UsersController#show as */*
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"2"}
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStore Load (3.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Completed 404 Not Found in 7ms (ActiveRecord: 3.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=2):
+  
+app/controllers/stores_controller.rb:3:in `show'
+Started GET "/users/2" for 10.0.2.2 at 2017-09-10 14:30:10 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 14:30:11 +0000
+  [1m[36mUser Load (23.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 0.9ms | ActiveRecord: 23.1ms)
+
+
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mStore Load (0.6ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=2):
+  
+app/controllers/stores_controller.rb:3:in `show'
+Started GET "/users/1" for 10.0.2.2 at 2017-09-10 14:30:13 +0000
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 14:30:13 +0000
+Processing by UsersController#show as */*
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStore Load (0.7ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.9ms)
+
+
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2017-09-10 14:30:25 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 14:30:26 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2" for 10.0.2.2 at 2017-09-10 14:30:32 +0000
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 14:30:32 +0000
+Processing by UsersController#show as */*
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"2"}
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStore Load (0.6ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.2ms)
+
+
+Completed 404 Not Found in 4ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=2):
+  
+app/controllers/stores_controller.rb:3:in `show'
+Started GET "/users/2" for 10.0.2.2 at 2017-09-10 14:31:35 +0000
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 14:31:35 +0000
+Processing by UsersController#show as */*
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"2"}
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mStore Load (2.8ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 2.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=2):
+  
+app/controllers/stores_controller.rb:3:in `show'
+Started GET "/users/1" for 10.0.2.2 at 2017-09-10 14:32:34 +0000
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 14:32:34 +0000
+Processing by UsersController#show as */*
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.8ms)
+
+
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 14:32:37 +0000
+Started GET "/users/2" for 10.0.2.2 at 2017-09-10 14:32:37 +0000
+Processing by StoresController#show as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  Parameters: {"id"=>"2"}
+  [1m[36mStore Load (1.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=2):
+  
+app/controllers/stores_controller.rb:3:in `show'
+Started GET "/users/1" for 10.0.2.2 at 2017-09-10 14:32:58 +0000
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 14:32:58 +0000
+Processing by UsersController#show as */*
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mStore Load (1.6ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 14:33:05 +0000
+Started GET "/users/2" for 10.0.2.2 at 2017-09-10 14:33:05 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=2):
+  
+app/controllers/stores_controller.rb:3:in `show'
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 14:34:12 +0000
+Started GET "/users/1" for 10.0.2.2 at 2017-09-10 14:34:12 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (1.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 14:34:43 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2017-09-10 14:35:11 +0000
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-10 14:35:11 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mStore Load (2.6ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/2" for 10.0.2.2 at 2017-09-10 14:35:13 +0000
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-10 14:35:13 +0000
+Processing by UsersController#show as */*
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"2"}
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=2):
+  
+app/controllers/stores_controller.rb:3:in `show'

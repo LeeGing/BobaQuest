@@ -6,6 +6,9 @@ export default DS.Model.extend({
   address: DS.attr('string'),
   location: DS.attr('string'),
   phonenumber: DS.attr('string'),
+  drinks: DS.hasMany('drink'),
+  transactions: DS.hasMany('transaction'),
+  quests: DS.hasMany('quest')
 
 });
 
