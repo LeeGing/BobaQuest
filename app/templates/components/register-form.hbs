@@ -1,0 +1,11 @@
+<form {{action 'resetPassword' on="submit"}}>  
+  {{input type="password" value=newPassword placeholder="reset password"}}<br>  
+    {{#if newPassword}}  
+      {{input type="password" value=confirmPassword placeholder="confirm password"}}  
+        {{#if passwordOK}}  
+          {{input type="submit" value="submit"}}  
+        {{else}}  
+        passwords don't match  
+        {{/if}}    
+    {{/if}}  
+</form>  

@@ -4,10 +4,10 @@ export default DS.Model.extend({
 
   name: DS.attr('string'),
   age: DS.attr('number'),
+  email: DS.attr('string'),
   password: DS.attr('string'),
+  passwordConfirmation: DS.attr('string'),
   email: DS.attr('string'),
   username: DS.attr('string'),
 
 });
-
-
