@@ -20,9 +20,8 @@ export default Ember.Route.extend({
 
   setupController: function(controller, models) {
 
-
     controller.set('user', models.users)
-    controller.set('stores', models.stores)
+    controller.set('store', models.stores)
 
   }
 

@@ -3,20 +3,26 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 
    model: function(params) {
-    return Ember.$.ajax({
+
+    return new Ember.RSVP.hash({
+      users: Ember.$.ajax({
       type: 'GET',
-      url: 'http://localhost:3000/stores/' + params.id,
-      success: function(data){
-        return data;
-      }, error: function(e) {
-        console.log('banana errors', e.status);
-      }
-    });
+      url: 'http://localhost:3000/users/' + params.id
+      }),
+
+      stores: Ember.$.ajax({
+        type: 'GET',
+        url: 'http://localhost:3000/stores/' + params.id
+      })
+    })
   },
 
 
-  setupController: function(controller, model) {
-    controller.set('store', model)
+  setupController: function(controller, models) {
+
+    console.log(models.stores)
+    controller.set('user', models.users)
+    controller.set('store', models.stores)
   }
 
 });

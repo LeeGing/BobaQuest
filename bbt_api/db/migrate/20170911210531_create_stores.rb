@@ -4,7 +4,7 @@ class CreateStores < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :address
       t.string :location
-      t.string :phonenumber
+      t.string :phone
     end
   end
 end
