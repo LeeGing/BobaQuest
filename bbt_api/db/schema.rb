@@ -10,83 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170909023700) do
+ActiveRecord::Schema.define(version: 20170911210900) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "achievements", force: :cascade do |t|
-    t.string  "name"
-    t.string  "description"
-    t.integer "awardpoint"
-  end
-
   create_table "drinks", force: :cascade do |t|
-    t.integer "store_id"
     t.string  "name"
-    t.integer "drinks_points"
-    t.index ["store_id"], name: "index_drinks_on_store_id", using: :btree
+    t.integer "drinkpoints"
   end
 
-  create_table "quests", force: :cascade do |t|
-    t.integer "multiplier",   default: 1
-    t.string  "description"
-    t.integer "bonus_points"
+  create_table "sales", force: :cascade do |t|
     t.integer "store_id"
-    t.index ["store_id"], name: "index_quests_on_store_id", using: :btree
+    t.integer "drink_id"
+    t.index ["drink_id"], name: "index_sales_on_drink_id", using: :btree
+    t.index ["store_id"], name: "index_sales_on_store_id", using: :btree
   end
 
   create_table "stores", force: :cascade do |t|
     t.string "name"
     t.string "address"
     t.string "location"
-    t.string "phonenumber"
+    t.string "phone"
   end
 
   create_table "transactions", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "store_id"
-    t.integer "drink_id"
+    t.integer "sale_id"
     t.string  "tot"
-    t.integer "points"
-    t.index ["drink_id"], name: "index_transactions_on_drink_id", using: :btree
-    t.index ["store_id"], name: "index_transactions_on_store_id", using: :btree
+    t.integer "transpoint"
+    t.index ["sale_id"], name: "index_transactions_on_sale_id", using: :btree
     t.index ["user_id"], name: "index_transactions_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "age"
-    t.string   "password_digest"
-    t.string   "email"
-    t.string   "username"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "provider"
-    t.string   "uid"
+    t.string  "name"
+    t.string  "password_digest"
+    t.string  "email"
+    t.string  "username"
+    t.integer "age"
   end
 
-  create_table "users_achievements", force: :cascade do |t|
-    t.integer "achievement_id"
-    t.integer "user_id"
-    t.index ["achievement_id"], name: "index_users_achievements_on_achievement_id", using: :btree
-    t.index ["user_id"], name: "index_users_achievements_on_user_id", using: :btree
-  end
-
-  create_table "users_quests", force: :cascade do |t|
-    t.integer "quest_id"
-    t.integer "user_id"
-    t.index ["quest_id"], name: "index_users_quests_on_quest_id", using: :btree
-    t.index ["user_id"], name: "index_users_quests_on_user_id", using: :btree
-  end
-
-  add_foreign_key "drinks", "stores"
-  add_foreign_key "quests", "stores"
-  add_foreign_key "transactions", "drinks"
-  add_foreign_key "transactions", "stores"
+  add_foreign_key "sales", "drinks"
+  add_foreign_key "sales", "stores"
+  add_foreign_key "transactions", "sales"
   add_foreign_key "transactions", "users"
-  add_foreign_key "users_achievements", "achievements"
-  add_foreign_key "users_achievements", "users"
-  add_foreign_key "users_quests", "quests"
-  add_foreign_key "users_quests", "users"
 end

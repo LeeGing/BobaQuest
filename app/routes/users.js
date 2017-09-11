@@ -20,20 +20,11 @@ export default Ember.Route.extend({
 
   setupController: function(controller, models) {
 
-
     controller.set('user', models.users)
-    controller.set('stores', models.stores)
+    controller.set('store', models.stores)
 
   }
 
 });
 
-
-
-  // model: function(params) {
-  // return new Ember.RSVP.hash({
-  //           news: Ember.$.ajax({
-  //             url: wpUrl + 'news',
-  //             dataType: "jsonp",
-  //             type: 'GET' }),
-  //           events: Ember.$.ajax({ url: wpUrl + 'events', dataType: "jsonp", type: 'GET' })
+//Can't load users/2 ... attempts to load stores/2 as well. Why?
