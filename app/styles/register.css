@@ -1,0 +1,177 @@
+.register-container {
+  width:30%;
+  display: block;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.rounded-social-buttons{
+  margin-top: 22em;
+}
+
+.btn {
+  width:30%;
+  display: block;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+.reginput{
+     display: inline-block;
+    text-align: center;
+}
+
+form {
+    position: absolute;
+    height: 200px;
+    width: 400px;
+    margin: 0 0 0 -200px;
+    top: 50%;
+    left: 50%;
+}
+
+input {
+    display: inline-block;
+    text-align: center;
+}
+
+.top-bar {
+  padding: 0.2rem;
+}
+
+.signup-form {
+  margin: auto;
+  margin-top: 4em;
+  display: inline;
+  text-align: center:
+  padding: 2em;
+}
+
+.word-container {
+  margin-left: auto;
+  margin-top: 5%;
+  padding:0px;
+  text-align:center;
+  display: :inline;
+
+}
+
+// \ edits
+
+$button-rounded-hover-radius: 5000px;
+$button-rounded-hover-border: 5px solid darken($primary-color, 10%);
+.button button-rounded-hover profile {
+  margin-left: 100px;
+}
+.button-rounded-hover {
+  border: 0;
+  border-radius: $button-rounded-hover-radius;
+  padding: 1rem;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  transition: all 0.35s ease;
+  transform: translateZ(0);
+  margin-top:0.1rem;
+  margin-left: 1em;
+  margin-bottom: 0.1rem;
+}
+
+.button-rounded-hover:before {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  left: 1px;
+  right: 1px;
+  border-radius: inherit;
+  background-color: $white;
+  transition: all 0.3s;
+  transform: translateX(-100%);
+}
+
+.button-rounded-hover:after {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border: $button-rounded-hover-border;
+  content: '';
+  border-radius: inherit;
+}
+
+.button-rounded-hover:hover,
+.button-rounded-hover:focus {
+  background-color: darken($primary-color, 10%);
+}
+
+.button-rounded-hover:hover:before,
+.button-rounded-hover:focus:before {
+  transform: translateX(0%);
+  opacity: 0.25;
+}
+
+.menu-hover-lines {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.35s ease;
+}
+
+.menu-hover-lines li a {
+  padding: 0.75rem 0;
+  color: rgba(10, 10, 10, 0.5);
+  position: relative;
+  margin-left: 1rem;
+
+}
+
+.menu-hover-lines li:first-child a {
+  margin-left: 0;
+}
+
+.menu-hover-lines li.active > a {
+  background-color: transparent;
+}
+
+.menu-hover-lines a:before,
+.menu-hover-lines a::after {
+  height: 3px;
+  position: absolute;
+  content: '';
+  transition: all 0.35s ease;
+  background-color: #1779ba;
+  width: 0;
+}
+
+.menu-hover-lines a::before {
+  top: 0;
+  left: 0;
+}
+
+.menu-hover-lines a::after {
+  bottom: 0;
+  right: 0;
+}
+
+.menu-hover-lines a:hover,
+.menu-hover-lines li.active > a {
+  color: #0a0a0a;
+  transition: all 0.35s ease;
+}
+
+.menu-hover-lines a:hover::before,
+.menu-hover-lines .active a::before,
+.menu-hover-lines a:hover::after,
+.menu-hover-lines .active a::after {
+  width: 100%;
+}
+
+
+//
