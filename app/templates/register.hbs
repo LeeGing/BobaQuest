@@ -6,9 +6,9 @@ THIS IS THE REGISTER PAGE
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BBT</title>
     <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="/styles/register.css">
-    <link rel="stylesheet" href="styles/.css">
+    <link rel="stylesheet" href="{{rootURL}}styles/layout.css">
+    <link rel="stylesheet" href="{{rootURL}}styles/register.css">
+    <link rel="stylesheet" href="{{rootURL}}styles/.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
     <script type="text/javascript" src="script/app.js"></script>
 
@@ -81,8 +81,14 @@ THIS IS THE REGISTER PAGE
                 {{input value=email placeholder="EMAIL PLS"}}
               </label>
             </div>
+            <div class="age">
+              <label>
+                {{!-- <input type="email" placeholder="Email Address" name="email" id="emailInput" size="50"> --}}
+                {{input value=age placeholder="AGE PLS"}}
+              </label>
+            </div>
             <div class="btn">
-              <button {{action "save"}} type="submit" class="button button-rounded-hover">Submit</button>
+              <button {{action "save"}} type="submit" class="button button-rounded-hover" onclick="location.href = '/';">Submit</button>
             </div>
           </form>
         </div>
