@@ -14,10 +14,13 @@ class UsersController < ApplicationController ##change UsersController to UserCo
     redirect_to "http://localhost:4100/"
   end
 
+
   private
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :username)
   end
+
+
 
 end
