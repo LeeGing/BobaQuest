@@ -13,6 +13,7 @@ Router.map(function() {
   });
 
   this.route('stores', { path: '/stores/:id'});
+  this.route('register');
 });
 
 export default Router;
