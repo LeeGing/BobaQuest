@@ -10,12 +10,12 @@ THIS IS USERS.HBS
   Name: {{user.name}} <br />
   Age: {{user.age}} <br />
   Email: {{user.email}}
-
-
+  Point: {{points}}
 </div>
 
 {{outlet}}
 
+{{!-- <pre>{{points}}</pre> --}}
 
 <form>
   {{input type='text' value=userEmail placeholder='email'}}
