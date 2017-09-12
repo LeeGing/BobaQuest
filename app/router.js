@@ -12,7 +12,7 @@ Router.map(function() {
   this.route('register', { path: '/register'})
 
   this.route('users', { path: '/users/:id'}, function() {
-     this.route('stores', { path: '/stores'});
+     // this.route('stores', { path: '/stores'});
     // this.route('transactions', {path: '/:id/transactions'});
   });
 

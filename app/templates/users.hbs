@@ -16,15 +16,6 @@ THIS IS USERS.HBS
 
 {{outlet}}
 
-
-<div>
-{{#each stores as |store|}}
-  Name: {{store.name}} <br />
-  Address: {{store.address}} <br />
-  Phone Number: {{store.phonenumber}}
-{{/each}}
-</div>
-
 <form>
   {{input type='text' value=userEmail placeholder='email'}}
   <button type='submit'>Sign up</button>

@@ -22,7 +22,7 @@ export default Ember.Route.extend({
 
 
     controller.set('user', models.users)
-    controller.set('stores', models.stores)
+
 
   }
 
