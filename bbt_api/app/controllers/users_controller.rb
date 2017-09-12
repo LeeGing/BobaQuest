@@ -10,14 +10,14 @@ class UsersController < ApplicationController ##change UsersController to UserCo
   def create
 
     @user = User.new(user_params)
-    @user.save;
-    redirect_to "http://localhost:4100/"
+    @user.save
+
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :username)
+    params.require(:user).permit(:name, :email, :password, :username, :age)
   end
 
 end

@@ -5967,3 +5967,637 @@ Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
 Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.3ms)
 
 
+Started POST "/users" for 10.0.2.2 at 2017-09-12 02:58:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"123@123.com", "password"=>"[FILTERED]", "username"=>"USERIO", "name"=>"NAMEO"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "NAMEO"], ["password_digest", "$2a$10$v5n1aI8heY3G7e2h7bOev.VmF7pX1bN31QSlsY/m7HjkSXsDjDzNC"], ["email", "123@123.com"], ["username", "USERIO"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:4100/
+Completed 302 Found in 101ms (ActiveRecord: 4.4ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-09-12 02:58:58 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"123@123.com", "password"=>"[FILTERED]", "username"=>"USERIO", "name"=>"NAMEO"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "NAMEO"], ["password_digest", "$2a$10$z7MVk63Sw4y9eliFczTM.ejEyzvWHaWfew858HAsIlsc/7zS7ZD2G"], ["email", "123@123.com"], ["username", "USERIO"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:4100/
+Completed 302 Found in 75ms (ActiveRecord: 2.7ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-09-12 02:59:22 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"123@123.com", "password"=>"[FILTERED]", "username"=>"USERIO", "name"=>"NAMEO"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "NAMEO"], ["password_digest", "$2a$10$b.1FLeEmQWXsxveVXcTWn.jH8IwJd98ts5nQW.3eBNe4IPmVr/Omu"], ["email", "123@123.com"], ["username", "USERIO"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:4100/
+Completed 302 Found in 72ms (ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-09-12 02:59:23 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"123@123.com", "password"=>"[FILTERED]", "username"=>"USERIO", "name"=>"NAMEO"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "NAMEO"], ["password_digest", "$2a$10$hompp/.jKhvJzcxYMI6qMOrRDJimHs9.ixnW8lPK1qFK.UtOSkfoG"], ["email", "123@123.com"], ["username", "USERIO"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:4100/
+Completed 302 Found in 66ms (ActiveRecord: 1.2ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-09-12 03:01:03 +0000
+Started POST "/users" for 10.0.2.2 at 2017-09-12 03:01:13 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"123@123.com", "password"=>"[FILTERED]", "username"=>"123", "name"=>"123"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "123"], ["password_digest", "$2a$10$6CZJq5P6zWHxkB2maCGIZe6MRlpuXiIED2V/q0GBbnF7dF758yGHa"], ["email", "123@123.com"], ["username", "123"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 112ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-09-12 03:01:13 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"123@123.com", "password"=>"[FILTERED]", "username"=>"123", "name"=>"123"}}
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"internal"=>true}
+  [1m[35m (21.3ms)[0m  [1m[35mBEGIN[0m
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/gems/railties-5.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/gems/railties-5.0.5/lib/rails/templates/rails/welcome/index.html.erb (7.1ms)
+  [1m[35mSQL (7.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "123"], ["password_digest", "$2a$10$sKraVqGvUaD8bTcl5qJycebTXjr20e6gk9/7qjfolz7VZyypXdNqG"], ["email", "123@123.com"], ["username", "123"]]
+Completed 200 OK in 32ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (10.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 141ms (ActiveRecord: 39.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-09-12 03:01:14 +0000
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"internal"=>true}
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/gems/railties-5.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/gems/railties-5.0.5/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-09-12 03:01:34 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"123@123.com", "password"=>"[FILTERED]", "username"=>"123", "name"=>"123"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "123"], ["password_digest", "$2a$10$hPKxCV87ZImwL4DkIfY52OAEoTOkASLKtdvMWorwqZKrjpuEVBeZ6"], ["email", "123@123.com"], ["username", "123"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 73ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-09-12 03:01:34 +0000
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"internal"=>true}
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/gems/railties-5.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/gems/railties-5.0.5/lib/rails/templates/rails/welcome/index.html.erb (2.5ms)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-09-12 03:01:35 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"123@123.com", "password"=>"[FILTERED]", "username"=>"123", "name"=>"123"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "123"], ["password_digest", "$2a$10$bFzjZ2HcNMdirP1Tsfll5.df9nABBdJ1hN0qTIGjNiztgOxC01sWu"], ["email", "123@123.com"], ["username", "123"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 69ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-09-12 03:01:35 +0000
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"internal"=>true}
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/gems/railties-5.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/gems/railties-5.0.5/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-09-12 03:01:38 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"123@123.com", "password"=>"[FILTERED]", "username"=>"123", "name"=>"123"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "123"], ["password_digest", "$2a$10$AEMMwRzFAjBhLgnK7rPjS.5Cru7BEh5OzQKfKlaGIGntGpqaW50/a"], ["email", "123@123.com"], ["username", "123"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 74ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-09-12 03:01:38 +0000
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"internal"=>true}
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/gems/railties-5.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/gems/railties-5.0.5/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-09-12 03:03:23 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"123", "password"=>"[FILTERED]", "username"=>"123", "name"=>"123"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "123"], ["password_digest", "$2a$10$4Hhimkllr5YDeI172NMfj.NETdlI9Mxr4divKgi6QlpKGNzWQwJfu"], ["email", "123"], ["username", "123"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 101ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-09-12 03:03:23 +0000
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"internal"=>true}
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/gems/railties-5.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/gems/railties-5.0.5/lib/rails/templates/rails/welcome/index.html.erb (2.5ms)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-09-12 03:04:40 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"sadasd", "password"=>"[FILTERED]", "username"=>"hdasksd", "name"=>"sdahkdsahd"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sdahkdsahd"], ["password_digest", "$2a$10$6WwFcdCoPYNDfU53JlLvC.PejYx6hFFS3A6m9Tjykv.I1yJCU7APW"], ["email", "sadasd"], ["username", "hdasksd"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 108ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-09-12 03:04:41 +0000
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"internal"=>true}
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/gems/railties-5.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/gems/railties-5.0.5/lib/rails/templates/rails/welcome/index.html.erb (6.7ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-09-12 03:10:05 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"1", "password"=>"[FILTERED]", "username"=>"1", "name"=>"Ricky"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ricky"], ["password_digest", "$2a$10$8h04Ibrh/eCbV/SHEaOi/eHMMbrcPckPdriolnLw2vDOOtN/zW0Lm"], ["email", "1"], ["username", "1"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 178ms (ActiveRecord: 10.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-09-12 03:10:26 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"a", "password"=>"[FILTERED]", "username"=>"a", "name"=>"a"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "a"], ["password_digest", "$2a$10$XNpWJogVMsHulTAt92dt0.YXhNJLj4MfJYzmDgbFxlWea4tZ3kAQ6"], ["email", "a"], ["username", "a"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 159ms (ActiveRecord: 2.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-09-12 03:11:00 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"12131", "password"=>"[FILTERED]", "username"=>"121312", "name"=>"qweqweqwe"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "qweqweqwe"], ["password_digest", "$2a$10$BJEgn1.YdjSM9GbPBa1tBeuClfRURRpblndoq.IM72XjZQh330KZa"], ["email", "12131"], ["username", "121312"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 73ms (ActiveRecord: 1.2ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-09-12 03:11:01 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"12131", "password"=>"[FILTERED]", "username"=>"121312", "name"=>"qweqweqwe"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "qweqweqwe"], ["password_digest", "$2a$10$131qXwn.rhlkobXppQ8s/.Mkz5Z4EdUMIqpFiU.kA5dFr4q9jM5Zq"], ["email", "12131"], ["username", "121312"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 69ms (ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-09-12 03:11:50 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"adsfdaf", "password"=>"[FILTERED]", "username"=>"dfad", "name"=>"dfadfadsf"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "dfadfadsf"], ["password_digest", "$2a$10$CAiQsOFYlOu/8nUkmL6nqOW07f8tpzEMypVgO0wQ8JIhM5VdMq/7u"], ["email", "adsfdaf"], ["username", "dfad"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 148ms (ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-09-12 03:12:16 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"123", "password"=>"[FILTERED]", "username"=>"123", "name"=>"21312"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "21312"], ["password_digest", "$2a$10$/x6VykKo2KeRUaEllTHepucB6Dj9zu08D1df1p9edWr1RK7cHU.uS"], ["email", "123"], ["username", "123"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 126ms (ActiveRecord: 2.4ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-09-12 03:12:31 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"fdadfas", "password"=>"[FILTERED]", "username"=>"fdasfdas", "name"=>"dsafads"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "dsafads"], ["password_digest", "$2a$10$flkurMN0ncCXnUhw9HQ8Yus2mP7.tgcVqAAZ4DX1xpNdx77K2NE6u"], ["email", "fdadfas"], ["username", "fdasfdas"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 159ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/stores/3" for 10.0.2.2 at 2017-09-12 13:11:23 +0000
+Started GET "/users/3" for 10.0.2.2 at 2017-09-12 13:11:23 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoresController#show as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  Parameters: {"id"=>"3"}
+  [1m[36mStore Load (1.8ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 404 Not Found in 60ms (ActiveRecord: 14.0ms)
+
+
+Completed 200 OK in 57ms (Views: 0.3ms | ActiveRecord: 17.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=3):
+  
+app/controllers/stores_controller.rb:3:in `show'
+Started GET "/users/1" for 10.0.2.2 at 2017-09-12 13:11:25 +0000
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-12 13:11:25 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (2.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-12 13:11:27 +0000
+Started GET "/users/2" for 10.0.2.2 at 2017-09-12 13:11:27 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"2"}
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mStore Load (0.7ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stores/3" for 10.0.2.2 at 2017-09-12 13:11:28 +0000
+Started GET "/users/3" for 10.0.2.2 at 2017-09-12 13:11:28 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"3"}
+Processing by UsersController#show as */*
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Parameters: {"id"=>"3"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=3):
+  
+app/controllers/stores_controller.rb:3:in `show'
+Started GET "/stores/4" for 10.0.2.2 at 2017-09-12 13:11:30 +0000
+Started GET "/users/4" for 10.0.2.2 at 2017-09-12 13:11:30 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"4"}
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mStore Load (1.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=4):
+  
+app/controllers/stores_controller.rb:3:in `show'
+Started GET "/users/1" for 10.0.2.2 at 2017-09-12 13:12:37 +0000
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-12 13:12:37 +0000
+Processing by UsersController#show as */*
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stores/3" for 10.0.2.2 at 2017-09-12 13:12:46 +0000
+Started GET "/users/3" for 10.0.2.2 at 2017-09-12 13:12:46 +0000
+Processing by StoresController#show as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  Parameters: {"id"=>"3"}
+  [1m[36mStore Load (1.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 1.1ms)
+
+
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=3):
+  
+app/controllers/stores_controller.rb:3:in `show'
+Started GET "/users/2" for 10.0.2.2 at 2017-09-12 13:13:58 +0000
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-12 13:13:58 +0000
+Processing by UsersController#show as */*
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"2"}
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-12 13:13:59 +0000
+Started GET "/users/1" for 10.0.2.2 at 2017-09-12 13:13:59 +0000
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+Processing by UsersController#show as */*
+  [1m[36mStore Load (2.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 2.4ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/14" for 10.0.2.2 at 2017-09-12 13:14:10 +0000
+Started GET "/stores/14" for 10.0.2.2 at 2017-09-12 13:14:10 +0000
+Processing by UsersController#show as */*
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Parameters: {"id"=>"14"}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mStore Load (1.5ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 1.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Store with 'id'=14):
+  
+app/controllers/stores_controller.rb:3:in `show'
+Started GET "/users/2" for 10.0.2.2 at 2017-09-12 13:14:34 +0000
+Started GET "/stores/2" for 10.0.2.2 at 2017-09-12 13:14:34 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mStore Load (1.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stores/1" for 10.0.2.2 at 2017-09-12 13:14:36 +0000
+Started GET "/users/1" for 10.0.2.2 at 2017-09-12 13:14:36 +0000
+Processing by StoresController#show as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2017-09-12 13:14:40 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2017-09-12 13:14:43 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/4" for 10.0.2.2 at 2017-09-12 13:14:45 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/7" for 10.0.2.2 at 2017-09-12 13:14:47 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/20" for 10.0.2.2 at 2017-09-12 13:17:30 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/last" for 10.0.2.2 at 2017-09-12 13:17:32 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"last"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=last):
+  
+app/controllers/users_controller.rb:6:in `show'
+Started GET "/users/25" for 10.0.2.2 at 2017-09-12 13:17:34 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=25):
+  
+app/controllers/users_controller.rb:6:in `show'
+Started GET "/users/22" for 10.0.2.2 at 2017-09-12 13:17:35 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/23" for 10.0.2.2 at 2017-09-12 13:17:37 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/24" for 10.0.2.2 at 2017-09-12 13:17:39 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/25" for 10.0.2.2 at 2017-09-12 13:17:41 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=25):
+  
+app/controllers/users_controller.rb:6:in `show'
+Started POST "/users" for 10.0.2.2 at 2017-09-12 13:17:55 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"Test@Test.com", "password"=>"[FILTERED]", "username"=>"TestID", "name"=>"TestName", "age"=>"25"}}
+Unpermitted parameter: age
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "TestName"], ["password_digest", "$2a$10$EaBC4sPFSFmIYR75Pv/RiORdaY203AkLSmcFd8xynm8faT4Sjft5y"], ["email", "Test@Test.com"], ["username", "TestID"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 72ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/users/25" for 10.0.2.2 at 2017-09-12 13:18:05 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-09-12 13:18:53 +0000
+  
+SyntaxError (/vagrant/SEWR_Project/bbt_api/app/controllers/users_controller.rb:20: syntax error, unexpected ':', expecting ')'
+... :email, :password, :username :age)
+...                               ^):
+  
+app/controllers/users_controller.rb:20: syntax error, unexpected ':', expecting ')'
+Started GET "/users/26" for 10.0.2.2 at 2017-09-12 13:18:56 +0000
+  
+SyntaxError (/vagrant/SEWR_Project/bbt_api/app/controllers/users_controller.rb:20: syntax error, unexpected ':', expecting ')'
+... :email, :password, :username :age)
+...                               ^):
+  
+app/controllers/users_controller.rb:20: syntax error, unexpected ':', expecting ')'
+Started GET "/users/25" for 10.0.2.2 at 2017-09-12 13:19:00 +0000
+  
+SyntaxError (/vagrant/SEWR_Project/bbt_api/app/controllers/users_controller.rb:20: syntax error, unexpected ':', expecting ')'
+... :email, :password, :username :age)
+...                               ^):
+  
+app/controllers/users_controller.rb:20: syntax error, unexpected ':', expecting ')'
+Started GET "/users/24" for 10.0.2.2 at 2017-09-12 13:19:03 +0000
+  
+SyntaxError (/vagrant/SEWR_Project/bbt_api/app/controllers/users_controller.rb:20: syntax error, unexpected ':', expecting ')'
+... :email, :password, :username :age)
+...                               ^):
+  
+app/controllers/users_controller.rb:20: syntax error, unexpected ':', expecting ')'
+Started GET "/users/1" for 10.0.2.2 at 2017-09-12 13:19:05 +0000
+  
+SyntaxError (/vagrant/SEWR_Project/bbt_api/app/controllers/users_controller.rb:20: syntax error, unexpected ':', expecting ')'
+... :email, :password, :username :age)
+...                               ^):
+  
+app/controllers/users_controller.rb:20: syntax error, unexpected ':', expecting ')'
+Started POST "/users" for 10.0.2.2 at 2017-09-12 13:19:23 +0000
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"1@1.com", "password"=>"[FILTERED]", "username"=>"1", "name"=>"Test3", "age"=>"1"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username", "age") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Test3"], ["password_digest", "$2a$10$fFINcE4CRSYS292goqaE6.ngjwSm0yjl5B/r4ejDz5fwdPkf.la1e"], ["email", "1@1.com"], ["username", "1"], ["age", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 114ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2017-09-12 13:19:27 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/25" for 10.0.2.2 at 2017-09-12 13:19:29 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/226" for 10.0.2.2 at 2017-09-12 13:19:31 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"226"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 226], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=226):
+  
+app/controllers/users_controller.rb:6:in `show'
+Started GET "/users/26" for 10.0.2.2 at 2017-09-12 13:19:33 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"26"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2017-09-12 13:26:47 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2017-09-12 13:41:15 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-09-12 15:14:03 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"1@1.com", "password"=>"[FILTERED]", "username"=>"Olaf", "name"=>"Olaf", "age"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "username", "age") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Olaf"], ["password_digest", "$2a$10$ZecI3nw78wlwXXeNhbK4nOPtGvpyID/WGf.QisFDVECp09iMOl11u"], ["email", "1@1.com"], ["username", "Olaf"], ["age", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 95ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2017-09-12 15:39:18 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
