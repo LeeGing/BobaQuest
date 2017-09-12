@@ -14,6 +14,8 @@ Router.map(function() {
 
   this.route('stores', { path: '/stores/:id'});
   this.route('register');
+  this.route('login')
+  this.route('protected');
 });
 
 export default Router;

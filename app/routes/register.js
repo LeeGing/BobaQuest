@@ -9,19 +9,3 @@ export default Ember.Route.extend({
 
 
 
-
-// export default Ember.Route.extend({
-
-//     model: function(params) {
-
-//         return Ember.$.ajax({
-
-//       url: 'http://localhost:3000/users/',
-//        type: "POST",
-//        data: JSON.stringify({
-//         email:  ,
-//         password:
-//       })
-//      })
-//     }
-// });

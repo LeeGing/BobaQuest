@@ -10,10 +10,10 @@ export default Ember.Route.extend({
       url: 'http://localhost:3000/users/' + params.id
       }),
 
-      stores: Ember.$.ajax({
-        type: 'GET',
-        url: 'http://localhost:3000/stores/' + params.id
-      })
+      // stores: Ember.$.ajax({
+      //   type: 'GET',
+      //   url: 'http://localhost:3000/stores/' + params.id
+      // })
     })
   },
 
@@ -26,5 +26,3 @@ export default Ember.Route.extend({
   }
 
 });
-
-//Can't load users/2 ... attempts to load stores/2 as well. Why?
