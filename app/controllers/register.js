@@ -15,6 +15,7 @@ export default Ember.Controller.extend({
             "password": this.get('pwd'),
             "username": this.get('username'),
             "name": this.get('name'),
+            "age": this.get('age')
 
             }
         }

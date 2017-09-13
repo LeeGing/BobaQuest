@@ -23,6 +23,16 @@
     <div class="top-bar topbar-sticky-shrink">
       <div class="top-bar-title">
 
+<<<<<<< HEAD
+<div>
+
+  Name: {{user.name}} <br />
+  Age: {{user.age}} <br />
+  Email: {{user.email}}
+  Point: {{points}}
+=======
+
+
         <nav class="top-bar topbar-responsive">
           <div class="top-bar-title">
             <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
@@ -45,6 +55,7 @@
       </div>
     </div>
   </div>
+>>>>>>> 98fc129069dcc48febd80802417005e7a129c991
 </div>
 {{#g-map lat=49.2120 lng=-123.0244 zoom=11 as |context|}}
   {{#g-map-marker context lat=49.28737839999999 lng=-123.1288151 as |markerContext|}}
@@ -103,12 +114,16 @@
     {{/g-map-infowindow}}
   {{/g-map-marker}}
 
+<<<<<<< HEAD
+{{!-- <pre>{{points}}</pre> --}}
+=======
 {{#g-map-marker context lat=49.18917709999999 lng= -122.8464159 as |markerContext|}}
     {{#g-map-infowindow markerContext openOn="mouseover" closeOn="mouseout"}}
       <h5><b>Chatime Surrey</b></h5>
       <h6>10255 King George Blvd, Surrey, BC V3T 2W6, Canada</h6>
     {{/g-map-infowindow}}
   {{/g-map-marker}}
+>>>>>>> 98fc129069dcc48febd80802417005e7a129c991
 
   {{#g-map-marker context lat=49.1872561 lng= -123.1301656 as |markerContext|}}
     {{#g-map-infowindow markerContext openOn="mouseover" closeOn="mouseout"}}

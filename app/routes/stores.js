@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import config from '../config/environment';
 
 export default Ember.Route.extend({
 
@@ -6,13 +7,13 @@ export default Ember.Route.extend({
 
     return new Ember.RSVP.hash({
       users: Ember.$.ajax({
-      type: 'GET',
-      url: 'http://localhost:3000/users/' + params.id
+        type: 'GET',
+        url: `${config.apiHost}/users/${params.id}`
       }),
 
       stores: Ember.$.ajax({
         type: 'GET',
-        url: 'http://localhost:3000/stores/' + params.id
+        url: '${config.apiHost}/stores/' + params.id
       })
     })
   },
