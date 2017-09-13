@@ -10792,3 +10792,404 @@ puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
 puma (3.10.0) lib/puma/server.rb:437:in `process_client'
 puma (3.10.0) lib/puma/server.rb:301:in `block in run'
 puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/undefined/points" for 10.0.2.2 at 2017-09-13 19:28:01 +0000
+Started GET "/users/undefined" for 10.0.2.2 at 2017-09-13 19:28:01 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (3.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"undefined"}
+Processing by PointsController#index as */*
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 85ms (ActiveRecord: 4.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/users_controller.rb:6:in `show'
+  [1m[36mUser Load (53.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 136ms (ActiveRecord: 58.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/points_controller.rb:3:in `index'
+Started GET "/users/undefined" for 10.0.2.2 at 2017-09-13 19:28:31 +0000
+Processing by UsersController#show as */*
+Started GET "/users/undefined/points" for 10.0.2.2 at 2017-09-13 19:28:32 +0000
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Processing by PointsController#index as */*
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  Parameters: {"user_id"=>"undefined"}
+  
+app/controllers/users_controller.rb:6:in `show'
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 31ms (ActiveRecord: 10.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/points_controller.rb:3:in `index'
+Started GET "/users/1/points" for 10.0.2.2 at 2017-09-13 19:29:06 +0000
+Started GET "/users/1" for 10.0.2.2 at 2017-09-13 19:29:06 +0000
+Processing by PointsController#index as */*
+Processing by UsersController#show as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM("transactions"."transpoint") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 95ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/token" for 10.0.2.2 at 2017-09-13 19:29:13 +0000
+Processing by LoginController#token as */*
+  Parameters: {"grant_type"=>"password", "username"=>"Swing@Swing.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Swing@Swing.com"], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/undefined/points" for 10.0.2.2 at 2017-09-13 19:29:13 +0000
+Started GET "/users/undefined" for 10.0.2.2 at 2017-09-13 19:29:13 +0000
+Processing by PointsController#index as */*
+Processing by UsersController#show as */*
+  Parameters: {"user_id"=>"undefined"}
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  
+Completed 404 Not Found in 4ms (ActiveRecord: 1.2ms)
+
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+app/controllers/points_controller.rb:3:in `index'
+  
+app/controllers/users_controller.rb:6:in `show'
+Started POST "/token" for 10.0.2.2 at 2017-09-13 19:29:19 +0000
+Processing by LoginController#token as */*
+  Parameters: {"grant_type"=>"password", "username"=>"Swing@Swing.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Swing@Swing.com"], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/revoke" for 10.0.2.2 at 2017-09-13 19:29:19 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/revoke"):
+  
+actionpack (5.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.0.5) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/undefined" for 10.0.2.2 at 2017-09-13 19:29:20 +0000
+Started GET "/users/undefined/points" for 10.0.2.2 at 2017-09-13 19:29:20 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"undefined"}
+Processing by PointsController#index as */*
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  Parameters: {"user_id"=>"undefined"}
+Completed 404 Not Found in 6ms (ActiveRecord: 2.9ms)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  
+Completed 404 Not Found in 4ms (ActiveRecord: 0.6ms)
+
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+app/controllers/users_controller.rb:6:in `show'
+  
+app/controllers/points_controller.rb:3:in `index'
+Started GET "/users/undefined" for 10.0.2.2 at 2017-09-13 19:29:39 +0000
+Started GET "/users/undefined/points" for 10.0.2.2 at 2017-09-13 19:29:39 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"undefined"}
+Processing by PointsController#index as */*
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  Parameters: {"user_id"=>"undefined"}
+Completed 404 Not Found in 5ms (ActiveRecord: 2.6ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+app/controllers/users_controller.rb:6:in `show'
+  
+app/controllers/points_controller.rb:3:in `index'
+Started GET "/users/undefined" for 10.0.2.2 at 2017-09-13 19:31:09 +0000
+Started GET "/users/undefined/points" for 10.0.2.2 at 2017-09-13 19:31:09 +0000
+Processing by UsersController#show as */*
+Processing by PointsController#index as */*
+  Parameters: {"id"=>"undefined"}
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Completed 404 Not Found in 5ms (ActiveRecord: 1.5ms)
+
+
+  
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+  
+app/controllers/users_controller.rb:6:in `show'
+app/controllers/points_controller.rb:3:in `index'
+Started GET "/users/undefined/points" for 10.0.2.2 at 2017-09-13 19:31:27 +0000
+Started GET "/users/undefined" for 10.0.2.2 at 2017-09-13 19:31:27 +0000
+Processing by PointsController#index as */*
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"undefined"}
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+  
+app/controllers/users_controller.rb:6:in `show'
+app/controllers/points_controller.rb:3:in `index'
+Started GET "/users/1/points" for 10.0.2.2 at 2017-09-13 19:41:02 +0000
+Started GET "/users/1" for 10.0.2.2 at 2017-09-13 19:41:02 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (4.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PointsController#index as */*
+  Parameters: {"user_id"=>"1"}
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (32.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 99ms (Views: 0.5ms | ActiveRecord: 37.3ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("transactions"."transpoint") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 178ms (Views: 0.2ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2017-09-13 19:41:57 +0000
+Started GET "/users/1/points" for 10.0.2.2 at 2017-09-13 19:41:57 +0000
+Processing by UsersController#show as */*
+Processing by PointsController#index as */*
+  Parameters: {"id"=>"1"}
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT SUM("transactions"."transpoint") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/1/points" for 10.0.2.2 at 2017-09-13 19:42:07 +0000
+Started GET "/users/1" for 10.0.2.2 at 2017-09-13 19:42:07 +0000
+Processing by PointsController#index as */*
+  Parameters: {"user_id"=>"1"}
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Parameters: {"id"=>"1"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT SUM("transactions"."transpoint") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+
+
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2017-09-13 19:42:10 +0000
+Started GET "/users/1/points" for 10.0.2.2 at 2017-09-13 19:42:10 +0000
+Processing by UsersController#show as */*
+Processing by PointsController#index as */*
+  Parameters: {"id"=>"1"}
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT SUM("transactions"."transpoint") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/users/1/points" for 10.0.2.2 at 2017-09-13 19:42:20 +0000
+Started GET "/users/1" for 10.0.2.2 at 2017-09-13 19:42:20 +0000
+Processing by PointsController#index as */*
+Processing by UsersController#show as */*
+  Parameters: {"user_id"=>"1"}
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT SUM("transactions"."transpoint") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/undefined/points" for 10.0.2.2 at 2017-09-13 19:42:24 +0000
+Started GET "/users/undefined" for 10.0.2.2 at 2017-09-13 19:42:24 +0000
+Processing by PointsController#index as */*
+  Parameters: {"user_id"=>"undefined"}
+Processing by UsersController#show as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  Parameters: {"id"=>"undefined"}
+Completed 404 Not Found in 4ms (ActiveRecord: 2.1ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+app/controllers/points_controller.rb:3:in `index'
+  
+app/controllers/users_controller.rb:6:in `show'
+Started GET "/users/1" for 10.0.2.2 at 2017-09-13 19:42:37 +0000
+Processing by UsersController#show as */*
+Started GET "/users/1/points" for 10.0.2.2 at 2017-09-13 19:42:37 +0000
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Processing by PointsController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT SUM("transactions"."transpoint") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2017-09-13 19:42:41 +0000
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/undefined" for 10.0.2.2 at 2017-09-13 19:43:27 +0000
+Started GET "/users/undefined/points" for 10.0.2.2 at 2017-09-13 19:43:27 +0000
+Processing by UsersController#show as */*
+Processing by PointsController#index as */*
+  Parameters: {"id"=>"undefined"}
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.8ms)
+
+
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  
+Completed 404 Not Found in 6ms (ActiveRecord: 3.0ms)
+
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+app/controllers/users_controller.rb:6:in `show'
+  
+app/controllers/points_controller.rb:3:in `index'
+Started GET "/users/1" for 10.0.2.2 at 2017-09-13 19:43:57 +0000
+Started GET "/users/1/points" for 10.0.2.2 at 2017-09-13 19:43:57 +0000
+Processing by PointsController#index as */*
+  Parameters: {"user_id"=>"1"}
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT SUM("transactions"."transpoint") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/undefined" for 10.0.2.2 at 2017-09-13 19:44:01 +0000
+Started GET "/users/undefined/points" for 10.0.2.2 at 2017-09-13 19:44:01 +0000
+Processing by UsersController#show as */*
+Processing by PointsController#index as */*
+  Parameters: {"id"=>"undefined"}
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 1.6ms)
+
+
+  
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/users_controller.rb:6:in `show'
+Completed 404 Not Found in 5ms (ActiveRecord: 2.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/points_controller.rb:3:in `index'
+Started GET "/users/undefined/points" for 10.0.2.2 at 2017-09-13 19:44:12 +0000
+Processing by PointsController#index as */*
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/points_controller.rb:3:in `index'

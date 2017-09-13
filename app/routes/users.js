@@ -23,6 +23,7 @@ export default Ember.Route.extend({
 
     controller.set('user', models.users)
     controller.set('points', models.points)
+
   }
 
 });
