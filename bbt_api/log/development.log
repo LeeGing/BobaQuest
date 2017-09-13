@@ -12743,3 +12743,48 @@ Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.8ms)
 Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 2.9ms)
 
 
+Started GET "/users/1/points" for 10.0.2.2 at 2017-09-13 21:47:58 +0000
+Started GET "/users/1" for 10.0.2.2 at 2017-09-13 21:47:58 +0000
+Processing by PointsController#index as */*
+  Parameters: {"user_id"=>"1"}
+Processing by UsersController#show as */*
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("transactions"."transpoint") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 2.6ms)
+
+
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 16.1ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/users/1/points" for 10.0.2.2 at 2017-09-13 21:49:12 +0000
+Started GET "/users/1" for 10.0.2.2 at 2017-09-13 21:49:12 +0000
+Processing by PointsController#index as */*
+Processing by UsersController#show as */*
+  Parameters: {"user_id"=>"1"}
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT SUM("transactions"."transpoint") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/2/points" for 10.0.2.2 at 2017-09-13 21:50:04 +0000
+Started GET "/users/2" for 10.0.2.2 at 2017-09-13 21:50:04 +0000
+Processing by PointsController#index as */*
+Processing by UsersController#show as */*
+  Parameters: {"user_id"=>"2"}
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT SUM("transactions"."transpoint") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+
+
