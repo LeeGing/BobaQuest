@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('register');
   this.route('login')
   this.route('protected');
+  this.route('welcome');
 });
 
 export default Router;
