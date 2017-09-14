@@ -11,10 +11,10 @@ export default Ember.Route.extend({
         type: 'GET',
         url: `${config.apiHost}/stores/${params.id}`
       }),
-      transactionsparam: Ember.$.ajax({
-        type: 'GET',
-        url: `${config.apiHost}/transactions/${params.id}`
-      })
+      // transactionsparam: Ember.$.ajax({
+      //   type: 'GET',
+      //   url: `${config.apiHost}/transactions/${params.id}`
+      // })
     })
   },
 
