@@ -13,7 +13,7 @@ export default Ember.Route.extend({
 
       stores: Ember.$.ajax({
         type: 'GET',
-        url: `${config.apiHost}/users/${params.id}`
+        url: `${config.apiHost}/stores/${params.id}`
       })
     })
   },

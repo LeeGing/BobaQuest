@@ -3,6 +3,7 @@
 
 module.exports = function(environment) {
   let ENV = {
+    apiHost: 'localhost:3000',
     modulePrefix: 'bbt',
     environment,
     rootURL: '/',
