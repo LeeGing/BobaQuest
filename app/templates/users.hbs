@@ -7,14 +7,20 @@ THIS IS USERS.HBS
 
 <div>
 
-  Name: {{user.name}} <br />
-  Age: {{user.age}} <br />
-  Email: {{user.email}}
+  Name: {{user.user.name}} <br />
+  Age: {{user.user.age}} <br />
+  Email: {{user.user.email}}
   Point: {{points}}
+<!--   {{#each user.achievements as |achievement|}}
+		<img src={{ achievement }}>
+	{{/each}} -->
 </div>
+
+
 
 {{outlet}}
 
-{{achievements points}}
+
+
   
 

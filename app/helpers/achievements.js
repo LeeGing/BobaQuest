@@ -6,7 +6,8 @@ export function achievements(params) {
 		return "50+ Points!"
 	}
 	else if (points > 39) {
-		return "Level 4 (40Points)"
+		return 'L1'
+
 	}
 	else if (points > 29) {
 		return "Level 3 (30Points)!"
