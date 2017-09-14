@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import config from '../config/environment';
 
 export default Ember.Route.extend({
 
@@ -11,7 +10,7 @@ export default Ember.Route.extend({
     })
   },
 
-  setupController: function(controller, models) {
+  setupController: function(controller) {
     controller.set('markers', function() {
      return [
        { name: 'Bubble world downtown', lat: 49.28737839999999, long: -123.1288151 },
