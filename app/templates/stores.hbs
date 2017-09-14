@@ -1,11 +1,26 @@
 
 <h1>THIS IS STORES.HBS</h1>
 
+<div> General Information </div>
+  Name: {{storeparam.name}} <br />
+  Address: {{storeparam.address}} <br />
+  Phone Number: {{storeparam.phone}}<br />
+  Location: {{storeparam.location}}<br />
 
-  Name: {{store.name}} <br />
-  Address: {{store.address}} <br />
-  Phone Number: {{store.phone}}
+
+<br />
+How many Drinks sold in a month: TODO SET UP ROUTES FOR TRANSACTION
 
 
+<br />
+
+How many Drinks sold in a month ( per timestamp of 1 month, count all the transaction for params_id.)
+How many users used the shop ( call Transaction. per store/params_id, count users. ( Transaction.sale_id) )
+Drinks sold for the company ( Get req to Sale. Sum all store.id. Call smallest timestamp and biggest)
+How many Drinks sold comparative to location ( Ger req to store.  )
+Market Share ( With above info, do %( helper function))
+Total Drinks sold for the company (call Transaction. per store/param_id, count transaction relevant.)
+Most pouplar drink
+
+<br />
   {{outlet}}
-

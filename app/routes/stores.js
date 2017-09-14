@@ -7,9 +7,13 @@ export default Ember.Route.extend({
 
     return new Ember.RSVP.hash({
 
-      stores: Ember.$.ajax({
+      storesparam: Ember.$.ajax({
         type: 'GET',
         url: `${config.apiHost}/stores/${params.id}`
+      }),
+      transactionsparam: Ember.$.ajax({
+        type: 'GET',
+        url: `${config.apiHost}/transactions/${params.id}`
       })
     })
   },
@@ -17,7 +21,8 @@ export default Ember.Route.extend({
 
   setupController: function(controller, models) {
 
-    controller.set('store', models.stores)
+    controller.set('storeparam', models.storesparam)
+    controller.set('transactionparam', models.transactionsparam)
   }
 
 });
