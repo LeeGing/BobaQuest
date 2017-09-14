@@ -3,10 +3,39 @@
  height: 500px;
 }
 
+.container-ad {
+  height: 400px;
+}
 
-body { padding: 2em; }
+body {
+ padding: 2em;
+ background-color: black;
+}
 
+.ad-carousel {
+  width:70%;
+  overflow: hidden;
+  float:left;
+  display:inline-block;
+  position:relative;
+  @include media-query(scontainer) {
+    width: 90vw;
+    overflow: hidden;
+  }
+}
 
+.slider-container {
+overflow: hidden;
+}
+
+.slick-slide:nth-of-child(n+1) {
+display: none;
+}
+
+.slick-initialized,
+.slick-slide:first-child {
+display: block;
+}
 /* Shared */
 .loginBtn {
   box-sizing: border-box;
