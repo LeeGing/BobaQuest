@@ -12726,3 +12726,33 @@ Processing by PointsController#index as */*
 Completed 200 OK in 31ms (Views: 0.2ms | ActiveRecord: 7.1ms)
 
 
+Started GET "/users/1" for 127.0.0.1 at 2017-09-13 18:47:51 -0700
+Started GET "/users/1/points" for 127.0.0.1 at 2017-09-13 18:47:51 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 7ms (Views: 1.1ms | ActiveRecord: 4.2ms)
+
+
+Processing by PointsController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT SUM("transactions"."transpoint") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-09-13 20:42:41 -0700
+Started GET "/users/1/points" for 127.0.0.1 at 2017-09-13 20:42:41 -0700
+Processing by PointsController#index as */*
+Processing by UsersController#show as */*
+  Parameters: {"user_id"=>"1"}
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (38.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 3.1ms | ActiveRecord: 38.1ms)
+
+
+  [1m[36mUser Load (12.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (14.9ms)[0m  [1m[34mSELECT SUM("transactions"."transpoint") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 90ms (Views: 2.3ms | ActiveRecord: 49.6ms)
+
+
