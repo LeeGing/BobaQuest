@@ -15,10 +15,20 @@ export default Ember.Controller.extend({
    return this.get('points') > 29;
 	}), //conditional statement for achievements hbs
 
+  store_details: [
+    {name: 'Bubble Tea', tagline: "bubbly"},
+    {name: 'Cha Time', tagline: "this is Cha Time's Menu"},
+    {name: 'Zeta', tagline: "all Zeta, all day"},
+  ],
+
+
+
+
   actions: {
     signup: function() {
       console.log(this.get('userEmail'));
-    }
+    },
+
   }
 
 });

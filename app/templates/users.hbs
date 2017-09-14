@@ -1,5 +1,4 @@
 
-
 <h2>Users n stores</h2>
 
 THIS IS USERS.HBS
@@ -17,9 +16,9 @@ THIS IS USERS.HBS
 <div>
 	<h4>Achievements:</h4>
 	{{#if isLvl1}} 
-	   <div>  <img src=http://www.magnateqsolutions.com/images/931level-1.png width="5%" height="5%"> First Purchase!  </div>
-	   {{else}}
-	   <h4> NONE  </h4>
+    <div>  <img src=http://www.magnateqsolutions.com/images/931level-1.png width="5%" height="5%"> First Purchase!  </div>
+  {{else}}
+    <h4> NONE  </h4>
 	{{/if}}
 
 	{{#if isLvl2}} 
@@ -36,4 +35,61 @@ THIS IS USERS.HBS
 	{{/each}}
 	{{/if}} -->
 </div>
+
+-------------------------------------------------------------------
+<div> PLACE YOUR ORDER: </div>
+<div> Choose a Store: </div>
+<br/>
+
+<select onchange={{action (mut currentStore) value='target.value' }} >
+	<option vaue='' disabled selected hidden> ----- </option>
+	{{#each store_details as |store|}}
+	  <option value={{store.name}} >{{store.name}}</option>
+	{{/each}}
+</select>
+
+<br/><br/>
+
+<div>{{currentStore}}</div>
+
+{{#if (eq currentStore 'Zeta')}}
+<div class="zetamenu">
+	<div> 1:  Original Milk Tea...$ 9 </div>
+  <div> 2:  Honey Milk Tea......$ 9 </div>
+  <div> 3:  Rails Milk Tea......$ 9 </div>
+  <div> 4:  Ember Milk Tea......$ 9 </div>
+  <div> 5:  Apple Slush.........$ 9 </div>
+  <div> 6:  Bannana Slush.......$ 9 </div>
+  <div> 7:  Cantalope Slush.....$ 9 </div>
+  <div> 8:  Durian Slush........$ 9 </div>
+  <div> 9:  Mango Slush.........$ 9 </div>
+  <div>10:  Strawberry Slush....$ 9 </div>
+  <div>11:  Poo Slush...........$ 9 </div>
+  <div>12:  Cookies and Cream...$ 12 </div>
+  <div>13:  Biscuts and Butter..$ 12 </div>
+  <div>14:  Salmon Slush........$ 12 </div>
+  <div>15:  Tuna Egg Slush......$ 12 </div>
+  </div>
+{{else if (eq currentStore 'Cha Time')}}
+<div class="chatimemenu">
+	<div> 1:  Original Milk Tea...$ 9 </div>
+  <div> 2:  Honey Milk Tea......$ 9 </div>
+  <div> 3:  Rails Milk Tea......$ 9 </div>
+  <div> 4:  Ember Milk Tea......$ 9 </div>
+  <div> 5:  Apple Slush.........$ 9 </div>
+  <div> 6:  Bannana Slush.......$ 9 </div>
+  <div> 7:  Cantalope Slush.....$ 9 </div>
+  <div> 8:  Durian Slush........$ 9 </div>
+  <div> 9:  Mango Slush.........$ 9 </div>
+  <div>10:  Strawberry Slush....$ 9 </div>
+  <div>11:  Poo Slush...........$ 9 </div>
+  <div>12:  Cookies and Cream...$ 12 </div>
+  <div>13:  Biscuts and Butter..$ 12 </div>
+  <div>14:  Salmon Slush........$ 12 </div>
+  <div>15:  Fish Roe Slush......$ 12 </div>
+  </div>
+{{/if}}
+
+
+ 
 

@@ -25,10 +25,6 @@ import Ember from 'ember';
 // 	}
 // }
 
-// export function achievements(params) {
-// 	let points = params
-// 	if (points > 10) {
-// 		return true
-// 	}
-// }
-export default Ember.Helper.helper(achievements);
+
+
+export default Ember.Helper.helper(orderStore);
