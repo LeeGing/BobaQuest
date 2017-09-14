@@ -24,6 +24,12 @@ module.exports = function(environment) {
     }
   };
 
+  ENV['FB'] = {
+    appId: '140804706527772',
+    version: 'v2.7',
+    xfbml: true
+  }
+
   ENV['g-map'] = {
     libraries: ['places', 'geometry'],
     key: 'AIzaSyDPAhtVsZuWPruwWetDGeOhPXRNyK2zRiQ',
