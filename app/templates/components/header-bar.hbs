@@ -1,16 +1,9 @@
 {{yield}}
 
-  {{#if session.isAuthenticated}}
-    <a {{action 'invalidateSession'}}><button>Logout</button></a>
-    {{#link-to 'users' 1}}User Profile{{/link-to}}
-    {{#link-to 'welcome'}}Home page{{/link-to}}
-    {{#link-to 'stores' 1}}Store Page{{/link-to}}
-    <h3> PLEASE DISPLAY CURRENT USER INFO(NAME) HERE</h3>
-  {{else}}
-    {{#link-to 'login'}}Login{{/link-to}}
-    {{#link-to 'register'}}Registration{{/link-to}}
-    {{#link-to 'welcome'}}Home page{{/link-to}}
-  {{/if}}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
 
 <button {{action 'processLogin'}} class="loginBtn loginBtn--facebook">
   Login with Facebook
@@ -18,3 +11,38 @@
 <button {{action 'processLogout'}} class="loginBtn loginBtn--facebook">
   Logout
 </button>
+<a {{action 'invalidateSession'}}><button>Logout</button></a>
+<div data-sticky-container>
+  <div data-sticky data-margin-top='0' data-top-anchor="header:bottom" data-btm-anchor="content:bottom">
+    <div class="top-bar topbar-sticky-shrink">
+      <div class="top-bar-title">
+        <nav class="top-bar topbar-responsive">
+          <div class="top-bar-title">
+            <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
+              <button class="menu-icon" type="button" data-toggle></button>
+
+            </span>
+            <a class="topbar-responsive-logo" href="#"></a>
+          </div>
+          <div id="topbar-responsive" class="topbar-responsive-links">
+            <div class="top-bar-right">
+              <ul class="menu simple vertical medium-horizontal">
+                {{#if session.isAuthenticated}}
+                  <li> <a {{action 'invalidateSession'}}><button>Logout</button></a> </li>
+                  <li> {{#link-to 'users' 1}}User Profile{{/link-to}} </li>
+                  <li> {{#link-to 'welcome'}}Home page{{/link-to}} </li>
+                  <li> {{#link-to 'stores' 1}}Store Page{{/link-to}} </li>
+                  <h3> PLEASE DISPLAY CURRENT USER INFO(NAME) HERE</h3>
+                {{else}}
+                  <li> {{#link-to 'login'}}Login{{/link-to}} </li>
+                  <li> {{#link-to 'register'}}Registration{{/link-to}} </li>
+                  <li> {{#link-to 'welcome'}}Home page{{/link-to}} </li>
+                {{/if}}
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
