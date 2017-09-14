@@ -9,6 +9,7 @@
 User.destroy_all
 
 ricky = User.create! ({
+  id: 1,
   name: "Ricky",
   age: "27",
   password: "abc123",
@@ -17,6 +18,7 @@ ricky = User.create! ({
 })
 
 edmond = User.create! ({
+  id: 2,
   name: "Edmond",
   age: "21",
   password: "qwe123",
