@@ -7,9 +7,9 @@ export default Ember.Route.extend({
 
     return new Ember.RSVP.hash({
 
-      stores: Ember.$.ajax({
+      allstores: Ember.$.ajax({
         type: 'GET',
-        url: `${config.apiHost}/stores/${params.id}`
+        url: `${config.apiHost}/allstores`
       })
     })
   },
@@ -17,7 +17,7 @@ export default Ember.Route.extend({
 
   setupController: function(controller, models) {
 
-    controller.set('store', models.stores)
+    controller.set('allstore', models.allstores)
   }
 
 });
