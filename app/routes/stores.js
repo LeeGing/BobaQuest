@@ -11,18 +11,18 @@ export default Ember.Route.extend({
         type: 'GET',
         url: `${config.apiHost}/stores/${params.id}`
       }),
-      // transactionsparam: Ember.$.ajax({
-      //   type: 'GET',
-      //   url: `${config.apiHost}/transactions/${params.id}`
-      // })
+      graphdata: Ember.$.ajax({
+        type: 'GET',
+        url: `${config.apiHost}/stores/${params.id}/graph`
+      })
     })
   },
 
 
   setupController: function(controller, models) {
 
-    controller.set('storeparam', models.storesparam)
-    controller.set('transactionparam', models.transactionsparam)
+    controller.set('store', models.storesparam)
+    controller.set('graphdata', models.graphdata)
   }
 
 });

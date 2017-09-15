@@ -20,6 +20,7 @@
     "ember-cli": "~2.15.0",
     "ember-cli-app-version": "^3.0.0",
     "ember-cli-babel": "^6.3.0",
+    "ember-cli-chart": "^3.3.2",
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.0.0",
     "ember-cli-facebook-js-sdk": "^1.0.10",
