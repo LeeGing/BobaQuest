@@ -73,9 +73,9 @@ Drink.create!([{
 
 }])
 
-Sale.destroy_all
+Inventory.destroy_all
 
-Sale.create!([{
+Inventory.create!([{
   id: 1,
   store_id: "1",
   drink_id: "1"     ##BubbleWorld sold Taro
@@ -96,6 +96,11 @@ Sale.create!([{
   id: 4,
   store_id: "2",
   drink_id: "2"   ##ChaiTime sold Lyche
+},
+{
+  id: 5,
+  store_id: "2",
+  drink_id: "3"
 }])
 
 
@@ -103,26 +108,26 @@ Transaction.destroy_all
 
 Transaction.create!([{
   user: ricky,
-  sale_id: "1",
+  inventory_id: "1",
   tot: "purchase",
   transpoint: "10" ##Ricky purchased Taro from BubbleWorld
 
 },
 {
   user: ricky,
-  sale_id: "4",
+  inventory_id: "4",
   tot: "purchase",
   transpoint: "20" ##Ricky purchased Lyche from ChaiTime
 },
 {
   user: edmond,
-  sale_id: "1",
+  inventory_id: "1",
   tot: "purchase",
   transpoint: "10" ##Edmond purchased Taro from BubbleWorld
 },
 {
   user: edmond,
-  sale_id: "2",
+  inventory_id: "2",
   tot: "purchase",
   transpoint: "10" ##Edmond purchased lyche from BubbleWorld
 }])
