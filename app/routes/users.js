@@ -14,7 +14,8 @@ export default Ember.Route.extend({
       points: Ember.$.ajax({
         type: 'GET',
         url: `${config.apiHost}/users/${params.id}/points`
-      })
+      }),
+
     })
   },
 

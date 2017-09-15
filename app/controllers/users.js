@@ -21,14 +21,43 @@ export default Ember.Controller.extend({
     {name: 'Zeta', tagline: "all Zeta, all day"},
   ],
 
-
-
+  order: [],
 
   actions: {
-    signup: function() {
+
+    signup: function() {  
       console.log(this.get('userEmail'));
     },
 
+    addToCart: function(drinks) {
+      console.log(this.get('order'));
+      console.log(JSON.stringify(this.get('order')));
+      if (this.get('order') === null){
+        this.set("order", []) && this.get("order").push(drinks)
+        console.log (this.get('order'))
+      } else {
+        this.get("order").push(drinks);
+        console.log(this.get('order'));
+      }
+    },
+
+    rmFromCart: function() {
+      this.set("order", []);
+      console.log (this.get('order'))
+    },
+
+    submitCart: function() {
+     Ember.$.ajax({
+        url: "http://localhost:3000/orders",
+        type: "POST",
+        data: {
+          order: this.get('order'),
+          user: this.get('user.name')
+        }
+      }, function success(response) {
+           console.log ( " YAYAYAYAUYAYAYYAYASDYASD")
+      });
+    }
   }
 
 });
