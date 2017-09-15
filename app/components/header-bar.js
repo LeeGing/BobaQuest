@@ -9,7 +9,10 @@ export default Ember.Component.extend({
       this.sendAction('authFB')
     },
     processLogout: function(response) {
-  // user is now logged out
+      this.sendAction('invalidateSession')
+    },
+    leaveFacebook: function() {
+      this.sendAction('exitFB')
     }
   }
 

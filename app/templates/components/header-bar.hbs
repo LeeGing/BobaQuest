@@ -16,30 +16,38 @@
             <button {{action 'processLogin'}} class="loginBtn loginBtn--facebook">
               Login with Facebook
             </button>
-            <button {{action 'processLogout'}} class="loginBtn loginBtn--facebook">
+            <button {{action 'leaveFacebook'}} class="loginBtn loginBtn--facebook">
               Logout
             </button>
             <a class="topbar-responsive-logo" href="#"></a>
           </div>
           <div id="topbar-responsive" class="topbar-responsive-links">
             <div class="top-bar-right">
-
+              <li>
+                <button {{action 'processLogout'}}>
+                  Logout
+                </button>
+              </li>
               {{#basic-dropdown as |dropdown|}}
-  {{#dropdown.trigger class="menu-icon"}}Click me{{/dropdown.trigger}}
-  {{#dropdown.content class="menu simple vertical medium-horizontal"}}
-                {{#if session.isAuthenticated}}
-                  <li><a {{action 'invalidateSession'}}><button>Logout</button></a></li>
-                  <li>{{#link-to 'users' 1}}User Profile{{/link-to}}</li>
-                  <li>{{#link-to 'welcome'}}Home page{{/link-to}}</li>
-                  <li>{{#link-to 'stores' 1}}Store Page{{/link-to}}</li>
-                  <h3> PLEASE DISPLAY CURRENT USER INFO(NAME) HERE</h3>
-                {{else}}
-                  <li>{{#link-to 'login'}}Login{{/link-to}}</li>
-                  <li>{{#link-to 'register'}}Registration{{/link-to}}</li>
-                  <li>{{#link-to 'welcome'}}Home page{{/link-to}}</li>
-                {{/if}}
-              {{/dropdown.content}}
-{{/basic-dropdown}}
+                {{#dropdown.trigger class="menu-icon"}}Click me{{/dropdown.trigger}}
+                {{#dropdown.content class="menu simple vertical medium-horizontal"}}
+                  {{#if session.isAuthenticated}}
+                    <li>
+                      <button {{action 'processLogout'}}>
+                        Logout
+                      </button>
+                    </li>
+                    <li>{{#link-to 'users' 1}}User Profile{{/link-to}}</li>
+                    <li>{{#link-to 'welcome'}}Home page{{/link-to}}</li>
+                    <li>{{#link-to 'stores' 1}}Store Page{{/link-to}}</li>
+                    <h3> PLEASE DISPLAY CURRENT USER INFO(NAME) HERE</h3>
+                  {{else}}
+                    <li>{{#link-to 'login'}}Login{{/link-to}}</li>
+                    <li>{{#link-to 'register'}}Registration{{/link-to}}</li>
+                    <li>{{#link-to 'welcome'}}Home page{{/link-to}}</li>
+                  {{/if}}
+                {{/dropdown.content}}
+              {{/basic-dropdown}}
 
             </div>
           </div>
