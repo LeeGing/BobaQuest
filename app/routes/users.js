@@ -15,7 +15,10 @@ export default Ember.Route.extend({
         type: 'GET',
         url: `${config.apiHost}/users/${params.id}/points`
       }),
-
+      // order: Ember.$.ajax({
+      //   type: 'POST',
+      //   url: "http://localhost:3000/orders"
+      // })
     })
   },
 
@@ -24,6 +27,7 @@ export default Ember.Route.extend({
 
     controller.set('user', models.users)
     controller.set('points', models.points)
+    // controller.set('order', models.order)
 
   }
 

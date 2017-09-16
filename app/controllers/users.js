@@ -47,17 +47,25 @@ export default Ember.Controller.extend({
     },
 
     submitCart: function() {
-     Ember.$.ajax({
+    this.get('order').stringify;
+    console.log(this.get('order'));
+    Ember.$.ajax({
         url: "http://localhost:3000/orders",
         type: "POST",
         data: {
           order: this.get('order'),
-          user: this.get('user.name')
+          user: this.get('user.id') 
+          // unncessary sever should know
         }
       }, function success(response) {
-           console.log ( " YAYAYAYAUYAYAYYAYASDYASD")
+           console.log ( " submitCart was successful ")
+           // trigger next step.
+           // show order created
+           // navigate to wherever you want to go. route. order confirmati0on route.
+              // ^ another ajax request.
+               // each time we look at order confirmation page we look at the id of the order.
+               // display on page. 
       });
     }
   }
-
 });
