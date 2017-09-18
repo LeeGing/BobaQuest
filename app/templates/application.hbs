@@ -1,19 +1,10 @@
 <h1>This is universal too all pages Good example is navbar</h1>
 
 <div class="menu">
-  {{#if session.isAuthenticated}}
-    <a {{action 'invalidateSession'}}><button>Logout</button></a>
-    {{#link-to 'users' 1}}User Profile{{/link-to}}
-    {{#link-to 'welcome'}}Home page{{/link-to}}
-    {{#link-to 'stores' 1}}Store Page{{/link-to}}
-    <h3> PLEASE DISPLAY CURRENT USER INFO(NAME) HERE</h3>
-  {{else}}
-    {{#link-to 'login'}}Login{{/link-to}}
-    {{#link-to 'register'}}Registration{{/link-to}}
-    {{#link-to 'welcome'}}Home page{{/link-to}}
-  {{/if}}
+{{header-bar authFB='authFB'}}
 </div>
 <div class="main">
   {{outlet}}
 </div>
+
 

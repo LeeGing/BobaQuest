@@ -3,6 +3,7 @@
 
 module.exports = function(environment) {
   let ENV = {
+    apiHost: 'localhost:3000',
     modulePrefix: 'bbt',
     environment,
     rootURL: '/',
@@ -23,6 +24,12 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+
+  ENV['FB'] = {
+    appId: '140804706527772',
+    version: 'v2.7',
+    xfbml: true
+  }
 
   ENV['g-map'] = {
     libraries: ['places', 'geometry'],

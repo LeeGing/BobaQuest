@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20170916205400) do
     t.integer "drinkpoints"
   end
 
+<<<<<<< HEAD
   create_table "orders", force: :cascade do |t|
     t.string   "order",      default: [],              array: true
     t.integer  "user_id"
@@ -29,10 +30,13 @@ ActiveRecord::Schema.define(version: 20170916205400) do
   end
 
   create_table "sales", force: :cascade do |t|
+=======
+  create_table "inventories", force: :cascade do |t|
+>>>>>>> master
     t.integer "store_id"
     t.integer "drink_id"
-    t.index ["drink_id"], name: "index_sales_on_drink_id", using: :btree
-    t.index ["store_id"], name: "index_sales_on_store_id", using: :btree
+    t.index ["drink_id"], name: "index_inventories_on_drink_id", using: :btree
+    t.index ["store_id"], name: "index_inventories_on_store_id", using: :btree
   end
 
   create_table "stores", force: :cascade do |t|
@@ -44,10 +48,10 @@ ActiveRecord::Schema.define(version: 20170916205400) do
 
   create_table "transactions", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "sale_id"
+    t.integer "inventory_id"
     t.string  "tot"
     t.integer "transpoint"
-    t.index ["sale_id"], name: "index_transactions_on_sale_id", using: :btree
+    t.index ["inventory_id"], name: "index_transactions_on_inventory_id", using: :btree
     t.index ["user_id"], name: "index_transactions_on_user_id", using: :btree
   end
 
@@ -59,8 +63,8 @@ ActiveRecord::Schema.define(version: 20170916205400) do
     t.integer "age"
   end
 
-  add_foreign_key "sales", "drinks"
-  add_foreign_key "sales", "stores"
-  add_foreign_key "transactions", "sales"
+  add_foreign_key "inventories", "drinks"
+  add_foreign_key "inventories", "stores"
+  add_foreign_key "transactions", "inventories"
   add_foreign_key "transactions", "users"
 end

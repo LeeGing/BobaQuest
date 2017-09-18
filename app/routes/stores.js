@@ -6,14 +6,14 @@ export default Ember.Route.extend({
    model: function(params) {
 
     return new Ember.RSVP.hash({
-      users: Ember.$.ajax({
-        type: 'GET',
-        url: `${config.apiHost}/users/${params.id}`
-      }),
 
-      stores: Ember.$.ajax({
+      storesparam: Ember.$.ajax({
         type: 'GET',
-        url: `${config.apiHost}/users/${params.id}`
+        url: `${config.apiHost}/stores/${params.id}`
+      }),
+      graphdata: Ember.$.ajax({
+        type: 'GET',
+        url: `${config.apiHost}/stores/${params.id}/graph`
       }),
 
       order: Ember.$.ajax({
@@ -26,10 +26,9 @@ export default Ember.Route.extend({
 
   setupController: function(controller, models) {
 
-    console.log('orders', models.order)
-    controller.set('user', models.users)
-    controller.set('store', models.stores)
     controller.set('order', models.order)
+    controller.set('store', models.storesparam)
+    controller.set('graphdata', models.graphdata)
   }
 
 });
