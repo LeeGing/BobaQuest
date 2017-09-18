@@ -1,20 +1,56 @@
 {{yield}}
 
-  {{#if session.isAuthenticated}}
-    <a {{action 'invalidateSession'}}><button>Logout</button></a>
-    {{#link-to 'users' 1}}User Profile{{/link-to}}
-    {{#link-to 'welcome'}}Home page{{/link-to}}
-    {{#link-to 'stores' 1}}Store Page{{/link-to}}
-    <h3> PLEASE DISPLAY CURRENT USER INFO(NAME) HERE</h3>
-  {{else}}
-    {{#link-to 'login'}}Login{{/link-to}}
-    {{#link-to 'register'}}Registration{{/link-to}}
-    {{#link-to 'welcome'}}Home page{{/link-to}}
-  {{/if}}
 
-<button {{action 'processLogin'}} class="loginBtn loginBtn--facebook">
-  Login with Facebook
-</button>
-<button {{action 'processLogout'}} class="loginBtn loginBtn--facebook">
-  Logout
-</button>
+
+
+
+<div data-sticky-container>
+  <div data-sticky data-margin-top='0' data-top-anchor="header:bottom" data-btm-anchor="content:bottom">
+    <div class="top-bar topbar-sticky-shrink">
+      <div class="top-bar-title">
+        <nav class="top-bar topbar-responsive">
+          <div class="top-bar-title">
+            <a class="topbar-responsive-logo" href="#"></a>
+          </div>
+          <div id="topbar-responsive" class="topbar-responsive-links">
+            <div class="top-bar-left">
+              {{#basic-dropdown as |dropdown|}}
+                {{#dropdown.trigger}}
+                  <button class="loginBtn loginBtn--google">Menu</button>
+                  {{/dropdown.trigger}}
+                {{#dropdown.content class="menu simple vertical medium-vertical"}}
+                  {{#if session.isAuthenticated}}
+                    <li>
+                      <button {{action 'processLogout'}}>
+                        Logout
+                      </button>
+                    </li>
+                    <li>{{#link-to 'users' 1}}User Profile{{/link-to}}</li>
+                    <li>{{#link-to 'welcome'}}Home page{{/link-to}}</li>
+                    <li>{{#link-to 'stores' 1}}Store Page{{/link-to}}</li>
+                    <h3> PLEASE DISPLAY CURRENT USER INFO(NAME) HERE</h3>
+                  {{else}}
+                    <li class="loginBtn loginBtn--google">{{#link-to 'login'}}Login{{/link-to}}</li>
+                    <li class="loginBtn loginBtn--google">{{#link-to 'register'}}Registration{{/link-to}}</li>
+                    <li class="loginBtn loginBtn--google">{{#link-to 'welcome' }}Home page{{/link-to}}</li>
+                    <li>
+                      <button {{action 'processLogin'}} class="loginBtn loginBtn--facebook">
+                       Login with Facebook
+                      </button>
+                    </li>
+                    <li>
+                      <button {{action 'leaveFacebook'}} class="loginBtn loginBtn--facebook">
+                       Logout
+                      </button>
+                    </li>
+                  {{/if}}
+                {{/dropdown.content}}
+              {{/basic-dropdown}}
+
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

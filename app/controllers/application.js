@@ -15,6 +15,11 @@ export default Ember.Controller.extend({
     authFB: function() {
       this.get('fb').login('email public_profile').then(function() {
       });
+    },
+    exitFB: function() {
+      this.get('fb').logout(function(response) {
+      window.location.reload();
+    });
     }
   }
 });

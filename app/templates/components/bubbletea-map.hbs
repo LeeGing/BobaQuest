@@ -1,5 +1,7 @@
 {{yield}}
-{{#g-map lat=49.2120 lng=-123.0244 zoom=11 as |context|}}
+
+
+{{#g-map lat=49.2120 lng=-123.0244 zoom=11 options=customOptions as |context|}}
   {{#g-map-marker context lat=49.28737839999999 lng=-123.1288151 as |markerContext|}}
     {{#g-map-infowindow markerContext openOn="mouseover" closeOn="mouseout"}}
       <h5><b>Bubble World Downtown</b></h5>
