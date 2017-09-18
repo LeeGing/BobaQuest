@@ -42,71 +42,66 @@
     </div>
   </div>
 </div>
-<form>
-  Reservation name:<br>
-  <input type="text" name="Name" placeholder="Name"><br>
-  Phone number for confirmation:<br>
-  <input type="text" name="Phone" placeholder="Format: xxx-xxx-xxxx"><br>
 
-  Bubble Tea Cafe Reservation list
-  <select name="Cafe">
-    <option value="Bubble World Downtown">Bubble World Downtown</option>
-    <option value="Bubble World Vancouver">Bubble World Vancouver</option>
-    <option value="Bubble World Coquitlam">Bubble World Coquitlam</option>
-    <option value="Bubble World Burnaby">Bubble World Burnaby</option>
-    <option value="Bubble World Richmond">Bubble World Richmond</option>
-    <option value="Bubble World SFU">Bubble World SFU</option>
-    <option value="Chatime Downtown">Chatime Downtown</option>
-    <option value="Chatime Boardway">Chatime Boardway</option>
-    <option value="Chatime Burnaby">Chatime Burnaby</option>
-    <option value="Chatime Richmond">Chatime Richmond</option>
-    <option value="Chatime Surrey">Chatime Surrey</option>
-    <option value="SoulCup">SoulCup</option>
-    <option value="CoCo Downtown">CoCo Fresh Tea & Juice Downtown</option>
-    <option value="CoCo Vancouver">CoCo Fresh Tea & Juice Vancouver</option>
-    <option value="CoCo Richomnd">CoCo Fresh Tea & Juice Richomnd</option>
+
+<div reservation-form-container>
+  <form method="POST">{{rName}}{{rPhone}}
+  Reservation name:<br/>
+    {{input type="rName" value=reservationName placeholder="Full name"}}<br/>
+  Phone number:<br/>
+    {{input type="rPhone" value=reservationPhone placeholder="Format: xxx-xxx-xxxx"}}<br/>
+
+  Bubble Tea Cafe Reservation list:
+  <select onchange={{action 'setCafe' value='target.value' }} >
+    <option vaue='' disabled selected hidden> ----- </option>
+    {{#each cafe as |cafe|}}
+      <option value={{cafe.name}} >{{cafe.name}}</option>
+    {{/each}}
   </select>
 
-  Number of Guest :
-  <label for="num_guest"></label><input id="num_guest" type="number" min="1" max="20" step="1" value ="2"/>
-  Reservation Date:
-  <label for="Reservation date"></label><input id="Reservation" type="date" value="2017-09-21"/>
-  Reservation Time:
-  <select name="time">
-    <option value="12:00 PM">12:00 PM</option>
-    <option value="12:30 PM">12:30 PM</option>
-    <option value="1:00 PM">1:00 PM</option>
-    <option value="1:30 PM">1:30 PM</option>
-    <option value="2:00 PM">2:00 PM</option>
-    <option value="2:30 PM">2:30 PM</option>
-    <option value="3:00 PM">3:00 PM</option>
-    <option value="3:30 PM">3:30 PM</option>
-    <option value="4:00 PM">4:00 PM</option>
-    <option value="4:30 PM">4:30 PM</option>
-    <option value="5:00 PM">5:00 PM</option>
-    <option value="5:30 PM">5:30 PM</option>
-    <option value="6:00 PM">6:00 PM</option>
-    <option value="6:30 PM">6:30 PM</option>
-    <option value="7:00 PM">7:00 PM</option>
-    <option value="7:30 PM">7:30 PM</option>
-    <option value="8:00 PM">8:00 PM</option>
-    <option value="8:30 PM">8:30 PM</option>
-    <option value="9:00 PM">9:00 PM</option>
-    <option value="9:30 PM">9:30 PM</option>
-    <option value="10:00 PM">10:00 PM</option>
-    <option value="10:30 PM">10:30 PM</option>
-    <option value="11:00 PM">11:00 PM</option>
-    <option value="11:30 PM">11:30 PM</option>
-    <option value="12:00 AM">12:00 AM</option>
+  Number of Guest :<br />
+    {{input type="rGuest" value=numberGuest placeholder="Amount of people"}}
+
+  Reservation Date:<br />
+    {{input type=Date value=reservationDate placeholder="Format: MM/DD/YY"}}<br />
+
+  Reservation Time:<br />
+  <select onchange={{action 'setReservationTime' value="target.value" }} >
+    {{log rTime}}
+    <option value='' disabled selected hidden> ----- </option>
+    {{#each reservation_time as |time|}}
+      <option value={{time.name}} >{{time.name}}</option>
+    {{/each}}
   </select>
-</form>
 
+  </form>
+</div>
 
+{{#each combinedString as |item|}}
+  {{~ concat '+' item ~}}
+{{/each}}
 
-<button type="submit">Submit</button>
+<h4>Confirmation:</h4>
+Name:
+{{reservationName}}<br />
+Contact number:
+{{reservationPhone}}<br />
+Cafe:
+{{selectedCafe}}<br />
+Number of Guest:
+{{numberGuest}}<br />
+Reservation Date:
+{{reservationDate}}<br />
+Reservation Time:
+{{reservationTime}}<br />
 
+<br/>
+<button {{action "sendReservation"}} type="submit" class="button button-rounded-hover">Submit</button>
+
+<br />
 
 {{bubbletea-map}}
+
 <br />
 <div class="row small-up-1 medium-up-1 large-up-1">
   <div class="rounded-social-buttons">
