@@ -14,6 +14,11 @@ export default Ember.Route.extend({
       graphdata: Ember.$.ajax({
         type: 'GET',
         url: `${config.apiHost}/stores/${params.id}/graph`
+      }),
+
+      order: Ember.$.ajax({
+        type: 'GET',
+        url: `http://localhost:3000/orders/${params.id}`
       })
     })
   },
@@ -21,6 +26,7 @@ export default Ember.Route.extend({
 
   setupController: function(controller, models) {
 
+    controller.set('order', models.order)
     controller.set('store', models.storesparam)
     controller.set('graphdata', models.graphdata)
   }
