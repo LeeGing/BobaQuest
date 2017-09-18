@@ -10,27 +10,15 @@
       <div class="top-bar-title">
         <nav class="top-bar topbar-responsive">
           <div class="top-bar-title">
-            <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
-              <button class="menu-icon" type="button" data-toggle></button>
-            </span>
-            <button {{action 'processLogin'}} class="loginBtn loginBtn--facebook">
-              Login with Facebook
-            </button>
-            <button {{action 'leaveFacebook'}} class="loginBtn loginBtn--facebook">
-              Logout
-            </button>
             <a class="topbar-responsive-logo" href="#"></a>
           </div>
           <div id="topbar-responsive" class="topbar-responsive-links">
-            <div class="top-bar-right">
-              <li>
-                <button {{action 'processLogout'}}>
-                  Logout
-                </button>
-              </li>
+            <div class="top-bar-left">
               {{#basic-dropdown as |dropdown|}}
-                {{#dropdown.trigger class="menu-icon"}}Click me{{/dropdown.trigger}}
-                {{#dropdown.content class="menu simple vertical medium-horizontal"}}
+                {{#dropdown.trigger}}
+                  <button class="loginBtn loginBtn--google">Menu</button>
+                  {{/dropdown.trigger}}
+                {{#dropdown.content class="menu simple vertical medium-vertical"}}
                   {{#if session.isAuthenticated}}
                     <li>
                       <button {{action 'processLogout'}}>
@@ -42,9 +30,19 @@
                     <li>{{#link-to 'stores' 1}}Store Page{{/link-to}}</li>
                     <h3> PLEASE DISPLAY CURRENT USER INFO(NAME) HERE</h3>
                   {{else}}
-                    <li>{{#link-to 'login'}}Login{{/link-to}}</li>
-                    <li>{{#link-to 'register'}}Registration{{/link-to}}</li>
-                    <li>{{#link-to 'welcome'}}Home page{{/link-to}}</li>
+                    <li class="loginBtn loginBtn--google">{{#link-to 'login'}}Login{{/link-to}}</li>
+                    <li class="loginBtn loginBtn--google">{{#link-to 'register'}}Registration{{/link-to}}</li>
+                    <li class="loginBtn loginBtn--google">{{#link-to 'welcome' }}Home page{{/link-to}}</li>
+                    <li>
+                      <button {{action 'processLogin'}} class="loginBtn loginBtn--facebook">
+                       Login with Facebook
+                      </button>
+                    </li>
+                    <li>
+                      <button {{action 'leaveFacebook'}} class="loginBtn loginBtn--facebook">
+                       Logout
+                      </button>
+                    </li>
                   {{/if}}
                 {{/dropdown.content}}
               {{/basic-dropdown}}
