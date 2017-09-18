@@ -18,6 +18,8 @@ end
 
   get '/orders/:id', to: 'orders#show'
 
+  get '/users/:email', to: 'users#find_by_email'
+
 
 
 end
