@@ -2,7 +2,7 @@
 class LoginController < ApplicationController
   def token
 
-    user = User.find_by(email: params[:username])
+    user = User.find_by(username: params[:username])
     if user && user.authenticate(params[:password])
       # token = JsonWebToken.encode(user_id: user.id)
       # ember-simple-auth needs token in 'access_token' key for oauth2

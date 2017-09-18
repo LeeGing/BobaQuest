@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  userConfig: Ember.inject.service(),
 
   model: function(params) {
     console.log('model params:', params);
@@ -25,9 +26,9 @@ export default Ember.Route.extend({
        { name: 'Bubble world Richmond', lat: 49.1872561, long: -123.1301656 },
        { name: 'Soulcup', lat: 49.2498455, long: -122.862484 }
      ];
-    })
+    }),
 
-
+    controller.set('userHash', this.get('userConfig.userHash'))
   }
 
 });

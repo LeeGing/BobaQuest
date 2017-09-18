@@ -18,7 +18,7 @@ end
 
   get '/orders/:id', to: 'orders#show'
 
-  get '/users/:email', to: 'users#find_by_email'
+  get '/users/find/:username', to: 'users#find_by_username'
 
 
 

@@ -14,8 +14,8 @@ class UsersController < ApplicationController ##change UsersController to UserCo
 
   end
 
-  def find_by_email
-    @user = User.where(email: params[:email])
+  def find_by_username
+    @user = User.where(username: params[:username])
 
     render json: @user
   end

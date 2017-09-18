@@ -28,11 +28,16 @@
                     <li>{{#link-to 'users' 1}}User Profile{{/link-to}}</li>
                     <li>{{#link-to 'welcome'}}Home page{{/link-to}}</li>
                     <li>{{#link-to 'stores' 1}}Store Page{{/link-to}}</li>
-                    <h3> PLEASE DISPLAY CURRENT USER INFO(NAME) HERE</h3>
+                    <h3> {{user.name}}</h3>
                   {{else}}
                     <li class="loginBtn loginBtn--google">{{#link-to 'login'}}Login{{/link-to}}</li>
                     <li class="loginBtn loginBtn--google">{{#link-to 'register'}}Registration{{/link-to}}</li>
                     <li class="loginBtn loginBtn--google">{{#link-to 'welcome' }}Home page{{/link-to}}</li>
+                    <li>
+                      <button {{action 'processLogout'}}>
+                        Logout
+                      </button>
+                    </li>
                     <li>
                       <button {{action 'processLogin'}} class="loginBtn loginBtn--facebook">
                        Login with Facebook
@@ -46,6 +51,10 @@
                   {{/if}}
                 {{/dropdown.content}}
               {{/basic-dropdown}}
+              {{log userHash}}
+              {{#if userHash.username}}
+                Logged in as: {{userHash.username}}
+              {{/if}}
 
             </div>
           </div>
