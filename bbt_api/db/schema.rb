@@ -20,23 +20,19 @@ ActiveRecord::Schema.define(version: 20170916205400) do
     t.integer "drinkpoints"
   end
 
-<<<<<<< HEAD
+  create_table "inventories", force: :cascade do |t|
+    t.integer "store_id"
+    t.integer "drink_id"
+    t.index ["drink_id"], name: "index_inventories_on_drink_id", using: :btree
+    t.index ["store_id"], name: "index_inventories_on_store_id", using: :btree
+  end
+
   create_table "orders", force: :cascade do |t|
     t.string   "order",      default: [],              array: true
     t.integer  "user_id"
     t.integer  "store_id"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
-  end
-
-  create_table "sales", force: :cascade do |t|
-=======
-  create_table "inventories", force: :cascade do |t|
->>>>>>> master
-    t.integer "store_id"
-    t.integer "drink_id"
-    t.index ["drink_id"], name: "index_inventories_on_drink_id", using: :btree
-    t.index ["store_id"], name: "index_inventories_on_store_id", using: :btree
   end
 
   create_table "stores", force: :cascade do |t|

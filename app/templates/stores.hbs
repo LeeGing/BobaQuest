@@ -1,56 +1,54 @@
 
 <h1>THIS IS STORES.HBS</h1>
 
-<div class="LocationTransInfo">
-  <h2>Store information</h2> <br />
-  Name: {{store.name}} <br />
-  Address: {{store.address}} <br />
-  Phone Number: {{store.phone}}<br />
-  Location: {{store.location}}<br />
+  <div class="LocationTransInfo">
+    <h2>Store information</h2> <br />
+    Name: {{store.name}} <br />
+    Address: {{store.address}} <br />
+    Phone Number: {{store.phone}}<br />
+    Location: {{store.location}}<br />
+    <br />
+    <br />
+    Number of Transactions done: {{graphdata.storeTransaction}} <br />
+    Number of Taro BBT sold: {{graphadata.storeTaroSold}} <br />
+    Number of Lyche BBT sold: {{graphdata.storeLycheSold}} <br />
+  </div>
+
   <br />
+
+  <div class="TotalTransInfo">
+    <h2> Total Sale information </h2>
+
+    Total BBT sale from ALL transactions : {{graphdata.totalSale}}   <br />
+    Total Taro sale from ALL tranactions : {{graphdata.totalTarosale}}  <br />
+    Total Lyche sale from ALL transactions : {{graphdata.totalLychesale}} <br />
+    Total Number of stores in Burnaby : {{graphdata.totalStrBurnaby}} <br />
+    Total Number of stores in Richmond : {{graphdata.totalStrRichmond}} <br />
+  </div>
+
+  <div class="Analysis">
+    <h2> Analytic information </h2>
+
+    Market Share ( Taro BBT):{{MarketShareTaro graphdata.storeTaroSold graphdata.totalTarosale}} <br />
+    Market Share ( Lyche BBT):{{MarketShareLyche graphdata.storeLycheSold graphdata.totalLychesale}} <br />
+    Market Share ( Total):{{MarketShareTotal graphdata.storeTransaction graphdata.totalSale}} <br />
+    Market Share Advice: {{Advice graphdata.storeTransaction graphdata.totalSale graphdata.storeTaroSold graphdata.storeLychSold graphdata.totalTarosale graphdata.totalLychesale}} <br />
+
   <br />
-  Number of Transactions done: {{graphdata.storeTransaction}} <br />
-  Number of Taro BBT sold: {{graphadata.storeTaroSold}} <br />
-  Number of Lyche BBT sold: {{graphdata.storeLycheSold}} <br />
-</div>
 
-<br />
+    Popular Drink: {{MostPopular graphdata.storeTaroSold graphdata.storeLycheSold}} <br />
+    Least Popular Drink: {{LeastPopular graphdata.storeTaroSold graphdata.storeLycheSold}} <br />
+  </div>
 
-<div class="TotalTransInfo">
-  <h2> Total Sale information </h2>
-
-  Total BBT sale from ALL transactions : {{graphdata.totalSale}}   <br />
-  Total Taro sale from ALL tranactions : {{graphdata.totalTarosale}}  <br />
-  Total Lyche sale from ALL transactions : {{graphdata.totalLychesale}} <br />
-  Total Number of stores in Burnaby : {{graphdata.totalStrBurnaby}} <br />
-  Total Number of stores in Richmond : {{graphdata.totalStrRichmond}} <br />
-</div>
-
-<div class="Analysis">
-  <h2> Analytic information </h2>
-
-  Market Share ( Taro BBT):{{MarketShareTaro graphdata.storeTaroSold graphdata.totalTarosale}} <br />
-  Market Share ( Lyche BBT):{{MarketShareLyche graphdata.storeLycheSold graphdata.totalLychesale}} <br />
-  Market Share ( Total):{{MarketShareTotal graphdata.storeTransaction graphdata.totalSale}} <br />
-  Market Share Advice: {{Advice graphdata.storeTransaction graphdata.totalSale graphdata.storeTaroSold graphdata.storeLychSold graphdata.totalTarosale graphdata.totalLychesale}} <br />
-
-<br />
-
-  Popular Drink: {{MostPopular graphdata.storeTaroSold graphdata.storeLycheSold}} <br />
-  Least Popular Drink: {{LeastPopular graphdata.storeTaroSold graphdata.storeLycheSold}} <br />
-</div>
-
-
-</div>
 <table border='1px'>
-ORDERS: 
+ORDERS:
 {{#each order as |orderobj|}}
 {{!--   {{#each orderobj.order as |displayorder|}} --}}
-		<tr> 
-		<td>▶ TIME: {{orderobj.created_at}} </td> 
+		<tr>
+		<td>▶ TIME: {{orderobj.created_at}} </td>
 		<td>  ╚ID: {{orderobj.user_id}} </td>
 		<td> ORDER:{{#each orderobj.order as |list|}}
-			{{list}}, 
+			{{list}},
 		{{/each}}
 		</td>
 		</tr>
