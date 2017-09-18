@@ -41,6 +41,14 @@ Store.create!([{
   address: "450-9100 Blundell Rd",
   location: "Richmond",
   phone: "6042852428"
+},
+{
+  id: 3,
+  name: "Zeta",
+  address: "123 Zeta Rd",
+  location: "Burnaby",
+  phone: "604431ZETA"
+
 
 }])
 

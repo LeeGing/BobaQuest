@@ -11,7 +11,9 @@ Router.map(function() {
      this.route('points')
   });
 
-  this.route('stores', { path: '/stores/:id'});
+  this.route('stores', { path: '/stores/:id'}, function() {
+    this.route('admin', { path: 'admin' })
+  });
   this.route('register');
   this.route('login');
   this.route('protected');

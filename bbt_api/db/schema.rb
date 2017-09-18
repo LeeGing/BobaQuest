@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20170916205400) do
   create_table "orders", force: :cascade do |t|
     t.string   "order",      default: [],              array: true
     t.integer  "user_id"
+    t.integer  "store_id"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end

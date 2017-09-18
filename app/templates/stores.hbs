@@ -13,8 +13,30 @@
   Email: {{user.email}}
 
 
+
 </div>
+<table border='1px'>
+ORDERS: 
+{{#each order as |orderobj|}}
+{{!--   {{#each orderobj.order as |displayorder|}} --}}
+		<tr> 
+		<td>▶ TIME: {{orderobj.created_at}} </td> 
+		<td>  ╚ID: {{orderobj.user_id}} </td>
+		<td> ORDER:{{#each orderobj.order as |list|}}
+			{{list}}, 
+		{{/each}}
+		</td>
+		</tr>
+	{{/each}}
+	</table>
+
+{{!-- 	{{#each orderobj.user_id as |id|}}
+	{{id}}
+	{{/each}}
+
+{{/each}} --}}
 
 
-  {{outlet}}
+
+{{outlet}}
 

@@ -2,26 +2,33 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   users: null,
+  order: Ember.A([]),
 
   isLvl1: Ember.computed('points', function (){
    return this.get('points') > 9;
-	}), //conditional statement for achievements hbs
+  }), //conditional statement for achievements hbs
 
-	isLvl2: Ember.computed('points', function (){
+  isLvl2: Ember.computed('points', function (){
    return this.get('points') > 19;
-	}), //conditional statement for achievements hbs
+  }), //conditional statement for achievements hbs
 
-	isLvl3: Ember.computed('points', function (){
+  isLvl3: Ember.computed('points', function (){
    return this.get('points') > 29;
-	}), //conditional statement for achievements hbs
+  }), //conditional statement for achievements hbs
 
-  store_details: [
+  store_details: Ember.A([
     {name: 'Bubble Tea', tagline: "bubbly"},
     {name: 'Cha Time', tagline: "this is Cha Time's Menu"},
-    {name: 'Zeta', tagline: "all Zeta, all day"},
-  ],
+    {name: 'Zeta', store_id: 1 },
+  ]),
 
-  order: [],
+  storeData: {
+    'Bubble Tea': { store_id: 1, name: 'Bubble Tea' },
+    'Cha Time': { store_id: 2, name: 'Cha Time' },
+    'Zeta': { store_id: 3, name: 'Zeta' }
+  },
+
+  currentStore: null,
 
   actions: {
 
@@ -29,35 +36,33 @@ export default Ember.Controller.extend({
       console.log(this.get('userEmail'));
     },
 
+    setCurrentStore: function(store){ 
+      this.set('currentStore', this.get('storeData')[store]);
+      console.log(this.get('currentStore'));
+    },
+
     addToCart: function(drinks) {
-      console.log(this.get('order'));
-      console.log(JSON.stringify(this.get('order')));
-      if (this.get('order') === null){
-        this.set("order", []) && this.get("order").push(drinks)
-        console.log (this.get('order'))
-      } else {
-        this.get("order").push(drinks);
-        console.log(this.get('order'));
-      }
+      this.get('order').pushObject(drinks);
     },
 
     rmFromCart: function() {
-      this.set("order", []);
+      this.set("order", Ember.A([]));
       console.log (this.get('order'))
     },
 
     submitCart: function() {
     this.get('order').stringify;
-    console.log(this.get('order'));
+    console.log(this.get('store.id'));
     Ember.$.ajax({
         url: "http://localhost:3000/orders",
         type: "POST",
         data: {
           order: this.get('order'),
-          user: this.get('user.id') 
+          user: this.get('user.id'),
+          store: this.get('currentStore.store_id')
           // unncessary sever should know
         }
-      }, function success(response) {
+      }, function (response) {
            console.log ( " submitCart was successful ")
            // trigger next step.
            // show order created

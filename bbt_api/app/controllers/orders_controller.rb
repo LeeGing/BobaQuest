@@ -8,16 +8,18 @@ class OrdersController < ApplicationController
 
 	def show
 		# todo: look shit up in DB, return as JSON
-		params[:id]
+		@orders = Order.where(store_id: params[:id])
 		# called on order confirmation page
 		# order.find(id)
-		render json
-	end
+		render json: @orders
+	end		
 
 	def create
 		@order = params[:order]
     @user = params[:user]
-		@orderdata = Order.new(order: @order, user_id: @user )
+    @store = params[:store]
+    # @store = params[:]
+		@orderdata = Order.new(order: @order, user_id: @user, store_id: @store)
 		@orderdata.save;
     # set up current user method. 
     # render json: { order: @order, user: @user } ## NOT RIGHT PROBABLY - JERmyEY

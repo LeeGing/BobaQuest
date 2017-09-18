@@ -14,6 +14,11 @@ export default Ember.Route.extend({
       stores: Ember.$.ajax({
         type: 'GET',
         url: `${config.apiHost}/users/${params.id}`
+      }),
+
+      order: Ember.$.ajax({
+        type: 'GET',
+        url: `http://localhost:3000/orders/${params.id}`
       })
     })
   },
@@ -21,9 +26,10 @@ export default Ember.Route.extend({
 
   setupController: function(controller, models) {
 
-    console.log(models.stores)
+    console.log('orders', models.order)
     controller.set('user', models.users)
     controller.set('store', models.stores)
+    controller.set('order', models.order)
   }
 
 });

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :orders
 
   post '/token', to: 'login#token'
+  get '/orders/:id', to: 'orders#show'
 
   # post '/orders', to: 'orders#create'
   # get '/orders', to: 'orders#index'
