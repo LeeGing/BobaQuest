@@ -5,6 +5,13 @@ export default Ember.Route.extend(ApplicationRouteMixin);
 
 Ember.Route.extend({              //Natalie, I don't think it's reading this route.extend at all.
 
+
+  fb: Ember.inject.service(),
+
+  beforeModel() {
+    return this.get('fb').FBInit();
+  },
+
   model: function(params) {
     console.log('model params:', params);
 
