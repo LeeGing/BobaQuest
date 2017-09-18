@@ -8,6 +8,7 @@
     Phone Number: {{store.phone}}<br />
     Location: {{store.location}}<br />
     <br />
+
     <br />
     Number of Transactions done: {{graphdata.storeTransaction}} <br />
     Number of Taro BBT sold: {{graphadata.storeTaroSold}} <br />
@@ -18,7 +19,6 @@
 
   <div class="TotalTransInfo">
     <h2> Total Sale information </h2>
-
     Total BBT sale from ALL transactions : {{graphdata.totalSale}}   <br />
     Total Taro sale from ALL tranactions : {{graphdata.totalTarosale}}  <br />
     Total Lyche sale from ALL transactions : {{graphdata.totalLychesale}} <br />
@@ -28,40 +28,29 @@
 
   <div class="Analysis">
     <h2> Analytic information </h2>
-
-    Market Share ( Taro BBT):{{MarketShareTaro graphdata.storeTaroSold graphdata.totalTarosale}} <br />
-    Market Share ( Lyche BBT):{{MarketShareLyche graphdata.storeLycheSold graphdata.totalLychesale}} <br />
-    Market Share ( Total):{{MarketShareTotal graphdata.storeTransaction graphdata.totalSale}} <br />
+    Market Share ( Taro BBT ):{{MarketShareTaro graphdata.storeTaroSold graphdata.totalTarosale}} <br />
+    Market Share ( Lyche BBT ):{{MarketShareLyche graphdata.storeLycheSold graphdata.totalLychesale}} <br />
+    Market Share ( Total ):{{MarketShareTotal graphdata.storeTransaction graphdata.totalSale}} <br />
     Market Share Advice: {{Advice graphdata.storeTransaction graphdata.totalSale graphdata.storeTaroSold graphdata.storeLychSold graphdata.totalTarosale graphdata.totalLychesale}} <br />
 
   <br />
-
     Popular Drink: {{MostPopular graphdata.storeTaroSold graphdata.storeLycheSold}} <br />
     Least Popular Drink: {{LeastPopular graphdata.storeTaroSold graphdata.storeLycheSold}} <br />
   </div>
 
 <table border='1px'>
 ORDERS:
-{{#each order as |orderobj|}}
-{{!--   {{#each orderobj.order as |displayorder|}} --}}
+  {{#each order as |orderobj|}}
 		<tr>
-		<td>▶ TIME: {{orderobj.created_at}} </td>
-		<td>  ╚ID: {{orderobj.user_id}} </td>
+		<td> TIME: {{orderobj.created_at}} </td>
+		<td> ID: {{orderobj.user_id}} </td>
 		<td> ORDER:{{#each orderobj.order as |list|}}
 			{{list}},
 		{{/each}}
 		</td>
 		</tr>
 	{{/each}}
-	</table>
-
-{{!-- 	{{#each orderobj.user_id as |id|}}
-	{{id}}
-	{{/each}}
-
-{{/each}} --}}
-
-
+</table>
 
 {{outlet}}
 

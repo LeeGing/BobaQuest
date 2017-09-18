@@ -23,14 +23,3 @@ var lycheShare = d/f
 }
 
 export default Ember.Helper.helper(Advice);
-
-
-// a = store sale
-// b = all stores sale
-// c = Taro sold by the company
-// d = Lyche sold by the company
-// e = Taro sold by all company
-// f = Lyche sold by all company
-
-
-//

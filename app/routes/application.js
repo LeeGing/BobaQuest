@@ -3,11 +3,8 @@ import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mi
 
 export default Ember.Route.extend(ApplicationRouteMixin);
 
-Ember.Route.extend({              //Natalie, I don't think it's reading this route.extend at all.
-
-
+Ember.Route.extend({
   fb: Ember.inject.service(),
-
   beforeModel() {
     return this.get('fb').FBInit();
   },
@@ -29,10 +26,7 @@ Ember.Route.extend({              //Natalie, I don't think it's reading this rou
 
 
   setupController: function(controller, models) {
-
     controller.set('user', models.users)
     controller.set('points', models.points)
-
   }
-
 });

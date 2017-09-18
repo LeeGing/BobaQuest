@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 User.destroy_all
 
 ricky = User.create! ({
@@ -78,7 +70,6 @@ Drink.create!([{
   id: 4,
   name: "Lyche BBT (ChaiTime)",
   drinkpoints: "20"
-
 }])
 
 Inventory.destroy_all
@@ -86,24 +77,24 @@ Inventory.destroy_all
 Inventory.create!([{
   id: 1,
   store_id: "1",
-  drink_id: "1"     ##BubbleWorld sold Taro
+  drink_id: "1"
 
 },
 {
   id: 2,
   store_id: "1",
-  drink_id: "2" ##BubbleWorld sold Lyche
+  drink_id: "2"
 },
 {
   id: 3,
   store_id: "2",
-  drink_id: "1" ##ChaiTime sold Taro
+  drink_id: "1"
 
 },
 {
   id: 4,
   store_id: "2",
-  drink_id: "2"   ##ChaiTime sold Lyche
+  drink_id: "2"
 },
 {
   id: 5,
@@ -118,25 +109,25 @@ Transaction.create!([{
   user: ricky,
   inventory_id: "1",
   tot: "purchase",
-  transpoint: "10" ##Ricky purchased Taro from BubbleWorld
+  transpoint: "10"
 
 },
 {
   user: ricky,
   inventory_id: "4",
   tot: "purchase",
-  transpoint: "20" ##Ricky purchased Lyche from ChaiTime
+  transpoint: "20"
 },
 {
   user: edmond,
   inventory_id: "1",
   tot: "purchase",
-  transpoint: "10" ##Edmond purchased Taro from BubbleWorld
+  transpoint: "10"
 },
 {
   user: edmond,
   inventory_id: "2",
   tot: "purchase",
-  transpoint: "10" ##Edmond purchased lyche from BubbleWorld
+  transpoint: "10"
 }])
 

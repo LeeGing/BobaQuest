@@ -1,5 +1,6 @@
-$topbar-sticky-shrink-padding: 2rem; // controls the un-stuck height of topbar
-$topbar-sticky-shrink-padding-stuck: 1rem; // controls the is stuck height of topbar
+@charset "UTF-8";
+$topbar-sticky-shrink-padding: 2rem;
+$topbar-sticky-shrink-padding-stuck: 1rem;
 $topbar-sticky-shrink-bg: #2c3840;
 
 .topbar-sticky-shrink {
@@ -21,7 +22,6 @@ $topbar-sticky-shrink-bg: #2c3840;
   width: 100%;
 }
 
-// for demo only
 .topbar-sticky-shrink-header {
   padding: 10rem 0;
   background: url('https://placehold.it/2000x500&text=this is a header') center center no-repeat;
@@ -138,7 +138,7 @@ $topbar-responsive-animation-type: fade-in; // or use slide-down or none
 div.column {
   margin-top: 40px;
 }
-@charset "UTF-8";
+
 
 .rounded-social-buttons {
   text-align: center;
