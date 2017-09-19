@@ -6,6 +6,3 @@ export default OAuth2PasswordGrant.extend({
   serverTokenRevocationEndpoint: `${config.apiHost}/revoke`
 });
 
-// current user 
-// have some sort of gem make rails act as oauth
-// gem will have docs on current user. 
