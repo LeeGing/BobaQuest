@@ -13,7 +13,7 @@ THIS IS USERS.HBS
 	<h4>Achievements:</h4>
 	{{#if isLvl1}}
     <div>
-      <img src=http://www.magnateqsolutions.com/images/931level-1.png width="5%" height="5%"> First Purchase!
+      <img src=https://www.btcpublic.net/img/portfolio/level-1.png width="5.5%" height="5.5%"> ★ Welcome ★
     </div>
   {{else}}
     <h4> NONE  </h4>
@@ -21,15 +21,21 @@ THIS IS USERS.HBS
 
 	{{#if isLvl2}}
 	   <div>
-      <img src=http://www.magnateqsolutions.com/images/967level-2.png width="5%" height="5%"> The Second!
+      <img src=https://d30y9cdsu7xlg0.cloudfront.net/png/81253-200.png width="5.5%" height="5.5%"> ★ First Purchase ★
     </div>
 	{{/if}}
 
 	{{#if isLvl3}}
 	   <div>
-      <img src=http://firstlineresponse.co.uk/wp-content/uploads/2016/06/level-3.png width="5%" height="5%"> Third Time Charm<
+      <img src=https://d30y9cdsu7xlg0.cloudfront.net/png/56326-200.png width="5.5%" height="5.5%"> ★ First Redeem ★
     </div>
 	{{/if}}
+
+    {{#if isLvl4}}
+    <div>
+      <img src=http://nextlevelfunctionalnutrition.com/wp-content/uploads/2014/10/badge_2.png width="5.5%" height="5.5%"> ★ Beginner ★
+    </div>
+    {{/if}}
 </div>
 
 <div> PLACE YOUR ORDER: </div>
@@ -47,9 +53,9 @@ THIS IS USERS.HBS
 
 <div>{{currentStore.name}}</div>
 
-{{#if (eq currentStore.name 'Zeta')}}
-  <div class="zetamenu">
-    <h3> Zeta Menu </h3>
+{{#if (eq currentStore.name 'CoCo - Pender')}}
+  <div class="menu">
+    <h3> CoCo - Pender Menu </h3>
   	<div value="ORDERING"> 1:  Original Milk Tea...$ 9 </div>
   	<button {{action "addToCart" "Original Milk Tea"}}>Add</button>
 
@@ -98,10 +104,10 @@ THIS IS USERS.HBS
     <button {{action "submitCart"}}>Submit</button>
   </div>
 
-{{else if (eq currentStore.name 'Cha Time')}}
-<div class="chatimemenu">
-	<h3> Zeta Menu </h3>
-    <div value="ORDERING"> 1:  Original Green Milk Tea...$ 9 </div>
+{{else if (eq currentStore.name 'Cha Time - Robson')}}
+<div class="menu">
+	<h3> Cha Time - Robson Menu </h3>
+    <div value="ORDERING"> 1: Original Green Milk Tea...$ 9 </div>
     <button {{action "addToCart" "Original Milk Tea"}}>Add</button>
 
     <div> 2:  React Green Milk Tea......$ 9 </div>
@@ -148,6 +154,57 @@ THIS IS USERS.HBS
     <button {{action "rmFromCart"}}>Empty</button>
     <button {{action "submitCart"}}>Submit</button>
   </div>
+  {{else if (eq currentStore.name 'Bubble World - Robson')}}
+<div class="menu">
+  <h3> Bubble World - Robson Menu</h3>
+    <div> 1:  Original Green Milk Tea.....$ 9 </div>
+    <button {{action "addToCart" "Original Milk Tea"}}>Add</button>
+
+    <div> 2:  Honey Green Milk Tea.....$ 9 </div>
+    <button {{action "addToCart" "React Milk Tea"}}>Add</button>
+
+    <div> 3:  Almond Milk Tea.....$ 9 </div>
+    <button {{action "addToCart" "Java Milk Tea"}}>Add</button>
+
+    <div> 4:  Strawberry Milk Tea.....$ 9 </div>
+    <button {{action "addToCart" "Ember Milk Tea"}}>Add</button>
+
+    <div> 5:  Mango Slush.....$ 9 </div>
+    <button {{action "addToCart" "AJAX Slush"}}>Add</button>
+
+    <div> 6:  Apple Slush.....$ 9 </div>
+    <button {{action "addToCart" "Node.JS Slush"}}>Add</button>
+
+    <div> 7:  Peach Slush.....$ 9 </div>
+    <button {{action "addToCart" "Apple Slush"}}>Add</button>
+
+    <div> 8:  Grape Slush.....$ 9 </div>
+    <button {{action "addToCart" "NPM Slush"}}>Add</button>
+
+    <div> 9:  Taro Slush.....$ 9 </div>
+    <button {{action "addToCart" "Mongo Slush"}}>Add</button>
+
+    <div>10:  Cookies Slush.....$ 9 </div>
+    <button {{action "addToCart" "PSQ: Slush"}}>Add</button>
+
+    <div>11:  Orange Slush.....$ 9 </div>
+    <button {{action "addToCart" "Ruby Slush"}}>Add</button>
+
+    <div>12:  Bacon Slush.....$ 12 </div>
+    <button {{action "addToCart" "Rails and Bacon"}}>Add</button>
+
+    <div>13:  Blueberry Slush.....$ 12 </div>
+    <button {{action "addToCart" " Babel Butter"}}>Add</button>
+
+    <div>14:  Watermelon Slush.....$ 12 </div>
+    <button {{action "addToCart" "Rspec Slush"}}>Add</button>
+
+    <div>15:  Mocha Slush.....$ 12 </div>
+    <button {{action "addToCart" "Mocha Slush"}}>Add</button> <br />
+    <button {{action "rmFromCart"}}>Empty</button>
+    <button {{action "submitCart"}}>Submit</button>
+  </div>
+
 
 {{/if}}
 

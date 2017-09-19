@@ -16,16 +16,20 @@ export default Ember.Controller.extend({
    return this.get('points') > 29;
   }),
 
+  isLvl4: Ember.computed('points', function (){
+    return this.get('points') >29;
+  }),
+
   store_details: Ember.A([
-    {name: 'Bubble Tea', tagline: "bubbly"},
-    {name: 'Cha Time', tagline: "this is Cha Time's Menu"},
-    {name: 'Zeta', store_id: 1 },
+    {name: 'CoCo - Pender', store_id: 1 },
+    {name: 'Cha Time - Robson', store_id: 2 },
+    {name: 'Bubble World - Robson', store_id: 3 },
   ]),
 
   storeData: {
-    'Bubble Tea': { store_id: 1, name: 'Bubble Tea' },
-    'Cha Time': { store_id: 2, name: 'Cha Time' },
-    'Zeta': { store_id: 3, name: 'Zeta' }
+    'CoCo - Pender': { store_id: 1, name: 'CoCo - Pender' },
+    'Cha Time - Robson': { store_id: 2, name: 'Cha Time - Robson' },
+    'Bubble World - Robson': { store_id: 3, name: 'Bubble World - Robson' }
   },
 
   currentStore: null,
