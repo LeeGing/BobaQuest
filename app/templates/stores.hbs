@@ -1,56 +1,52 @@
 <div class="storemain">
-<h1 >Store Statistics</h1>
+  <h1 >Store Statistics</h1>
 
   <div class="LocationTransInfo">
     <table class="storeInfo" style="overflow-x:auto;">
-    <th>Store information</th>
-    <th></th>
-    <tr>
-    <td>Name:</td><td>{{store.name}}</td>
-    </tr>
-    <tr>
-    <td>Address:</td><td> {{store.address}} </td>
-    </tr>
-    <tr>
-    <td>Phone Number:</td><td> {{store.phone}}</td>
-    </tr>
-    <tr>
-    <td>Location:</td><td> {{store.location}}</td>
-    </tr>
-  </table>
+      <th>Store information</th><th></th>
+      <tr>
+        <td>Name:</td><td>{{store.name}}</td>
+      </tr>
+      <tr>
+        <td>Address:</td><td> {{store.address}} </td>
+      </tr>
+      <tr>
+        <td>Phone Number:</td><td> {{store.phone}}</td>
+      </tr>
+      <tr>
+        <td>Location:</td><td> {{store.location}}</td>
+      </tr>
+    </table>
+    <br />
     <br />
 
-    <br />
+  <h2> Online Drinks Order </h2>
+    <table class="orderlist" style="overflow-x:auto;">
+      <tr>
+        <th>Order Time:</th>
+        <th>User ID:</th>
+        <th>Drinks Ordered:</th>
+      </tr>
+      {{#each sortedOrders as |orderobj|}}
+        <tr>
+          <td>▶{{orderobj.created_at}} </td>
+          <td> {{orderobj.user_id}} </td>
+          <td> {{#each orderobj.order as |list|}}
+          {{list}},
+          {{/each}}
+          </td>
+        </tr>
+      {{/each}}
+    </table>
 
-<h2> Online Drinks Order </h2>
-
-  <table class="orderlist" style="overflow-x:auto;">
-    <tr>
-      <th>Order Time:</th>
-      <th>User ID:</th>
-      <th>Drinks Ordered:</th>
-    </tr>
-  {{#each sortedOrders as |orderobj|}}
-    <tr>
-      <td>▶{{orderobj.created_at}} </td>
-      <td> {{orderobj.user_id}} </td>
-      <td> {{#each orderobj.order as |list|}}
-       {{list}},
-    {{/each}}
-      </td>
-    </tr>
-  {{/each}}
-  </table>
-
-
-<h2> Statistics </h2>
+  <h2> Statistics </h2>
     <table class="order-table" style="overflow-x:auto;">
-    <th> Transactions: </th>
-    <tr>Number of Transactions done: <b>{{graphdata.storeTransaction}}</b></tr>
-    <tr>Number of Taro BBT sold: <b>{{graphdata.storeTaroSold}}</b></tr>
-    <tr>Number of Lyche BBT sold: <b>{{graphdata.storeLycheSold}}</b></tr>
-    <tr>Popular Drink: <b>{{MostPopular graphdata.storeTaroSold graphdata.storeLycheSold}}</b></tr>
-    <tr>Least Popular Drink: <b>{{LeastPopular graphdata.storeTaroSold graphdata.storeLycheSold}}</b></tr>
+      <th> Transactions:</th>
+      <tr>Number of Transactions done:<b>{{graphdata.storeTransaction}}</b></tr>
+      <tr>Number of Taro BBT sold:<b>{{graphdata.storeTaroSold}}</b></tr>
+      <tr>Number of Lyche BBT sold:<b>{{graphdata.storeLycheSold}}</b></tr>
+      <tr>Popular Drink:<b>{{MostPopular graphdata.storeTaroSold graphdata.storeLycheSold}}</b></tr>
+      <tr>Least Popular Drink:<b>{{LeastPopular graphdata.storeTaroSold graphdata.storeLycheSold}}</b></tr>
     </table>
   </div>
 
@@ -58,29 +54,25 @@
 
   <div class="TotalTransInfo">
     <h2> Total Sale information </h2>
-
   <table class="order-table" style="overflow-x:auto;">
-    <th> Total </th>
-    <tr>  Total BBT sale from ALL transactions : <b>{{graphdata.totalSale}}</b></tr>
-    <tr>   Total Taro sale from ALL tranactions : <b>{{graphdata.totalTarosale}}</b></tr>
-    <tr>   Total Lyche sale from ALL transactions : <b>{{graphdata.totalLychesale}}</b></tr>
-    <tr>   Total Number of stores in Burnaby : <b>{{graphdata.totalStrBurnaby}}</b></tr>
-    <tr>   Total Number of stores in Richmond : <b>{{graphdata.totalStrRichmond}}</b></tr>
+    <th>Total</th>
+    <tr>Total BBT sale from ALL transactions :<b>{{graphdata.totalSale}}</b></tr>
+    <tr>Total Taro sale from ALL tranactions :<b>{{graphdata.totalTarosale}}</b></tr>
+    <tr>Total Lyche sale from ALL transactions :<b>{{graphdata.totalLychesale}}</b></tr>
+    <tr>Total Number of stores in Burnaby :<b>{{graphdata.totalStrBurnaby}}</b></tr>
+    <tr>Total Number of stores in Richmond :<b>{{graphdata.totalStrRichmond}}</b></tr>
   </table>
 
   </div>
 
   <div class="Analysis">
     <h2> Analytic information </h2>
-
-<table class="order-table" style="overflow-x:auto;">
-<th> Market Share </th>
-  <tr>  Market Share ( Taro BBT):<b>{{MarketShareTaro graphdata.storeTaroSold graphdata.totalTarosale}}</b></tr>
-  <tr>  Market Share ( Lyche BBT):<b>{{MarketShareLyche graphdata.storeLycheSold graphdata.totalLychesale}}</b></tr>
-  <tr>  Market Share ( Total):<b>{{MarketShareTotal graphdata.storeTransaction graphdata.totalSale}}</b></tr>
-  <tr>  Market Share Advice:<b> {{Advice graphdata.storeTransaction graphdata.totalSale graphdata.storeTaroSold graphdata.storeLychSold  graphdata.totalTarosale graphdata.totalLychesale}}</b></tr>
-</table>
-</div>
-{{outlet}}
-
+    <table class="order-table" style="overflow-x:auto;">
+      <th>Market Share</th>
+      <tr>Market Share ( Taro BBT):<b>{{MarketShareTaro graphdata.storeTaroSold graphdata.totalTarosale}}</b></tr>
+      <tr>Market Share ( Lyche BBT):<b>{{MarketShareLyche graphdata.storeLycheSold graphdata.totalLychesale}}</b></tr>
+      <tr>Market Share ( Total):<b>{{MarketShareTotal graphdata.storeTransaction graphdata.totalSale}}</b></tr>
+      <tr>Market Share Advice:<b> {{Advice graphdata.storeTransaction graphdata.totalSale graphdata.storeTaroSold graphdata.storeLychSold  graphdata.totalTarosale graphdata.totalLychesale}}</b></tr>
+    </table>
+  </div>
 </div>
