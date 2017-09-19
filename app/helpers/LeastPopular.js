@@ -2,10 +2,10 @@ import Ember from 'ember';
 
 export function LeastPopular([a,b]) {
   if ( a > b){
-    return "Your least popular drink is Lyche."
+    return "Lyche drink"
     }
   else {
-    return "Your least popular drink is Taro."
+    return "Taro drink"
   }
 }
 

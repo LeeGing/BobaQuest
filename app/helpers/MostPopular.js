@@ -2,10 +2,10 @@ import Ember from 'ember';
 
 export function Popular([a,b]) {
    if ( a > b){
-    return "Your most popular drink is Taro."
+    return "Taro drink"
     }
    else {
-    return "Your most popular drink is Lyche."
+    return "Lyche drink"
    }
 }
 
