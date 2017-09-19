@@ -6,15 +6,15 @@ export default Ember.Controller.extend({
 
   isLvl1: Ember.computed('points', function (){
    return this.get('points') > 9;
-  }), //conditional statement for achievements hbs
+  }),
 
   isLvl2: Ember.computed('points', function (){
    return this.get('points') > 19;
-  }), //conditional statement for achievements hbs
+  }),
 
   isLvl3: Ember.computed('points', function (){
    return this.get('points') > 29;
-  }), //conditional statement for achievements hbs
+  }),
 
   store_details: Ember.A([
     {name: 'Bubble Tea', tagline: "bubbly"},
@@ -32,11 +32,11 @@ export default Ember.Controller.extend({
 
   actions: {
 
-    signup: function() {  
+    signup: function() {
       console.log(this.get('userEmail'));
     },
 
-    setCurrentStore: function(store){ 
+    setCurrentStore: function(store){
       this.set('currentStore', this.get('storeData')[store]);
       console.log(this.get('currentStore'));
     },
@@ -60,17 +60,10 @@ export default Ember.Controller.extend({
           order: this.get('order'),
           user: this.get('user.id'),
           store: this.get('currentStore.store_id')
-          // unncessary sever should know
         }
-      }, function (response) {
-           console.log ( " submitCart was successful ")
-           // trigger next step.
-           // show order created
-           // navigate to wherever you want to go. route. order confirmati0on route.
-              // ^ another ajax request.
-               // each time we look at order confirmation page we look at the id of the order.
-               // display on page. 
-      });
+      },  function (response) {
+            console.log ( " submitCart was successful ")
+          });
     }
   }
 });

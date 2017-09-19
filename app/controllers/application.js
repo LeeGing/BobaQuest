@@ -24,7 +24,6 @@ export default Ember.Controller.extend({
   }
 });
 
-
 export function initialize(application) {
   application.inject('controller', 'fb', 'service:fb');
 }

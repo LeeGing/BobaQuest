@@ -3,5 +3,4 @@ class AllstoresController < ApplicationController
     allstores = Store.all;;
     render json: allstores
   end
-
 end

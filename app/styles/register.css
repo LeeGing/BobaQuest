@@ -18,22 +18,22 @@
   margin-left: auto;
 }
 .reginput{
-     display: inline-block;
-    text-align: center;
+  display: inline-block;
+  text-align: center;
 }
 
 form {
-    position: absolute;
-    height: 200px;
-    width: 400px;
-    margin: 0 0 0 -200px;
-    top: 50%;
-    left: 50%;
+  position: absolute;
+  height: 200px;
+  width: 400px;
+  margin: 0 0 0 -200px;
+  top: 50%;
+  left: 50%;
 }
 
 input {
-    display: inline-block;
-    text-align: center;
+  display: inline-block;
+  text-align: center;
 }
 
 .top-bar {
@@ -57,13 +57,13 @@ input {
 
 }
 
-// \ edits
-
 $button-rounded-hover-radius: 5000px;
 $button-rounded-hover-border: 5px solid darken($primary-color, 10%);
+
 .button button-rounded-hover profile {
   margin-left: 100px;
 }
+
 .button-rounded-hover {
   border: 0;
   border-radius: $button-rounded-hover-radius;
@@ -172,6 +172,3 @@ $button-rounded-hover-border: 5px solid darken($primary-color, 10%);
 .menu-hover-lines .active a::after {
   width: 100%;
 }
-
-
-//

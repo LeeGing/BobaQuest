@@ -7,6 +7,7 @@
    <p> Phone Number: {{store.phone}}</p>
     <p>Location: {{store.location}}</p>
     <br />
+
     <br />
 
     <table class="orderlist" style="overflow-x:auto;" border='1px'>
@@ -42,6 +43,7 @@
 
   <div class="TotalTransInfo">
     <h2> Total Sale information </h2>
+
   <table class="order-table" border='1px'>
   <th> Total </th>
     <tr> <p> Total BBT sale from ALL transactions : {{graphdata.totalSale}}   </p> </tr>
@@ -50,10 +52,12 @@
    <tr> <p>  Total Number of stores in Burnaby : {{graphdata.totalStrBurnaby}} </p> </tr>
    <tr> <p>  Total Number of stores in Richmond : {{graphdata.totalStrRichmond}} </p> </tr>
    </table>
+
   </div>
 
   <div class="Analysis">
     <h2> Analytic information </h2>
+
 <table class="order-table" border='1px'>
 <th> Market Share </th>
    <tr> <p> Market Share ( Taro BBT):{{MarketShareTaro graphdata.storeTaroSold graphdata.totalTarosale}} </p> </tr>
@@ -73,6 +77,8 @@
 	{{/each}}
 
 {{/each}} --}}
+
+
 
 
 

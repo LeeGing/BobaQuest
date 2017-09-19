@@ -9,15 +9,10 @@ Rails.application.routes.draw do
 
   resources :stores do
     resources :graph
-end
-
-
+  end
 
   get '/allstores', to: 'allstores#show'
   post '/token', to: 'login#token'
-
   get '/orders/:id', to: 'orders#show'
-
-
 
 end
