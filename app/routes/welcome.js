@@ -9,6 +9,7 @@ export default Ember.Route.extend({
   setupController: function(controller) {
     controller.set('markers', function() {
       return [
+        { name: 'Lighthouse Lab', lat: 49.281844, long: -123.108162 },
         { name: 'Bubble world downtown', lat: 49.28737839999999, long: -123.1288151 },
         { name: 'Bubble world Kingsway', lat: 49.2329488, long: -123.0331494 },
         { name: 'Bubble world Coquitlam', lat: 49.2513789, long: -122.8925542 },
