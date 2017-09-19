@@ -2,46 +2,54 @@ User.destroy_all
 
 ricky = User.create! ({
   id: 1,
-  name: "Ricky",
-  age: "27",
-  password: "abc123",
-  email: "ricky@ricky.com",
+  name: "Ricky Na",
+  age: "47",
+  password: "12345",
+  email: "rickyna@gmail.com",
   username: "Naricky"
 })
 
 edmond = User.create! ({
   id: 2,
-  name: "Edmond",
-  age: "21",
-  password: "qwe123",
-  email: "edmond@edmond.com",
-  username: "Naedmond"
+  name: "Edmond Lee",
+  age: "20",
+  password: "12345",
+  email: "taromonkey@gmail.com",
+  username: "BBTNinja"
+})
 
+james = User.create! ({
+  id: 23,
+  name: "James Holland",
+  age: "24",
+  password: "12345",
+  email: "jholland@gmail.com",
+  username: "jHolland"
 })
 
 Store.destroy_all
 
 Store.create!([{
   id: 1,
-  name: "BubbleWorld",
-  address: "4300 Kingsway",
-  location: "Burnaby",
-  phone: "6044345551"
+  name: "CoCo - Pender",
+  address: "609 W Pender St",
+  location: "Vancouver",
+  phone: "604-434-5551"
 
 },
 {
   id: 2,
-  name: "ChaiTime",
-  address: "450-9100 Blundell Rd",
-  location: "Richmond",
-  phone: "6042852428"
+  name: "Cha Time - Robson",
+  address: "1274 Robson St",
+  location: "Vancouver",
+  phone: "604-285-2428"
 },
 {
   id: 3,
-  name: "Zeta",
-  address: "123 Zeta Rd",
-  location: "Burnaby",
-  phone: "604431ZETA"
+  name: "Bubble World - Robson",
+  address: "1325 Robson St",
+  location: "Vancouver",
+  phone: "604-431-7232"
 
 
 }])
@@ -129,5 +137,10 @@ Transaction.create!([{
   inventory_id: "2",
   tot: "purchase",
   transpoint: "10"
+},
+{ user: james,
+  inventory_id:"3",
+  tot: "purchase",
+  transpoint: "60"
 }])
 
