@@ -49,6 +49,7 @@
   "private": true,
   "dependencies": {
     "ember-cli": "^2.15.1",
+    "jquery": "^3.2.1",
     "liquid-fire": "^0.28.0",
     "slick-carousel": "^1.7.1"
   }
