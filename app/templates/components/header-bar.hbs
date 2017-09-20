@@ -15,27 +15,45 @@
           <div id="topbar-responsive" class="topbar-responsive-links">
             <div class="top-bar-left">
               {{#basic-dropdown as |dropdown|}}
-                {{#dropdown.trigger}}
+                {{#dropdown.trigger }}
                   <button class="loginBtn loginBtn--google">Menu</button>
                   {{/dropdown.trigger}}
-                {{#dropdown.content class="menu simple vertical medium-vertical"}}
+                {{#dropdown.content class="content-bootstrap-feel width-300 slide-fade"}}
                   {{#if session.isAuthenticated}}
-                    <li>
+                    <li class="loginBtn loginBtn--google">
                       <button {{action 'processLogout'}}>
                         Logout
                       </button>
                     </li>
-                    <li>{{#link-to 'users' 1}}User Profile{{/link-to}}</li>
-                    <li>{{#link-to 'welcome'}}Home page{{/link-to}}</li>
-                    <li>{{#link-to 'stores' 1}}Store Page{{/link-to}}</li>
-                    <h3> {{user.name}}</h3>
+                    <li class="loginBtn loginBtn--google">
+                    <button>
+                        {{#link-to 'users' userHash.id}}User Profile{{/link-to}}
+                      </button>
+                    </li>
+                    <li class="loginBtn loginBtn--google">
+                      <button>
+                        {{#link-to 'welcome'}}Home page{{/link-to}}
+                      </button>
+                    </li>
+                    <li class="loginBtn loginBtn--google">
+                      <button>
+                        {{#link-to 'stores' userHash.id}}Store Page{{/link-to}}
+                      </button>
+                    </li>
                   {{else}}
-                    <li class="loginBtn loginBtn--google">{{#link-to 'login'}}Login{{/link-to}}</li>
-                    <li class="loginBtn loginBtn--google">{{#link-to 'register'}}Registration{{/link-to}}</li>
-                    <li class="loginBtn loginBtn--google">{{#link-to 'welcome' }}Home page{{/link-to}}</li>
-                    <li>
-                      <button {{action 'processLogout'}}>
-                        Logout
+                    <li class="loginBtn loginBtn--google">
+                      <button>
+                        {{#link-to 'login'}}Login{{/link-to}}
+                      </button>
+                    </li>
+                    <li class="loginBtn loginBtn--google">
+                      <button>
+                        {{#link-to 'register'}}Registration{{/link-to}}
+                      </button>
+                    </li>
+                    <li class="loginBtn loginBtn--google">
+                      <button>
+                        {{#link-to 'welcome' }}Home page{{/link-to}}
                       </button>
                     </li>
                     <li>
@@ -55,9 +73,9 @@
               {{#if userHash.username}}
                 Logged in as: {{userHash.username}}
               {{/if}}
-
             </div>
           </div>
+          <h3 class="title1">BoBa Quest</h3>
         </nav>
       </div>
     </div>

@@ -3,6 +3,12 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   session: Ember.inject.service('session'),
 
+  didInsertElement: function() {
+    Ember.$( ".menu-button" ).click(function() {
+      Ember.$( ".menu-content" ).slideToggle( "100" );
+    });
+  },
+
   actions: {
     processLogin: function() {
       this.sendAction('authFB')

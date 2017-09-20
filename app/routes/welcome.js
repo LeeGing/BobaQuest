@@ -2,14 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   userConfig: Ember.inject.service(),
+  session: Ember.inject.service('session'),
 
   model: function(params) {
     console.log('model params:', params);
-
-    return new Ember.RSVP.hash({
-
-    })
   },
+
+
 
   setupController: function(controller) {
     controller.set('markers', function() {
