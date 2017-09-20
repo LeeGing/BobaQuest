@@ -179,3 +179,9 @@ display: inline-block;
 .loginBtn--google:focus {
   background: rgba(0,0,0,.3);
 }
+
+/* user page*/
+
+.userpage {
+  background-color: #f1f7cd;
+}
