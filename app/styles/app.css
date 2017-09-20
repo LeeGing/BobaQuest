@@ -27,6 +27,7 @@
 
 .welcometextbox{
   float: left;
+  background-color: rgba(255, 235, 142, .05) !important;
   display: block;
   box-sizing: content-box;
   width: 30%;
@@ -36,11 +37,20 @@
 
 .questtext {
   font-family: 'Quicksand', sans-serif !important;
+  background-color: rgba(255, 235, 142, .05) !important;
+}
 
+html {
+  background: url(https://cdn.dribbble.com/users/281367/screenshots/1695966/bubble_tea_geoffrey_brailsford.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body {
- padding: 2em;
+
+  padding: 2em;
 }
 
 .main {
@@ -202,19 +212,12 @@ display: inline-block;
 }
 
 .slide-fade {
-  will-change: transform, opacity;
-  &.ember-basic-dropdown-content--below.ember-basic-dropdown--transitioning-in {
-    animation: drop-fade-below 1.15s;
-  }
-  &.ember-basic-dropdown-content--below.ember-basic-dropdown--transitioning-out {
-    animation: drop-fade-below 1.15s reverse;
-  }
-  &.ember-basic-dropdown-content--above.ember-basic-dropdown--transitioning-in {
-    animation: drop-fade-above 1.15s;
-  }
-  &.ember-basic-dropdown-content--above.ember-basic-dropdown--transitioning-out {
-    animation: drop-fade-above 1.15s reverse;
-  }
+overflow-y: hidden;
+  max-height: 500px; /* approximate max height */
+
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
 
 

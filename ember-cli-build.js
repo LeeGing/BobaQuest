@@ -8,6 +8,12 @@ module.exports = function(defaults) {
     // Add options here
     'ember-cli-foundation-6-sass' :{
       'foundationJs': 'all'
+    },
+
+    'ember-bootstrap': {
+      bootstrapVersion: 3,
+      importBootstrapFont: true,
+      importBootstrapCSS: false
     }
   });
 

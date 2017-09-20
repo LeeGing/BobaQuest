@@ -20,52 +20,56 @@
                   {{/dropdown.trigger}}
                 {{#dropdown.content class="content-bootstrap-feel width-300 slide-fade"}}
                   {{#if session.isAuthenticated}}
-                    <li class="loginBtn loginBtn--google">
-                      <button {{action 'processLogout'}}>
-                        Logout
-                      </button>
-                    </li>
-                    <li class="loginBtn loginBtn--google">
-                    <button>
-                        {{#link-to 'users' userHash.id}}User Profile{{/link-to}}
-                      </button>
-                    </li>
-                    <li class="loginBtn loginBtn--google">
+                    <div class="slide-fade">
+                      <li class="loginBtn loginBtn--google">
+                        <button {{action 'processLogout'}}>
+                          Logout
+                        </button>
+                      </li>
+                      <li class="loginBtn loginBtn--google">
                       <button>
-                        {{#link-to 'welcome'}}Home page{{/link-to}}
-                      </button>
-                    </li>
-                    <li class="loginBtn loginBtn--google">
-                      <button>
-                        {{#link-to 'stores' userHash.id}}Store Page{{/link-to}}
-                      </button>
-                    </li>
+                          {{#link-to 'users' userHash.id}}User Profile{{/link-to}}
+                        </button>
+                      </li>
+                      <li class="loginBtn loginBtn--google">
+                        <button>
+                          {{#link-to 'welcome'}}Home page{{/link-to}}
+                        </button>
+                      </li>
+                      <li class="loginBtn loginBtn--google">
+                        <button>
+                          {{#link-to 'stores' userHash.id}}Store Page{{/link-to}}
+                        </button>
+                      </li>
+                    </div>
                   {{else}}
-                    <li class="loginBtn loginBtn--google">
-                      <button>
-                        {{#link-to 'login'}}Login{{/link-to}}
-                      </button>
-                    </li>
-                    <li class="loginBtn loginBtn--google">
-                      <button>
-                        {{#link-to 'register'}}Registration{{/link-to}}
-                      </button>
-                    </li>
-                    <li class="loginBtn loginBtn--google">
-                      <button>
-                        {{#link-to 'welcome' }}Home page{{/link-to}}
-                      </button>
-                    </li>
-                    <li>
-                      <button {{action 'processLogin'}} class="loginBtn loginBtn--facebook">
-                       Login with Facebook
-                      </button>
-                    </li>
-                    <li>
-                      <button {{action 'leaveFacebook'}} class="loginBtn loginBtn--facebook">
-                       Logout
-                      </button>
-                    </li>
+                    <div class="slide-fade">
+                      <li class="loginBtn loginBtn--google">
+                        <button>
+                          {{#link-to 'login'}}Login{{/link-to}}
+                        </button>
+                      </li>
+                      <li class="loginBtn loginBtn--google">
+                        <button>
+                          {{#link-to 'register'}}Registration{{/link-to}}
+                        </button>
+                      </li>
+                      <li class="loginBtn loginBtn--google">
+                        <button>
+                          {{#link-to 'welcome' }}Home page{{/link-to}}
+                        </button>
+                      </li>
+                      <li>
+                        <button {{action 'processLogin'}} class="loginBtn loginBtn--facebook">
+                         Login with Facebook
+                        </button>
+                      </li>
+                      <li>
+                        <button {{action 'leaveFacebook'}} class="loginBtn loginBtn--facebook">
+                         Logout
+                        </button>
+                      </li>
+                     </div>
                   {{/if}}
                 {{/dropdown.content}}
               {{/basic-dropdown}}

@@ -1,3 +1,5 @@
 @import "settings";
 @import 'foundation-sites/foundation';
 @include foundation-everything;
+
+@import "ember-bootstrap/bootstrap";
