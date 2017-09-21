@@ -267,3 +267,28 @@ display: inline-block;
   background-color: #f1f7cd;
 }
 
+.userInfoTable {
+  /*background-color: rgba(255,255,255,.5);*/
+  padding: 2em;
+  font-size: 2.5em;
+  font-family: 'Quicksand', sans-serif;
+  float: left;
+  display: block;
+}
+
+.achievementsBox {
+  padding: 2em  ;
+  background-color: rgba(255,255,255,.7);
+  padding-left: 1em;
+  font-family: 'Quicksand', sans-serif;
+  display: block;
+
+}
+
+.orderingMenu{
+  display: inline;
+}
+
+.menu {
+  font-family: 'Quicksand', sans-serif;
+}

@@ -22,21 +22,21 @@
                           Logout
                         </button>
                       </li>
-                      <li class="loginBtn loginBtn--google">
-                      <button>
-                          {{#link-to 'users' userHash.id}}{{/link-to}}User Profile
-                        </button>
-                      </li>
-                      <li class="loginBtn loginBtn--google">
-                        <button>
-                          {{#link-to 'welcome'}}{{/link-to}}Home page
-                        </button>
-                      </li>
-                      <li class="loginBtn loginBtn--google">
-                        <button>
-                          {{#link-to 'stores' 1}}{{/link-to}}Store Page
-                        </button>
-                      </li>
+                      {{#link-to 'users' userHash.id}}
+                        <li class="loginBtn loginBtn--google">
+                          <button>User Profile</button>
+                        </li>
+                      {{/link-to}}
+                      {{#link-to 'welcome'}}
+                        <li class="loginBtn loginBtn--google">
+                          <button>Home page</button>
+                        </li>
+                      {{/link-to}}
+                      {{#link-to 'stores' 1}}
+                        <li class="loginBtn loginBtn--google">
+                          <button>Store Page</button>
+                        </li>
+                      {{/link-to}}
                     </ul>
                   {{else}}
                     <ul>
@@ -50,11 +50,11 @@
                           <button>Registration</button>
                         </li>
                       {{/link-to}}
-                      <li class="loginBtn loginBtn--google">
-                        <button>
-                          {{#link-to 'welcome' }}{{/link-to}}Home page
-                        </button>
-                      </li>
+                      {{#link-to 'welcome' }}
+                        <li class="loginBtn loginBtn--google">
+                        <button>Home page</button>
+                        </li>
+                      {{/link-to}}
                       <li class="loginBtn loginBtn--facebook">
                         <button {{action 'processLogin'}} >
                          Login with Facebook
@@ -71,7 +71,7 @@
               {{/basic-dropdown}}
               {{log userHash}}
               {{#if userHash.username}}
-                Logged in as: {{userHash.username}}
+                <h6 style="font-family: 'Quicksand', sans-serif; float: left; display: block;">Logged in as: {{userHash.username}}</h6>
               {{/if}}
             </div>
           </div>
