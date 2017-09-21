@@ -5617,3 +5617,503 @@ Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.4ms)
 
 
 >>>>>>> sept20/test
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7548110526173859915);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (27.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7548110526173859915)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mSQL (27.4ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 2]]
+  [1m[35mSQL (3.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 3]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 4]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[32mINSERT INTO "users" ("id", "name", "password_digest", "email", "username", "age") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["name", "Ricky Na"], ["password_digest", "$2a$10$TLY4FHVN0mJ9e.mMVV1V3O6YZmxnI6tyIBVYzhZv8ow8BTqA7qvJu"], ["email", "rickyna@gmail.com"], ["username", "Naricky"], ["age", 47]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("id", "name", "password_digest", "email", "username", "age") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 2], ["name", "Edmond Lee"], ["password_digest", "$2a$10$SPvn.JyahVvt1Dah9N7tP.6VgtPqYJFN7ZAJxwIjNNb2gvPwwXVv2"], ["email", "taromonkey@gmail.com"], ["username", "BBTNinja"], ["age", 20]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("id", "name", "password_digest", "email", "username", "age") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 23], ["name", "James Holland"], ["password_digest", "$2a$10$5dhxIHKW.pQCLe34iwmt.OaBm7KZD1XmDh1HrjVGey6ZcIxzMrXV6"], ["email", "jholland@gmail.com"], ["username", "jHolland"], ["age", 24]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStore Load (0.7ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.6ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."store_id" = $1[0m  [["store_id", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "inventories" WHERE "inventories"."id" = $1[0m  [["id", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "inventories" WHERE "inventories"."id" = $1[0m  [["id", 2]]
+  [1m[35mSQL (6.8ms)[0m  [1m[31mDELETE FROM "stores" WHERE "stores"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."store_id" = $1[0m  [["store_id", 2]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "inventories" WHERE "inventories"."id" = $1[0m  [["id", 3]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "inventories" WHERE "inventories"."id" = $1[0m  [["id", 4]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "inventories" WHERE "inventories"."id" = $1[0m  [["id", 5]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "stores" WHERE "stores"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."store_id" = $1[0m  [["store_id", 3]]
+  [1m[35mSQL (2.2ms)[0m  [1m[31mDELETE FROM "stores" WHERE "stores"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("id", "name", "address", "location", "phone") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 1], ["name", "CoCo - Pender"], ["address", "609 W Pender St"], ["location", "Vancouver"], ["phone", "604-434-5551"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("id", "name", "address", "location", "phone") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 2], ["name", "Cha Time - Robson"], ["address", "1274 Robson St"], ["location", "Vancouver"], ["phone", "604-285-2428"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("id", "name", "address", "location", "phone") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 3], ["name", "Bubble World - Robson"], ["address", "1325 Robson St"], ["location", "Vancouver"], ["phone", "604-431-7232"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mDrink Load (0.7ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."drink_id" = $1[0m  [["drink_id", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "drinks" WHERE "drinks"."id" = $1[0m  [["id", 1]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.3ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."drink_id" = $1[0m  [["drink_id", 2]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "drinks" WHERE "drinks"."id" = $1[0m  [["id", 2]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."drink_id" = $1[0m  [["drink_id", 3]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "drinks" WHERE "drinks"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."drink_id" = $1[0m  [["drink_id", 4]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "drinks" WHERE "drinks"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "drinks" ("id", "name", "drinkpoints") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 1], ["name", "Taro BBT (BubbleWorld)"], ["drinkpoints", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "drinks" ("id", "name", "drinkpoints") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 2], ["name", "Lyche BBT (BubbleWorld)"], ["drinkpoints", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "drinks" ("id", "name", "drinkpoints") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 3], ["name", "Taro BBT (ChaiTime)"], ["drinkpoints", 20]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "drinks" ("id", "name", "drinkpoints") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 4], ["name", "Lyche BBT (ChaiTime)"], ["drinkpoints", 20]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "inventories" ("id", "store_id", "drink_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 1], ["store_id", 1], ["drink_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "inventories" ("id", "store_id", "drink_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 2], ["store_id", 1], ["drink_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "inventories" ("id", "store_id", "drink_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 3], ["store_id", 2], ["drink_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "inventories" ("id", "store_id", "drink_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 4], ["store_id", 2], ["drink_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "inventories" ("id", "store_id", "drink_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 5], ["store_id", 2], ["drink_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["inventory_id", 1], ["tot", "purchase"], ["transpoint", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["inventory_id", 4], ["tot", "purchase"], ["transpoint", 20]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["inventory_id", 1], ["tot", "purchase"], ["transpoint", 10]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["inventory_id", 2], ["tot", "purchase"], ["transpoint", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 23], ["inventory_id", 3], ["tot", "purchase"], ["transpoint", 60]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7548110526173859915);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7548110526173859915)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 5]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 6]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 7]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 8]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 23]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 9]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("id", "name", "password_digest", "email", "username", "age") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["name", "Ricky Na"], ["password_digest", "$2a$10$0Gr03ua2CAo8h2TBmBoYaObjcBhbsv44xn0FVFhT9WH.hqHKY58s."], ["email", "rickyna@gmail.com"], ["username", "Naricky"], ["age", 47]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("id", "name", "password_digest", "email", "username", "age") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 2], ["name", "Edmond Lee"], ["password_digest", "$2a$10$yhPRpiCOjeSDTVljIytYnutxaHk6L4zViYrHZqkM/iFB/wLRp5MC."], ["email", "taromonkey@gmail.com"], ["username", "BBTNinja"], ["age", 20]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("id", "name", "password_digest", "email", "username", "age") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 23], ["name", "James Holland"], ["password_digest", "$2a$10$Hbvj7fcQkSb7SNZfJFWLpuTDWGPyUa7G8Bg1HoxvCQjzrgdVf19la"], ["email", "jholland@gmail.com"], ["username", "jHolland"], ["age", 24]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStore Load (0.7ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.4ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."store_id" = $1[0m  [["store_id", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "inventories" WHERE "inventories"."id" = $1[0m  [["id", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "inventories" WHERE "inventories"."id" = $1[0m  [["id", 2]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "stores" WHERE "stores"."id" = $1[0m  [["id", 1]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."store_id" = $1[0m  [["store_id", 2]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "inventories" WHERE "inventories"."id" = $1[0m  [["id", 3]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "inventories" WHERE "inventories"."id" = $1[0m  [["id", 4]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "inventories" WHERE "inventories"."id" = $1[0m  [["id", 5]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "stores" WHERE "stores"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."store_id" = $1[0m  [["store_id", 3]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "stores" WHERE "stores"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("id", "name", "address", "location", "phone") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 1], ["name", "CoCo - Pender"], ["address", "609 W Pender St"], ["location", "Vancouver"], ["phone", "604-434-5551"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("id", "name", "address", "location", "phone") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 2], ["name", "Cha Time - Robson"], ["address", "1274 Robson St"], ["location", "Vancouver"], ["phone", "604-285-2428"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("id", "name", "address", "location", "phone") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 3], ["name", "Bubble World - Robson"], ["address", "1325 Robson St"], ["location", "Vancouver"], ["phone", "604-431-7232"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mDrink Load (0.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.3ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."drink_id" = $1[0m  [["drink_id", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "drinks" WHERE "drinks"."id" = $1[0m  [["id", 1]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.3ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."drink_id" = $1[0m  [["drink_id", 2]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "drinks" WHERE "drinks"."id" = $1[0m  [["id", 2]]
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."drink_id" = $1[0m  [["drink_id", 3]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "drinks" WHERE "drinks"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."drink_id" = $1[0m  [["drink_id", 4]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "drinks" WHERE "drinks"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "drinks" ("id", "name", "drinkpoints") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 1], ["name", "Taro BBT (BubbleWorld)"], ["drinkpoints", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "drinks" ("id", "name", "drinkpoints") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 2], ["name", "Lyche BBT (BubbleWorld)"], ["drinkpoints", 10]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "drinks" ("id", "name", "drinkpoints") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 3], ["name", "Taro BBT (ChaiTime)"], ["drinkpoints", 20]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "drinks" ("id", "name", "drinkpoints") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 4], ["name", "Lyche BBT (ChaiTime)"], ["drinkpoints", 20]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "inventories" ("id", "store_id", "drink_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 1], ["store_id", 1], ["drink_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "inventories" ("id", "store_id", "drink_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 2], ["store_id", 1], ["drink_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "inventories" ("id", "store_id", "drink_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 3], ["store_id", 2], ["drink_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "inventories" ("id", "store_id", "drink_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 4], ["store_id", 2], ["drink_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "inventories" ("id", "store_id", "drink_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 5], ["store_id", 2], ["drink_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["inventory_id", 1], ["tot", "purchase"], ["transpoint", 10]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["inventory_id", 4], ["tot", "purchase"], ["transpoint", 20]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["inventory_id", 1], ["tot", "purchase"], ["transpoint", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["inventory_id", 2], ["tot", "purchase"], ["transpoint", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 23], ["inventory_id", 3], ["tot", "purchase"], ["transpoint", 60]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7548110526173859915);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7548110526173859915)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 10]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 11]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 12]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 13]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 23]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 14]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("id", "name", "password_digest", "email", "username", "age") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["name", "Ricky Na"], ["password_digest", "$2a$10$VlQjYGLBdKfViz4F4Gu.B.DLIwQliGZxMzIRpbyxGBcjh4rhU/Rzi"], ["email", "rickyna@gmail.com"], ["username", "Naricky"], ["age", 47]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("id", "name", "password_digest", "email", "username", "age") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 2], ["name", "Edmond Lee"], ["password_digest", "$2a$10$R3qEbRWaN5X5vvNaNwja3OozyNEIFnwGQ730TMNVPkFGh.zY5pk36"], ["email", "taromonkey@gmail.com"], ["username", "BBTNinja"], ["age", 20]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("id", "name", "password_digest", "email", "username", "age") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 23], ["name", "James Holland"], ["password_digest", "$2a$10$FNKaM1sIjpNaFom6eD16k.welO/PUfy.6wprkA05mYZ7qedQ8VwaK"], ["email", "jholland@gmail.com"], ["username", "jHolland"], ["age", 24]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStore Load (0.7ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.4ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."store_id" = $1[0m  [["store_id", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "inventories" WHERE "inventories"."id" = $1[0m  [["id", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "inventories" WHERE "inventories"."id" = $1[0m  [["id", 2]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "stores" WHERE "stores"."id" = $1[0m  [["id", 1]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.4ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."store_id" = $1[0m  [["store_id", 2]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "inventories" WHERE "inventories"."id" = $1[0m  [["id", 3]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "inventories" WHERE "inventories"."id" = $1[0m  [["id", 4]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "inventories" WHERE "inventories"."id" = $1[0m  [["id", 5]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "stores" WHERE "stores"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."store_id" = $1[0m  [["store_id", 3]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "stores" WHERE "stores"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("id", "name", "address", "location", "phone") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 1], ["name", "CoCo - Pender"], ["address", "609 W Pender St"], ["location", "Vancouver"], ["phone", "604-434-5551"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("id", "name", "address", "location", "phone") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 2], ["name", "Cha Time - Robson"], ["address", "1274 Robson St"], ["location", "Vancouver"], ["phone", "604-285-2428"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("id", "name", "address", "location", "phone") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 3], ["name", "Bubble World - Robson"], ["address", "1325 Robson St"], ["location", "Vancouver"], ["phone", "604-431-7232"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."drink_id" = $1[0m  [["drink_id", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "drinks" WHERE "drinks"."id" = $1[0m  [["id", 1]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."drink_id" = $1[0m  [["drink_id", 2]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "drinks" WHERE "drinks"."id" = $1[0m  [["id", 2]]
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.3ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."drink_id" = $1[0m  [["drink_id", 3]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "drinks" WHERE "drinks"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."drink_id" = $1[0m  [["drink_id", 4]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "drinks" WHERE "drinks"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "drinks" ("id", "name", "drinkpoints") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 1], ["name", "Taro BBT (BubbleWorld)"], ["drinkpoints", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "drinks" ("id", "name", "drinkpoints") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 2], ["name", "Lyche BBT (BubbleWorld)"], ["drinkpoints", 10]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "drinks" ("id", "name", "drinkpoints") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 3], ["name", "Taro BBT (ChaiTime)"], ["drinkpoints", 20]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "drinks" ("id", "name", "drinkpoints") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 4], ["name", "Lyche BBT (ChaiTime)"], ["drinkpoints", 20]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "inventories" ("id", "store_id", "drink_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 1], ["store_id", 1], ["drink_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "inventories" ("id", "store_id", "drink_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 2], ["store_id", 1], ["drink_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "inventories" ("id", "store_id", "drink_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 3], ["store_id", 2], ["drink_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "inventories" ("id", "store_id", "drink_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 4], ["store_id", 2], ["drink_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "inventories" ("id", "store_id", "drink_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 5], ["store_id", 2], ["drink_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["inventory_id", 1], ["tot", "purchase"], ["transpoint", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["inventory_id", 4], ["tot", "purchase"], ["transpoint", 20]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["inventory_id", 1], ["tot", "purchase"], ["transpoint", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["inventory_id", 2], ["tot", "purchase"], ["transpoint", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 23], ["inventory_id", 3], ["tot", "purchase"], ["transpoint", 60]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 15]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 16]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (12.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 17]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 18]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 23]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "transactions" WHERE "transactions"."id" = $1[0m  [["id", 19]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("id", "name", "password_digest", "email", "username", "age") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["name", "Ricky Na"], ["password_digest", "$2a$10$tY8FKzmCaxui8SZEEZcuZe.1hIp1RGtik1jESJeRNrmTRvcMMzv26"], ["email", "rickyna@gmail.com"], ["username", "Naricky"], ["age", 47]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("id", "name", "password_digest", "email", "username", "age") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 2], ["name", "Edmond Lee"], ["password_digest", "$2a$10$tAmWE.HRgjxakwowMt0VLukQc6T25aKfk.HncRS5.T5KuedamJ4uS"], ["email", "taromonkey@gmail.com"], ["username", "BBTNinja"], ["age", 20]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("id", "name", "password_digest", "email", "username", "age") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 23], ["name", "James Holland"], ["password_digest", "$2a$10$dN1BFHgKXNZO073fMElXWuqTQff3XDDDou/I9UwSn.fvLTynfMh7O"], ["email", "jholland@gmail.com"], ["username", "jHolland"], ["age", 24]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT "stores".* FROM "stores"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.4ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."store_id" = $1[0m  [["store_id", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "inventories" WHERE "inventories"."id" = $1[0m  [["id", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "inventories" WHERE "inventories"."id" = $1[0m  [["id", 2]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "stores" WHERE "stores"."id" = $1[0m  [["id", 1]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."store_id" = $1[0m  [["store_id", 2]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "inventories" WHERE "inventories"."id" = $1[0m  [["id", 3]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "inventories" WHERE "inventories"."id" = $1[0m  [["id", 4]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "inventories" WHERE "inventories"."id" = $1[0m  [["id", 5]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "stores" WHERE "stores"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."store_id" = $1[0m  [["store_id", 3]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "stores" WHERE "stores"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("id", "name", "address", "location", "phone") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 1], ["name", "CoCo - Pender"], ["address", "609 W Pender St"], ["location", "Vancouver"], ["phone", "604-434-5551"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("id", "name", "address", "location", "phone") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 2], ["name", "Cha Time - Robson"], ["address", "1274 Robson St"], ["location", "Vancouver"], ["phone", "604-285-2428"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("id", "name", "address", "location", "phone") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 3], ["name", "Bubble World - Robson"], ["address", "1325 Robson St"], ["location", "Vancouver"], ["phone", "604-431-7232"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mDrink Load (0.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.3ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."drink_id" = $1[0m  [["drink_id", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "drinks" WHERE "drinks"."id" = $1[0m  [["id", 1]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.3ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."drink_id" = $1[0m  [["drink_id", 2]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "drinks" WHERE "drinks"."id" = $1[0m  [["id", 2]]
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.4ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."drink_id" = $1[0m  [["drink_id", 3]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "drinks" WHERE "drinks"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE "inventories"."drink_id" = $1[0m  [["drink_id", 4]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "drinks" WHERE "drinks"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "drinks" ("id", "name", "drinkpoints") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 1], ["name", "Taro BBT (BubbleWorld)"], ["drinkpoints", 10]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "drinks" ("id", "name", "drinkpoints") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 2], ["name", "Lyche BBT (BubbleWorld)"], ["drinkpoints", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "drinks" ("id", "name", "drinkpoints") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 3], ["name", "Taro BBT (ChaiTime)"], ["drinkpoints", 20]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "drinks" ("id", "name", "drinkpoints") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 4], ["name", "Lyche BBT (ChaiTime)"], ["drinkpoints", 20]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "inventories" ("id", "store_id", "drink_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 1], ["store_id", 1], ["drink_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "inventories" ("id", "store_id", "drink_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 2], ["store_id", 1], ["drink_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "inventories" ("id", "store_id", "drink_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 3], ["store_id", 2], ["drink_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "inventories" ("id", "store_id", "drink_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 4], ["store_id", 2], ["drink_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "inventories" ("id", "store_id", "drink_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["id", 5], ["store_id", 2], ["drink_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTransaction Load (0.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["inventory_id", 1], ["tot", "purchase"], ["transpoint", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["inventory_id", 4], ["tot", "purchase"], ["transpoint", 20]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["inventory_id", 1], ["tot", "purchase"], ["transpoint", 10]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["inventory_id", 2], ["tot", "purchase"], ["transpoint", 10]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 23], ["inventory_id", 3], ["tot", "purchase"], ["transpoint", 60]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
