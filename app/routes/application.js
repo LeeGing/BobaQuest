@@ -7,9 +7,9 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
   userConfig: Ember.inject.service(),
   fb: Ember.inject.service(),
 
-  // beforeModel() {
-  //   return this.get('fb').FBInit();
-  // },
+   // beforeModel() {
+
+   // },
 
   // model: function(params) {
   //   console.log('model params:', params);
@@ -28,7 +28,9 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
 
 
   setupController: function(controller, models) {
-    controller.set('userHash', this.get('userConfig.userHash'));
+    this.get('userConfig').setUserHash(this.get('session.data.authenticated.username')).then(result => {
+      controller.set('userHash', this.get('userConfig.userHash'));
+    });
     // controller.set('user', models.users)
     // controller.set('points', models.points)
 

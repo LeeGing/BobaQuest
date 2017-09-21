@@ -1,8 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Service.extend({
-  userHash: null,
-
   email: Ember.computed.alias('userHash.email'),
   userId: Ember.computed.alias('userHash.id'),
   username: Ember.computed.alias('userHash.username'),

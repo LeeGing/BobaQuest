@@ -190,34 +190,4 @@ display: inline-block;
   background: rgba(0,0,0,.3);
 }
 
-@keyframes drop-fade-below {
-  0%   {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-@keyframes drop-fade-above {
-  0%   {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-.slide-fade {
-overflow-y: hidden;
-  max-height: 500px; /* approximate max height */
-
-  transition-property: all;
-  transition-duration: .5s;
-  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-}
-
 
