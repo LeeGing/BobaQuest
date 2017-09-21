@@ -1,25 +1,58 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
 
 <title>BBT</title>
 
-<div class="off-canvas-wrapper">
-  <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
-    <div class="off-canvas-content" data-off-canvas-content>
-      <div class="title-bar hide-for-large">
-        <div class="title-bar-left">
-        </div>
-      </div>
+<div class="welcometextbox">
+  {{#if userHash}}
+    <div class="questtext">
+      <h3>Username: {{userHash.username}}</h3>
+      <h3>Email: {{userHash.email}}</h3>
+
+      <h2>Today's Quest</h2>
+      <p> Hello {{userHash.username}}! We have the following activities for you to complete some diabetic quests!</p>
+      <table border='1px'>
+        <tr>
+          <td>Go to CoCo and grab a Bubble GaGa</td>
+          <td>50 pts</td>
+        </tr>
+        <tr>
+          <td>Try the new Mango QQ from ChaTime!</td>
+          <td>50 pts</td>
+        </tr>
+        <tr>
+          <td>Bubble World has a student discount on Honey Milk Tea</td>
+          <td>50 pts</td>
+        </tr>
+      </table>
     </div>
-  </div>
+  {{else}}
+    <div class="questtext">
+      <h2>Today's Quest</h2>
+      <p>  We have the following activities for you to complete some diabetic quests!</p>
+      <table border='1px'>
+        <tr>
+          <td>Go to CoCo and grab a Bubble GaGa</td>
+          <td>50 pts</td>
+        </tr>
+        <tr>
+          <td>Try the new Mango QQ from ChaTime!</td>
+          <td>50 pts</td>
+        </tr>
+        <tr>
+          <td>Bubble World has a student discount on Honey Milk Tea</td>
+          <td>50 pts</td>
+        </tr>
+      </table>
+    </div>
+  {{/if}}
 </div>
 
 
-<center class="mapbox">
+<div class="mapbox">
   {{bubbletea-map}}
-</center>
+</div>
 <br />
 <div class="row small-up-1 medium-up-1 large-up-1">
   <div class="rounded-social-buttons">

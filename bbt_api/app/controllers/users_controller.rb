@@ -5,6 +5,13 @@ class UsersController < ApplicationController
   def show
     user = User.find(params[:id]).as_json
     render json: user
+
+  end
+
+  def find_by_username
+    @user = User.where(username: params[:username])
+
+    render json: @user
   end
 
   def create

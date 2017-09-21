@@ -1,7 +1,13 @@
+<link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+
+
 <div class="menu">
-  {{header-bar authFB='authFB' invalidateSession='invalidateSession' exitFB='exitFB'}}
+{{header-bar authFB='authFB' invalidateSession='invalidateSession' exitFB='exitFB' session=session userHash=userHash}}
+
 </div>
 
 <div class="main">
   {{outlet}}
+
 </div>
+

@@ -2,6 +2,11 @@ import Ember from 'ember';
 import config from '../config/environment';
 
 export default Ember.Route.extend({
+<<<<<<< HEAD
+=======
+  userConfig: Ember.inject.service(),
+
+>>>>>>> sept20/test
   model: function(params) {
     console.log('model params:', params);
 
@@ -19,6 +24,10 @@ export default Ember.Route.extend({
   },
 
   setupController: function(controller, models) {
+<<<<<<< HEAD
+=======
+    controller.set('userHash', this.get('userConfig.userHash'));
+>>>>>>> sept20/test
     controller.set('user', models.users);
     controller.set('points', models.points);
     controller.set('store', models.store);

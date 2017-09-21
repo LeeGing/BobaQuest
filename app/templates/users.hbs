@@ -1,9 +1,15 @@
-<div class='userpage'>
+
+<link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+
+<h2>Users n stores</h2>
+
+THIS IS USERS.HBS
 <div>
-  <h3>Welcome back,<b> {{user.name}}</b></h3>
-  {{!-- Age: {{user.age}} <br /> --}}
-  <h5>Your Registered Email is: {{user.email}}</h5>
-  <h5>You have collected <b>{{points}}</b> points so far!</h5>
+
+  Name: {{userHash.name}} <br />
+  Age: {{userHash.age}} <br />
+  Email: {{userHash.email}}
+  Point: {{points}}
   {{user.achievements}}
 </div>
 

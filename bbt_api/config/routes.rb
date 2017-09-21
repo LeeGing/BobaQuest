@@ -15,4 +15,11 @@ Rails.application.routes.draw do
   post '/token', to: 'login#token'
   get '/orders/:id', to: 'orders#show'
 
+<<<<<<< HEAD
+=======
+  get '/users/find/:username', to: 'users#find_by_username'
+
+
+
+>>>>>>> sept20/test
 end
