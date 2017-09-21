@@ -6117,3 +6117,1762 @@ Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.4ms)
   [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT  "inventories".* FROM "inventories" WHERE "inventories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("user_id", "inventory_id", "tot", "transpoint") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 23], ["inventory_id", 3], ["tot", "purchase"], ["transpoint", 60]]
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/revoke" for 127.0.0.1 at 2017-09-21 00:25:25 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (13.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [POST] "/revoke"):
+  
+actionpack (5.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.0.5) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 00:25:27 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (14.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 54ms (Views: 5.5ms | ActiveRecord: 26.2ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 00:25:36 -0700
+Started POST "/token" for 127.0.0.1 at 2017-09-21 00:25:36 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 63ms (Views: 30.9ms | ActiveRecord: 23.0ms)
+
+
+Processing by LoginController#token as */*
+  Parameters: {"grant_type"=>"password", "username"=>"Naricky", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Naricky"], ["LIMIT", 1]]
+Completed 200 OK in 103ms (Views: 0.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 00:25:36 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 00:25:41 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 00:25:41 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:32:12 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (620.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 662ms (Views: 23.6ms | ActiveRecord: 620.5ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:32:13 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 08:32:13 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (17.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 19ms (Views: 1.6ms | ActiveRecord: 17.0ms)
+
+
+  [1m[36mUser Load (77.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 81ms (Views: 2.3ms | ActiveRecord: 77.8ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:32:38 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:32:38 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 08:32:39 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:33:05 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 35ms (Views: 23.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:33:05 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 08:33:05 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:34:16 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 13ms (Views: 5.1ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:34:16 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 08:34:16 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 9ms (Views: 1.3ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:37:30 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (18.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 50ms (Views: 12.0ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:37:31 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 08:37:31 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:37:47 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 10ms (Views: 3.3ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:37:47 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 08:37:49 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:43:27 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 73ms (Views: 49.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:43:28 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 08:43:28 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 9ms (Views: 1.3ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:43:46 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:43:46 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 08:43:47 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:45:09 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (28.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 105ms (Views: 63.2ms | ActiveRecord: 28.5ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:45:09 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 08:45:09 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:46:16 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 34ms (Views: 23.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:46:17 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 8ms (Views: 2.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 08:46:17 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 7ms (Views: 1.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:46:51 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 8ms (Views: 1.5ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:46:52 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 08:46:52 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:47:02 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 15ms (Views: 5.5ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:47:02 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (27.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 30ms (Views: 2.2ms | ActiveRecord: 27.1ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 08:47:03 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (9.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 30ms (Views: 19.4ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:47:47 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (12.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 14ms (Views: 1.8ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:47:47 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 08:47:47 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:48:19 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 28ms (Views: 15.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:48:19 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:48:31 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:48:31 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 08:48:33 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:49:12 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 9ms (Views: 3.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:49:12 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 8ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 08:49:12 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:50:10 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:50:10 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 08:50:11 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (11.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 13ms (Views: 1.5ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-09-21 08:50:13 -0700
+Started GET "/users/1/points" for 127.0.0.1 at 2017-09-21 08:50:13 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (29.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 2.1ms | ActiveRecord: 29.5ms)
+
+
+Processing by PointsController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT SUM("transactions"."transpoint") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 200ms (Views: 0.3ms | ActiveRecord: 86.3ms)
+
+
+Started GET "/stores/1/graph" for 127.0.0.1 at 2017-09-21 08:50:17 -0700
+Started GET "/stores/1" for 127.0.0.1 at 2017-09-21 08:50:17 -0700
+Started GET "/orders/1" for 127.0.0.1 at 2017-09-21 08:50:17 -0700
+Processing by GraphController#index as */*
+Processing by OrdersController#show as */*
+Processing by StoresController#show as */*
+  Parameters: {"store_id"=>"1"}
+  Parameters: {"id"=>"1"}
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (26.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."store_id" = $1[0m  [["store_id", 1]]
+Completed 200 OK in 94ms (Views: 19.3ms | ActiveRecord: 64.2ms)
+
+
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStore Load (0.6ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 107ms (Views: 0.3ms | ActiveRecord: 89.2ms)
+
+
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  [1m[36mInventory Load (0.6ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE (drink_id = '1')[0m
+  [1m[36mInventory Load (0.3ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE (drink_id = '3')[0m
+  [1m[36mInventory Load (0.6ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE (drink_id = '2')[0m
+  [1m[36mInventory Load (0.3ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE (drink_id = '4')[0m
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE (location = 'Burnaby')[0m
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE (location = 'Richmond')[0m
+  [1m[36mInventory Load (0.8ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" INNER JOIN "transactions" ON "transactions"."inventory_id" = "inventories"."id" WHERE "inventories"."store_id" = $1[0m  [["store_id", 1]]
+  [1m[36mInventory Load (0.7ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" INNER JOIN "transactions" ON "transactions"."inventory_id" = "inventories"."id" WHERE "inventories"."store_id" = $1 AND (drink_id = '1')[0m  [["store_id", 1]]
+  [1m[36mInventory Load (0.4ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" INNER JOIN "transactions" ON "transactions"."inventory_id" = "inventories"."id" WHERE "inventories"."store_id" = $1 AND (drink_id = '2')[0m  [["store_id", 1]]
+Completed 200 OK in 164ms (Views: 0.2ms | ActiveRecord: 103.8ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:50:33 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 9ms (Views: 1.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:56:00 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 33ms (Views: 21.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:56:01 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 08:56:01 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:57:50 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 23ms (Views: 12.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:57:50 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 08:57:50 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:58:32 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 08:58:33 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 08:58:33 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 09:00:40 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 27ms (Views: 14.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 09:00:40 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:00:40 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:03:11 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 33ms (Views: 20.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 09:03:22 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 09:03:22 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 09:05:20 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 48ms (Views: 37.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 09:05:20 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:05:21 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 09:10:02 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 09:10:02 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 09:13:24 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (12.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 15ms (Views: 1.9ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 09:13:24 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 09:13:33 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 09:13:33 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-09-21 09:13:39 -0700
+Started GET "/users/1/points" for 127.0.0.1 at 2017-09-21 09:13:39 -0700
+Processing by UsersController#show as */*
+Processing by PointsController#index as */*
+  Parameters: {"id"=>"1"}
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 2.0ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT SUM("transactions"."transpoint") FROM "transactions" WHERE "transactions"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 39ms (Views: 0.5ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/stores/1/graph" for 127.0.0.1 at 2017-09-21 09:13:49 -0700
+Started GET "/stores/1" for 127.0.0.1 at 2017-09-21 09:13:49 -0700
+Processing by GraphController#index as */*
+Started GET "/orders/1" for 127.0.0.1 at 2017-09-21 09:13:49 -0700
+Processing by StoresController#show as */*
+  Parameters: {"store_id"=>"1"}
+  Parameters: {"id"=>"1"}
+Processing by OrdersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (1.5ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStore Load (2.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mOrder Load (2.9ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."store_id" = $1[0m  [["store_id", 1]]
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 2.9ms)
+
+
+  [1m[36mTransaction Load (5.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  [1m[36mInventory Load (1.8ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE (drink_id = '1')[0m
+  [1m[36mInventory Load (0.4ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE (drink_id = '3')[0m
+  [1m[36mInventory Load (0.3ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE (drink_id = '2')[0m
+  [1m[36mInventory Load (0.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE (drink_id = '4')[0m
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE (location = 'Burnaby')[0m
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE (location = 'Richmond')[0m
+  [1m[36mInventory Load (3.8ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" INNER JOIN "transactions" ON "transactions"."inventory_id" = "inventories"."id" WHERE "inventories"."store_id" = $1[0m  [["store_id", 1]]
+  [1m[36mInventory Load (0.7ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" INNER JOIN "transactions" ON "transactions"."inventory_id" = "inventories"."id" WHERE "inventories"."store_id" = $1 AND (drink_id = '1')[0m  [["store_id", 1]]
+  [1m[36mInventory Load (0.7ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" INNER JOIN "transactions" ON "transactions"."inventory_id" = "inventories"."id" WHERE "inventories"."store_id" = $1 AND (drink_id = '2')[0m  [["store_id", 1]]
+Completed 200 OK in 33ms (Views: 0.4ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/stores/1" for 127.0.0.1 at 2017-09-21 09:21:44 -0700
+Started GET "/stores/1/graph" for 127.0.0.1 at 2017-09-21 09:21:44 -0700
+Started GET "/orders/1" for 127.0.0.1 at 2017-09-21 09:21:44 -0700
+Processing by GraphController#index as */*
+  Parameters: {"store_id"=>"1"}
+Processing by StoresController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mStore Load (33.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStore Load (26.6ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by OrdersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (16.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+Completed 200 OK in 49ms (Views: 3.6ms | ActiveRecord: 26.6ms)
+
+
+  [1m[36mOrder Load (2.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."store_id" = $1[0m  [["store_id", 1]]
+Completed 200 OK in 25ms (Views: 15.6ms | ActiveRecord: 2.6ms)
+
+
+  [1m[36mInventory Load (17.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE (drink_id = '1')[0m
+  [1m[36mInventory Load (0.5ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE (drink_id = '3')[0m
+  [1m[36mInventory Load (0.5ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE (drink_id = '2')[0m
+  [1m[36mInventory Load (0.4ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" WHERE (drink_id = '4')[0m
+  [1m[36mStore Load (0.6ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE (location = 'Burnaby')[0m
+  [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE (location = 'Richmond')[0m
+  [1m[36mInventory Load (0.9ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" INNER JOIN "transactions" ON "transactions"."inventory_id" = "inventories"."id" WHERE "inventories"."store_id" = $1[0m  [["store_id", 1]]
+  [1m[36mInventory Load (1.2ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" INNER JOIN "transactions" ON "transactions"."inventory_id" = "inventories"."id" WHERE "inventories"."store_id" = $1 AND (drink_id = '1')[0m  [["store_id", 1]]
+  [1m[36mInventory Load (0.8ms)[0m  [1m[34mSELECT "inventories".* FROM "inventories" INNER JOIN "transactions" ON "transactions"."inventory_id" = "inventories"."id" WHERE "inventories"."store_id" = $1 AND (drink_id = '2')[0m  [["store_id", 1]]
+Completed 200 OK in 129ms (Views: 1.3ms | ActiveRecord: 72.1ms)
+
+
+Started GET "/users/find/Naricky" for 127.0.0.1 at 2017-09-21 09:21:44 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"Naricky"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "Naricky"]]
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/revoke" for 127.0.0.1 at 2017-09-21 09:27:49 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/revoke"):
+  
+actionpack (5.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.0.5) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:27:50 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 18ms (Views: 9.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:30:22 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 15ms (Views: 5.6ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:30:24 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:30:53 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 24ms (Views: 11.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:30:53 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 8ms (Views: 2.8ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:32:04 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 23ms (Views: 11.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:32:04 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:32:25 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:32:25 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:33:41 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 24ms (Views: 12.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:33:41 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:33:52 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (28.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 30ms (Views: 1.7ms | ActiveRecord: 28.2ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:33:52 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:34:13 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:34:13 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:34:59 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:35:00 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:35:15 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:35:15 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:35:50 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:35:50 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:36:11 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (14.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 16ms (Views: 1.3ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:36:11 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:38:29 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:38:47 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (62.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 65ms (Views: 1.5ms | ActiveRecord: 62.6ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:38:47 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:39:46 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:39:46 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:41:30 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 9ms (Views: 1.6ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:41:30 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:43:04 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 37ms (Views: 15.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:43:05 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:43:26 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:43:26 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 8ms (Views: 1.4ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:43:55 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:43:56 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:44:22 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:44:23 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-09-21 09:44:47 -0700
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:25:in `user_params'
+app/controllers/users_controller.rb:18:in `create'
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:44:48 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:48:31 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:48:31 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:49:28 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:49:29 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:49:54 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (9.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 11ms (Views: 1.3ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:49:55 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:50:14 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:50:14 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:50:41 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 29ms (Views: 21.7ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:50:41 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:51:36 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:51:37 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:51:59 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:51:59 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:52:18 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:52:18 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:52:48 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:52:48 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:53:43 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:53:43 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:54:16 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:54:17 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:54:25 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:54:26 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:54:38 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:54:38 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:55:29 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:55:29 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:56:21 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (14.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 17ms (Views: 1.0ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:56:21 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:56:59 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:56:59 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:57:15 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (17.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 19ms (Views: 1.1ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:57:16 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:57:39 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:57:39 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:57:53 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:57:53 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:58:53 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:58:54 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:59:01 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 09:59:02 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:00:07 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:00:08 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:00:22 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (15.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 17ms (Views: 1.7ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:00:22 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:00:36 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 7ms (Views: 1.2ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:00:36 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:00:47 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:00:47 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:01:34 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 12ms (Views: 1.2ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:01:35 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:02:34 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:02:34 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:02:48 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:02:49 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/edmond@edmond.com" for 127.0.0.1 at 2017-09-21 10:02:53 -0700
+Processing by UsersController#find_by_username as 
+  Parameters: {"username"=>"edmond@edmond"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "edmond@edmond"]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/token" for 127.0.0.1 at 2017-09-21 10:02:53 -0700
+Processing by LoginController#token as */*
+  Parameters: {"grant_type"=>"password", "username"=>"edmond@edmond.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edmond@edmond.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 8ms (Views: 0.4ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/users/find/edmond@edmond.com" for 127.0.0.1 at 2017-09-21 10:02:54 -0700
+Started POST "/token" for 127.0.0.1 at 2017-09-21 10:02:54 -0700
+Processing by UsersController#find_by_username as 
+Processing by LoginController#token as */*
+  Parameters: {"username"=>"edmond@edmond"}
+  Parameters: {"grant_type"=>"password", "username"=>"edmond@edmond.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "edmond@edmond"]]
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edmond@edmond.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/token" for 127.0.0.1 at 2017-09-21 10:02:54 -0700
+Started GET "/users/find/edmond@edmond.com" for 127.0.0.1 at 2017-09-21 10:02:54 -0700
+Processing by LoginController#token as */*
+Processing by UsersController#find_by_username as 
+  Parameters: {"grant_type"=>"password", "username"=>"edmond@edmond.com", "password"=>"[FILTERED]"}
+  Parameters: {"username"=>"edmond@edmond"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edmond@edmond.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "edmond@edmond"]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/find/edmond@edmond.com" for 127.0.0.1 at 2017-09-21 10:02:55 -0700
+Started POST "/token" for 127.0.0.1 at 2017-09-21 10:02:55 -0700
+Processing by UsersController#find_by_username as 
+  Parameters: {"username"=>"edmond@edmond"}
+Processing by LoginController#token as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "edmond@edmond"]]
+  Parameters: {"grant_type"=>"password", "username"=>"edmond@edmond.com", "password"=>"[FILTERED]"}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 2.1ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edmond@edmond.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/edmond@edmond.com" for 127.0.0.1 at 2017-09-21 10:02:55 -0700
+Started POST "/token" for 127.0.0.1 at 2017-09-21 10:02:55 -0700
+Processing by UsersController#find_by_username as 
+  Parameters: {"username"=>"edmond@edmond"}
+Processing by LoginController#token as */*
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "edmond@edmond"]]
+  Parameters: {"grant_type"=>"password", "username"=>"edmond@edmond.com", "password"=>"[FILTERED]"}
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 2.5ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edmond@edmond.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/token" for 127.0.0.1 at 2017-09-21 10:02:58 -0700
+Started GET "/users/find/edmond@edmond.com" for 127.0.0.1 at 2017-09-21 10:02:58 -0700
+Processing by LoginController#token as */*
+  Parameters: {"grant_type"=>"password", "username"=>"edmond@edmond.com", "password"=>"[FILTERED]"}
+Processing by UsersController#find_by_username as 
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edmond@edmond.com"], ["LIMIT", 1]]
+  Parameters: {"username"=>"edmond@edmond"}
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "edmond@edmond"]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/edmond@edmond.com" for 127.0.0.1 at 2017-09-21 10:02:58 -0700
+Started POST "/token" for 127.0.0.1 at 2017-09-21 10:02:58 -0700
+Processing by UsersController#find_by_username as 
+  Parameters: {"username"=>"edmond@edmond"}
+Processing by LoginController#token as */*
+  Parameters: {"grant_type"=>"password", "username"=>"edmond@edmond.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "edmond@edmond"]]
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 2.4ms)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edmond@edmond.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (Views: 0.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:03:10 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:03:10 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:03:11 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/edmond@edmond.com" for 127.0.0.1 at 2017-09-21 10:03:13 -0700
+Started POST "/token" for 127.0.0.1 at 2017-09-21 10:03:13 -0700
+Processing by UsersController#find_by_username as 
+  Parameters: {"username"=>"edmond@edmond"}
+Processing by LoginController#token as */*
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "edmond@edmond"]]
+  Parameters: {"grant_type"=>"password", "username"=>"edmond@edmond.com", "password"=>"[FILTERED]"}
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 3.7ms)
+
+
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edmond@edmond.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 6ms (Views: 0.3ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/token" for 127.0.0.1 at 2017-09-21 10:03:13 -0700
+Started GET "/users/find/edmond@edmond.com" for 127.0.0.1 at 2017-09-21 10:03:13 -0700
+Processing by LoginController#token as */*
+  Parameters: {"grant_type"=>"password", "username"=>"edmond@edmond.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edmond@edmond.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Processing by UsersController#find_by_username as 
+  Parameters: {"username"=>"edmond@edmond"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "edmond@edmond"]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:03:13 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/edmond@edmond.com" for 127.0.0.1 at 2017-09-21 10:03:14 -0700
+Started POST "/token" for 127.0.0.1 at 2017-09-21 10:03:14 -0700
+Processing by UsersController#find_by_username as 
+Processing by LoginController#token as */*
+  Parameters: {"username"=>"edmond@edmond"}
+  Parameters: {"grant_type"=>"password", "username"=>"edmond@edmond.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "edmond@edmond"]]
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edmond@edmond.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/find/edmond@edmond.com" for 127.0.0.1 at 2017-09-21 10:03:14 -0700
+Started POST "/token" for 127.0.0.1 at 2017-09-21 10:03:14 -0700
+Processing by UsersController#find_by_username as 
+  Parameters: {"username"=>"edmond@edmond"}
+Processing by LoginController#token as */*
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "edmond@edmond"]]
+  Parameters: {"grant_type"=>"password", "username"=>"edmond@edmond.com", "password"=>"[FILTERED]"}
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 2.5ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edmond@edmond.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/edmond@edmond.com" for 127.0.0.1 at 2017-09-21 10:03:14 -0700
+Started POST "/token" for 127.0.0.1 at 2017-09-21 10:03:14 -0700
+Processing by UsersController#find_by_username as 
+Processing by LoginController#token as */*
+  Parameters: {"username"=>"edmond@edmond"}
+  Parameters: {"grant_type"=>"password", "username"=>"edmond@edmond.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "edmond@edmond"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edmond@edmond.com"], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+
+
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/edmond@edmond.com" for 127.0.0.1 at 2017-09-21 10:03:17 -0700
+Started POST "/token" for 127.0.0.1 at 2017-09-21 10:03:17 -0700
+Processing by UsersController#find_by_username as 
+Processing by LoginController#token as */*
+  Parameters: {"username"=>"edmond@edmond"}
+  Parameters: {"grant_type"=>"password", "username"=>"edmond@edmond.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "edmond@edmond"]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edmond@edmond.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/find/edmond@edmond.com" for 127.0.0.1 at 2017-09-21 10:03:17 -0700
+Started POST "/token" for 127.0.0.1 at 2017-09-21 10:03:17 -0700
+Processing by UsersController#find_by_username as 
+  Parameters: {"username"=>"edmond@edmond"}
+Processing by LoginController#token as */*
+  Parameters: {"grant_type"=>"password", "username"=>"edmond@edmond.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "edmond@edmond"]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 1.3ms)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edmond@edmond.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (Views: 3.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/find/edmond@edmond.com" for 127.0.0.1 at 2017-09-21 10:03:42 -0700
+Started POST "/token" for 127.0.0.1 at 2017-09-21 10:03:42 -0700
+Processing by UsersController#find_by_username as 
+Processing by LoginController#token as */*
+  Parameters: {"username"=>"edmond@edmond"}
+  Parameters: {"grant_type"=>"password", "username"=>"edmond@edmond.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "edmond@edmond"]]
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edmond@edmond.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:04:03 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:04:03 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:04:46 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:04:46 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:04:48 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (12.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 14ms (Views: 1.1ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:04:49 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:05:00 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:05:01 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:05:24 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (17.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 19ms (Views: 1.0ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:05:24 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:05:59 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (11.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 13ms (Views: 0.9ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:06:00 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:06:19 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/find/undefined" for 127.0.0.1 at 2017-09-21 10:06:20 -0700
+Processing by UsersController#find_by_username as HTML
+  Parameters: {"username"=>"undefined"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1[0m  [["username", "undefined"]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.6ms)
+
+

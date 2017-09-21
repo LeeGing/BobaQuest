@@ -1,13 +1,27 @@
-<h1> login </h1>
 
-<form {{action 'authenticate' on='submit'}}>
-  <label for="identification">Login</label>
-    {{input id='identification' placeholder='Enter E-mail' value=identification}}
-  <label for="password">Password</label>
-    {{input id='password' placeholder='Enter Password' type='password' value=password}}
-  <button type="submit">Login</button>
-  {{#if errorMessage}}
-    {{log errorMessage}}
-    <p>{{errorMessage.errors}}</p>
-  {{/if}}
-</form>
+
+<h1 style="font-family: 'Quicksand', sans-serif; padding: 1em"> Login if you love Bubble Tea </h1>
+<div style="padding-left: 3em;">
+  <form {{action 'authenticate' on='submit'}}>
+    <label for="identification" >
+      <h3 style="font-family: 'Quicksand', sans-serif;">Username</h3>
+    </label>
+    <div style="display: inline-block; padding-left: 3em; padding-bottom: 2em;">
+      {{input id='identification' placeholder='Enter E-mail' value=identification}}
+    </div>
+    <label for="password">
+      <h3 style="font-family: 'Quicksand', sans-serif;">Password</h3>
+    </label>
+    <div style="display: inline-block;  padding-left: 3em; padding-bottom: 2em">
+      {{input id='password' placeholder='Enter Password' type='password' value=password}}
+    </div>
+    <\br>
+    <button type="submit">
+      <h2 style="font-family: 'Quicksand', sans-serif;">Click here to Login</h2>
+    </button>
+    {{#if errorMessage}}
+      {{log errorMessage}}
+      <p>{{errorMessage.errors}}</p>
+    {{/if}}
+  </form>
+</div>

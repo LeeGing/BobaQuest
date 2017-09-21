@@ -28,8 +28,16 @@ export default Ember.Route.extend({
      ];
     });
 
-    this.get('userConfig').setUserHash(this.get('session.data.authenticated.username')).then(result => {
+    if (!this.get('session.data.authenticated.username')) {
       controller.set('userHash', this.get('userConfig.userHash'));
-    });
+      this.set('session.data.authenticated.username', this.get('userConfig.username'))
+    } else {
+      this.get('userConfig').setUserHash(this.get('session.data.authenticated.username')).then(result => {
+        console.log('welcome', this.get('userConfig.userHash'));
+        controller.set('userHash', this.get('userConfig.userHash'));
+      });
+    }
+
+
   }
 });

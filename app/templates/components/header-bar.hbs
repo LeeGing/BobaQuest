@@ -24,44 +24,44 @@
                       </li>
                       <li class="loginBtn loginBtn--google">
                       <button>
-                          {{#link-to 'users' 1}}User Profile{{/link-to}}
+                          {{#link-to 'users' userHash.id}}{{/link-to}}User Profile
                         </button>
                       </li>
                       <li class="loginBtn loginBtn--google">
                         <button>
-                          {{#link-to 'welcome'}}Home page{{/link-to}}
+                          {{#link-to 'welcome'}}{{/link-to}}Home page
                         </button>
                       </li>
                       <li class="loginBtn loginBtn--google">
                         <button>
-                          {{#link-to 'stores' 1}}Store Page{{/link-to}}
+                          {{#link-to 'stores' 1}}{{/link-to}}Store Page
                         </button>
                       </li>
                     </ul>
                   {{else}}
                     <ul>
+                      {{#link-to 'login' }}
+                        <li class="loginBtn loginBtn--google">
+                          <button>Login</button>
+                        </li>
+                      {{/link-to}}
+                      {{#link-to 'register'}}
+                        <li class="loginBtn loginBtn--google">
+                          <button>Registration</button>
+                        </li>
+                      {{/link-to}}
                       <li class="loginBtn loginBtn--google">
                         <button>
-                          {{#link-to 'login'}}Login{{/link-to}}
+                          {{#link-to 'welcome' }}{{/link-to}}Home page
                         </button>
                       </li>
-                      <li class="loginBtn loginBtn--google">
-                        <button>
-                          {{#link-to 'register'}}Registration{{/link-to}}
-                        </button>
-                      </li>
-                      <li class="loginBtn loginBtn--google">
-                        <button>
-                          {{#link-to 'welcome' }}Home page{{/link-to}}
-                        </button>
-                      </li>
-                      <li>
-                        <button {{action 'processLogin'}} class="loginBtn loginBtn--facebook">
+                      <li class="loginBtn loginBtn--facebook">
+                        <button {{action 'processLogin'}} >
                          Login with Facebook
                         </button>
                       </li>
-                      <li>
-                        <button {{action 'leaveFacebook'}} class="loginBtn loginBtn--facebook">
+                      <li class="loginBtn loginBtn--facebook">
+                        <button {{action 'leaveFacebook'}} >
                          Logout
                         </button>
                       </li>
