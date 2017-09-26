@@ -73,12 +73,13 @@ h2 {
 }
 
 .mapbox {
+  padding-top: -50px;
   display: block;
   margin-left:40%;
   height: 60%;
-  padding: 20px;
-  background: rgba(255, 235, 142, .4);
-  color: rgba(255, 235, 142, .2);
+  padding: 4em;
+  background: rgba(255, 235, 142, 0);
+  color: rgba(120, 140, 120, .9);
   font-size: 21px;
   font-weight: bold;
   line-height: 1.3em;
@@ -89,23 +90,24 @@ h2 {
 }
 
 .container-ad {
-  height: 400px;
+  height: 200px;
 
 }
 
 .welcometextbox{
   float: left;
-  background-color: rgba(255, 235, 142, .05) !important;
+  background-color: transparent !important;
   display: block;
   box-sizing: content-box;
   width: 30%;
   height: 80%;
+  padding: 4em;
   font-family: 'Quicksand', sans-serif;
 }
 
 .questtext {
   font-family: 'Quicksand', sans-serif !important;
-  background-color: rgba(255, 235, 142, .05) !important;
+  background-color: transparent !important;
 }
 
 html {
@@ -119,6 +121,7 @@ html {
 body {
 
   padding: 2em;
+  background-color: transparent !important;
 }
 
 .main {
@@ -147,16 +150,14 @@ color: black;
 }
 
 .ad-carousel {
-  width:70%;
+  margin-left: 1em;
+  width: 100%;
   margin: 10px;
-  background: rgba(255, 235, 142, .4);
-  color: #rgba(255, 235, 142, .2);
+  background: transparent;
+  color: rgba(255, 235, 142, .2);
   font-size: 21px;
   font-weight: bold;
   line-height: 1.3em;
-  border-radius: 2px;
-  box-shadow: 0 0 0 4px rgba(255, 235, 142, 0.8), 2px 1px 6px 4px rgba(255, 235, 142, 0.7);
-  text-shadow: -1px -1px #aa3030;
   font-weight: normal;
   overflow: hidden;
   display:inline-block;
@@ -253,6 +254,7 @@ display: inline-block;
 
 .loginBtn--google:before {
   border-right: lightgray 1px solid;
+  color: transparent;
   background: url('https://ih0.redbubble.net/image.65374203.4115/ap,550x550,12x16,1,transparent,t.u3.png') 6px 6px center no-repeat;
 }
 
@@ -266,3 +268,28 @@ display: inline-block;
   background-color: #f1f7cd;
 }
 
+.userInfoTable {
+  /*background-color: rgba(255,255,255,.5);*/
+  padding: 2em;
+  font-size: 2.5em;
+  font-family: 'Quicksand', sans-serif;
+  float: left;
+  display: block;
+}
+
+.achievementsBox {
+  padding: 2em  ;
+  background-color: rgba(255,255,255,.7);
+  padding-left: 1em;
+  font-family: 'Quicksand', sans-serif;
+  display: block;
+
+}
+
+.orderingMenu{
+  display: inline;
+}
+
+.menu {
+  font-family: 'Quicksand', sans-serif;
+}

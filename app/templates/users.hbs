@@ -1,49 +1,46 @@
 
 <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 
-<h2>Users n stores</h2>
-
-THIS IS USERS.HBS
-<div>
-
+<div class="userInfoTable">
   Name: {{userHash.name}} <br />
   Age: {{userHash.age}} <br />
-  Email: {{userHash.email}}
+  Email: {{userHash.email}} <br />
   Point: {{points}}
   {{user.achievements}}
 </div>
 
-<div>
-	<h4>Unlocked Achievements:</h4>
+<div class="achievementsBox">
+	<h2 style="font-family: 'Quicksand', sans-serif;">Unlocked Achievements:</h2>
 	{{#if isLvl1}}
     <div>
-      <img src=https://www.btcpublic.net/img/portfolio/level-1.png width="auto" height="40px" /> ★ Welcome ★
+      <img src=https://www.btcpublic.net/img/portfolio/level-1.png width="200px" height="100px" /> ★ Welcome ★
     </div>
   {{else}}
-    <h4> NONE  </h4>
+    <h4 style="font-family: 'Quicksand', sans-serif;"> No Achievements Yet </h4>
 	{{/if}}
 
 	{{#if isLvl2}}
 	   <div>
-      <img src=https://d30y9cdsu7xlg0.cloudfront.net/png/81253-200.png width="auto" height="40px" /> ★ First Purchase ★
+      <img src=https://d30y9cdsu7xlg0.cloudfront.net/png/81253-200.png width="200px" height="100px" /> ★ First Purchase ★
     </div>
 	{{/if}}
 
 	{{#if isLvl3}}
 	   <div>
-      <img src=https://d30y9cdsu7xlg0.cloudfront.net/png/56326-200.png width="auto" height="40px" /> ★ First Redeem ★
+      <img src=https://d30y9cdsu7xlg0.cloudfront.net/png/56326-200.png width="200px" height="100px" /> ★ First Redeem ★
     </div>
 	{{/if}}
 
     {{#if isLvl4}}
     <div>
-      <img src=http://nextlevelfunctionalnutrition.com/wp-content/uploads/2014/10/badge_2.png width="auto" height="40px" />★ Beginner ★
+      <img src=http://nextlevelfunctionalnutrition.com/wp-content/uploads/2014/10/badge_2.png width="200px" height="100px" />★ Beginner ★
     </div>
     {{/if}}
 </div>
 <br /><br />
-<div><h3> Online Order: </h3></div>
-<div> Choose a Store: </div>
+<div class="orderingMenu">
+<div><h3 style="font-family: 'Quicksand', sans-serif;"> Online Order: </h3></div>
+<div style="font-family: 'Quicksand', sans-serif;"> Choose a Store: </div>
 <br />
 
 <select onchange={{action 'setCurrentStore' value='target.value' }} >
@@ -59,7 +56,7 @@ THIS IS USERS.HBS
 
 {{#if (eq currentStore.name 'CoCo - Pender')}}
   <div class="menu">
-    <h3> CoCo - Downtown Menu </h3>
+    <h3 style="font-family: 'Quicksand', sans-serif;"> CoCo - Downtown Menu </h3>
   	<table class="drinkmenu">
       <tr>
         <th>Item #</th>
@@ -98,7 +95,7 @@ THIS IS USERS.HBS
         <td>10</td><td>Strawberry Slush</td><td>$ 9</td><td><button {{action "addToCart" "Strawberry Slush"}}>Add</button></td>
       </tr>
       <tr>
-        <td>11</td><td>Poo Slush</td><td>$ 9</td><td><button {{action "addToCart" "Poo Slush"}}>Add</button></td>
+        <td>11</td><td>Mint Slush</td><td>$ 9</td><td><button {{action "addToCart" "Mint Slush"}}>Add</button></td>
       </tr>
       <tr>
         <td>12</td><td>Cookies and Cream</td><td>$ 12</td><td><button {{action "addToCart" "Cookies and Cream"}}>Add</button></td>
@@ -113,8 +110,8 @@ THIS IS USERS.HBS
         <td>15</td><td>Tuna Egg Slush</td><td>$ 12</td><td><button {{action "addToCart" "Tuna Egg Slush"}}>Add</button></td>
       </tr>
     </table>
-    <button {{action "rmFromCart"}}>Empty</button>
-    <button {{action "submitCart"}}>Click here to order!</button>
+    <button {{action "rmFromCart"}} class="loginBtn loginBtn--google" style="width: 14em; padding; 1em;">Empty cart</button> <br/>
+    <button {{action "submitCart"}} class="loginBtn loginBtn--google" style="width: 14em; padding; 1em;">Click here to order!</button>
   </div>
 
 {{else if (eq currentStore.name 'Cha Time - Robson')}}
@@ -173,8 +170,8 @@ THIS IS USERS.HBS
         <td>15</td><td>Mocha Volcano Slush</td><td>$ 12</td><td><button {{action "addToCart" "Mocha Volcano Slush"}}>Add</button></td>
       </tr>
     </table>
-    <button {{action "rmFromCart"}}>Empty</button>
-    <button {{action "submitCart"}}>Click here to order!</button>
+    <button {{action "rmFromCart"}} class="loginBtn loginBtn--google" >Empty cart</button>
+    <button {{action "submitCart"}} class="loginBtn loginBtn--google">Click here to order!</button>
   </div>
 
   {{else if (eq currentStore.name 'Bubble World - Robson')}}
@@ -233,8 +230,8 @@ THIS IS USERS.HBS
         <td>15</td><td>Mocha Slush</td><td>$ 12</td><td><button {{action "addToCart" "Mocha Slush"}}>Add</button></td>
       </tr>
     </table>
-    <button {{action "rmFromCart"}}>Empty</button>
-    <button {{action "submitCart"}}>Click here to order!</button>
+    <button {{action "rmFromCart"}} class="loginBtn loginBtn--google" >Empty cart</button>
+    <button {{action "submitCart"}} class="loginBtn loginBtn--google">Click here to order!</button>
   </div>
 
 {{/if}}
@@ -246,4 +243,4 @@ THIS IS USERS.HBS
     </tr>
   {{/each}}
 </table>
-
+</div>
