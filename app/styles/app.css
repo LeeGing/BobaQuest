@@ -73,7 +73,7 @@ h2 {
 }
 
 .mapbox {
-
+  padding-top: -50px;
   display: block;
   margin-left:40%;
   height: 60%;
@@ -90,7 +90,7 @@ h2 {
 }
 
 .container-ad {
-  height: 400px;
+  height: 200px;
 
 }
 
@@ -150,7 +150,8 @@ color: black;
 }
 
 .ad-carousel {
-  width:70%;
+  margin-left: 1em;
+  width: 100%;
   margin: 10px;
   background: transparent;
   color: rgba(255, 235, 142, .2);
